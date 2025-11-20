@@ -16,20 +16,18 @@ export default function Menu() {
     <div>
       <div className="fixed z-10 right-[100px] bottom-[60px] w-[240px]">
         <div className="relative flex justify-end">
-          {/* Toggle Button */}
           <div
             className="bg-[#8CD565] flex justify-center items-center rounded-full w-[62px] h-[62px] z-20 cursor-pointer"
             onClick={() => setOpen(!open)}
           >
-            <div className="w-6 h-[14px] relative">
-              {/* Top Line */}
+            <div className={`w-6 h-[14px] relative ${open ? "top-[-4px]" : ""}`}>
+            
               <span
                 className={`absolute block h-[3px] w-full bg-black rounded transition-all duration-300
                   ${open ? "top-[10px] rotate-45" : "top-0 rotate-0"}
                 `}
               ></span>
 
-              {/* Bottom Line */}
               <span
                 className={`absolute block h-[3px] w-full bg-black rounded transition-all duration-300
                   ${open ? "top-[10px] -rotate-45" : "bottom-0 rotate-0"}

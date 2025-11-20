@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import gmailicon from "../assets/images/icons/gmail-icon.svg";
+import phoneicon from "../assets/images/icons/phone-icon.svg";
 import herobg from "../assets/images/hero-bg.gif";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faUpwork } from "@fortawesome/free-brands-svg-icons";
@@ -13,21 +14,21 @@ export default function Cta() {
     <div>
       <div className="relative">
         <div className="containerX ">
-          <div className="bg-[#1E1E1E] border-[10px] border-[#3D3D3D] py-[60px] px-[80px] mb-[125px] text-center rounded-[20px] relative z-10">
-            <h2 className="text-white">Let's Connect.</h2>
+          <div className=" py-[60px] px-[80px]  text-center  relative z-10">
+            <h2 className="text-[#1E1E1E]">Let's Connect.</h2>
 
             <div className="my-[50px] flex justify-between items-center">
               <Link to="/" className="flex gap-2.5 items-center">
                 <img src={gmailicon} alt="" />
-                <p className="text-[20px] font-light text-white">
+                <p className="text-[20px] font-light text-[#1E1E1E]">
                   jatin_chauhan@gmail.com
                 </p>
               </Link>
 
               <Link to="" className="flex gap-2.5 items-center">
-                <img src={gmailicon} alt="" />
-                <p className="text-[20px] font-light text-white">
-                  +91 9876543210
+                <img src={phoneicon} alt="" />
+                <p className="text-[20px] font-light text-[#1E1E1E]">
+                  +91 70963 64801
                 </p>
               </Link>
 
@@ -77,12 +78,12 @@ export default function Cta() {
               </ul>
             </div>
 
-            <p className="text-white font-light">
+            <p className="text-[#1E1E1E80] font-light mb-[40px]">
               Copyright ⓒ 2025. All Rights Reserved by Jatin Chauhan.
             </p>
           </div>
         </div>
-        <div className="after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-[500px] after:bg-[linear-gradient(360deg,rgba(244,244,244,0)_0%,#F4F4F4_100%)] w-full absolute bottom-[-130px] h-[1000px]">
+        <div className="after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-[500px] after:bg-[linear-gradient(360deg,rgba(244,244,244,0)_0%,#F4F4F4_100%)] w-full absolute bottom-[0px] h-[1000px]">
           <img src={herobg} alt="" className="w-full h-full opacity-35" />
         </div>
       </div>
