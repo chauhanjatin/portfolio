@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <div>
       <div className="containerX relative z-10">
-        <div className=" text-center">
+        <div className="text-center">
           <div className="h-[calc(100vh-70px)] flex justify-center items-center">
             <div>
               <div className="flex justify-center">
@@ -40,13 +40,13 @@ export default function Hero() {
                 value.
               </h4>
 
-              <div className="mt-[80px] bg-[#8CD565] py-3 px-6 border-[#8CD565] border border-1 inline-flex rounded-[40px] transition-all duration-300 hover:bg-transparent hover:border hover:border-black">
+              <div className="xl:mt-[80px] lg:mt-[50px] bg-[#8CD565] py-3 px-6 border-[#8CD565] border border-1 inline-flex rounded-[40px] transition-all duration-300 hover:bg-transparent hover:border hover:border-black">
                 <Link to="/">
                   <h4 className="font-light">Say "Hello Jatin"</h4>
                 </Link>
               </div>
 
-              <div className="flex justify-center items-center mt-[60px] gap-5">
+              <div className="flex justify-center items-center xl:mt-[60px] lg:mt-[40px] gap-5">
                 <h4 className="italic">Also explore my creative side</h4>
                 <div>
                   <Link
@@ -62,7 +62,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4  text-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-start">
             <div className="col-span-1 md:col-span-2 relative group overflow-hidden rounded-[40px]">
               <img
                 className="w-full h-auto rounded-[40px] block"
@@ -233,8 +233,11 @@ export default function Hero() {
             </div>
           </div>
 
-          <div >
-            <Link to="/" className="my-[50px] border border-[#1E1E1E] py-3 px-6 inline-flex rounded-[40px] font-light transition-all duration-300 hover:bg-[#8CD565] hover:border-transparent">
+          <div>
+            <Link
+              to="/"
+              className="my-[50px] border border-[#1E1E1E] py-3 px-6 inline-flex rounded-[40px] font-light transition-all duration-300 hover:bg-[#8CD565] hover:border-transparent"
+            >
               <h4>View All</h4>
             </Link>
           </div>
