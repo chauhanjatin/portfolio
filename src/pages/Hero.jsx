@@ -6,6 +6,8 @@ import heroimg2 from "../assets/images/hero-img2.png";
 import heroimg3 from "../assets/images/hero-img3.png";
 import heroimg4 from "../assets/images/hero-img4.png";
 import heroimg5 from "../assets/images/hero-img5.png";
+import upworkring from "../assets/images/upwork-ring.png";
+import uplogo from "../assets/images/up-logo.png";
 import { Link } from "react-router-dom";
 import Cta from "../components/Cta";
 
@@ -40,13 +42,13 @@ export default function Hero() {
                 value.
               </h4>
 
-              <div className="xl:mt-[80px] lg:mt-[50px] bg-[#8CD565] py-3 px-6 border-[#8CD565] border border-1 inline-flex rounded-[40px] transition-all duration-300 hover:bg-transparent hover:border hover:border-black">
+              <div className="xl:mt-[80px] lg:mt-[50px] mt-[50px] bg-[#8CD565] py-3 px-6 border-[#8CD565] border border-1 inline-flex rounded-[40px] transition-all duration-300 hover:bg-transparent hover:border hover:border-black">
                 <Link to="/">
                   <h4 className="font-light">Say "Hello Jatin"</h4>
                 </Link>
               </div>
 
-              <div className="flex justify-center items-center xl:mt-[60px] lg:mt-[40px] gap-5">
+              <div className="flex justify-center items-center xl:mt-[60px] lg:mt-[40px] md:mt[30px] gap-5">
                 <h4 className="italic">Also explore my creative side</h4>
                 <div>
                   <Link
@@ -235,7 +237,7 @@ export default function Hero() {
 
           <div>
             <Link
-              to="/"
+              to="/mywork"
               className="my-[50px] border border-[#1E1E1E] py-3 px-6 inline-flex rounded-[40px] font-light transition-all duration-300 hover:bg-[#8CD565] hover:border-transparent"
             >
               <h4>View All</h4>
@@ -245,6 +247,15 @@ export default function Hero() {
       </div>
 
       <Cta></Cta>
+
+      <Link
+        className="upwork-logo"
+        to="https://upwork.com/freelancers/jatinchauhan"
+        target="_blank"
+      >
+        <img src={upworkring} alt="" className="circle-text" />
+        <img src={uplogo} alt="" className="upwork-icon" />
+      </Link>
     </div>
   );
 }

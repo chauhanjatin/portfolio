@@ -22,12 +22,7 @@ export default function Navbar() {
 
       <div
         className="
-        px-4 
-        sm:px-8 
-        md:px-20 
-        lg:px-40 
-        xl:px-64 
-        2xl:px-[400px] 
+       containerX
         relative z-10
       "
       >

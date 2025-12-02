@@ -9,6 +9,8 @@ import heroimg6 from "../assets/images/hero-img6.png";
 import heroimg7 from "../assets/images/hero-img7.png";
 import heroimg8 from "../assets/images/hero-img8.png";
 import heroimg9 from "../assets/images/hero-img9.png";
+import demysti from "../assets/images/demysti.png";
+import figmalink from "../assets/images/figma-link.png";
 import viewProjectArrow from "../assets/images/icons/viewproject-arrow.svg";
 import { Link } from "react-router-dom";
 import Cta from "../components/Cta";
@@ -33,6 +35,79 @@ export default function Mywork() {
   return (
     <div>
       <div className="containerX relative z-10">
+        <div className="flex justify-between items-center mt-10">
+          <h2>Work Showcase</h2>
+
+          <ul className="flex items-center gap-2.5">
+            <li className="py-2 px-10 bg-[#8CD565] rounded-[20px] cursor-pointer">
+              All
+            </li>
+            <li className="py-2 px-10 bg-transparent rounded-[20px] border border-[#1E1E1E] cursor-pointer">
+              Dashboard
+            </li>
+            <li className="py-2 px-10 bg-transparent rounded-[20px] border border-[#1E1E1E] cursor-pointer">
+              Website
+            </li>
+            <li className="py-2 px-10 bg-transparent rounded-[20px] border border-[#1E1E1E] cursor-pointer">
+              App
+            </li>
+          </ul>
+        </div>
+
+        <div className="Portfolio-grid mt-10">
+          <div className="bg-white p-5 rounded-[40px] Portfolio-items">
+            <p>Dashboard</p>
+            <div>
+              <img src={demysti} alt="" />
+            </div>
+          </div>
+          <div className="grid gap-10">
+            <div className="relative overflow-hidden rounded-[40px]">
+              <div className="bg-white p-5 ">
+                <p>Dashboard</p>
+                <div>
+                  <img src={demysti} alt="" />
+                </div>
+              </div>
+
+              <div className="Portfolio-contant">
+                <div className="w-full ">
+                  <div className="flex items-center gap-2.5">
+                    <h3 className="text-white">LearnBud AI</h3>
+                    <h4 className="text-white">(AI Learning)</h4>
+                  </div>
+                  <div className="flex justify-between items-center mt-2.5">
+                    <div>
+                      <Link to="" className="link-items">
+                        <div>
+                          <img src={figmalink} alt="" />
+                        </div>
+                      </Link>
+                    </div>
+
+                    <Link
+                      to="/"
+                      className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                    >
+                      <h4>View Details</h4>
+                      <img src={viewProjectArrow} alt="" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-5 rounded-[40px]">
+              <p>Dashboard</p>
+              <div>
+                <img src={demysti} alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="containerX relative z-10 hidden">
         <div className="mt-[160px] flex justify-between">
           <h2 className="text-[#1E1E1E]">Work Showcase</h2>
 

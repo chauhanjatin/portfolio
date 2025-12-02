@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Cta from "../components/Cta";
 import aboutimg from "../assets/images/aboutus-img.png";
-import handgif from "../assets/images/hand-gif.gif";
+import hand from "../assets/images/hand.png";
 import { Link } from "react-router-dom";
 import figma from "../assets/images/figma.png";
 import adobe from "../assets/images/adobe.png";
@@ -11,46 +11,11 @@ import photoshop from "../assets/images/photoshop.png";
 import reactnative from "../assets/images/react-native.png";
 import css from "../assets/images/css.png";
 import bootstrap from "../assets/images/bootstrap.png";
-import img1 from "../assets/images/slider-img1.png";
-import img2 from "../assets/images/slider-img2.png";
-import img3 from "../assets/images/slider-img3.png";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
+import indiaicon from "../assets/images/icons/india.svg";
+import ukicon from "../assets/images/icons/uk-icon.svg";
+import useicon from "../assets/images/icons/use-icon.svg";
+import Testimonial from "../components/Testimonial";
 
-const people = [
-  {
-    img: img2,
-    name: "James Carter",
-    role: "Globetrotter",
-  },
-  {
-    img: img3,
-    name: "Mark Johnson",
-    role: "Photographer",
-  },
-  {
-    img: img1,
-    name: "Sarah Wilson",
-    role: "Designer",
-  },
-  {
-    img: img2,
-    name: "James Carter",
-    role: "Globetrotter",
-  },
-  {
-    img: img3,
-    name: "Mark Johnson",
-    role: "Photographer",
-  },
-  {
-    img: img1,
-    name: "Sarah Wilson",
-    role: "Designer",
-  },
-];
 
 export default function Aboutus() {
   const containerRef = useRef(null);
@@ -60,27 +25,32 @@ export default function Aboutus() {
   // TIMELINE DATA
   const steps = [
     {
-      title: "Web Designer",
+      title: "Siya Soft",
       duration: "Apr 2011– Mar 2018",
-      bullets: ["Siya Soft", "India"],
+      bullets: ["Web Designer"],
+      images: indiaicon,
     },
     {
       title: "Web And UI Designer ( Level 2 ) – Remote Staff",
       duration: "Jan 2014 – Mar 2016",
       bullets: ["SFWM LTD (Super future Multi Services)", "London, UK"],
+      images: ukicon,
     },
     {
       title: "Web & Graphics Designer – Remote Staff",
       duration: "Feb 2013 – May 2014",
       bullets: ["Virtual Assistant Staffing", "Washington, USA"],
+      images: useicon,
     },
     {
       title: "Sr. Web & Graphics Designer",
       duration: "Apr 2018 – Apr 2020",
       bullets: ["Differenz System", "India"],
+      images: indiaicon,
     },
     {
       title: "Sr. UI/UX Designer and Frontend Designer + Team Leader",
+      images: indiaicon,
       duration: "Apr 2020 – Apr 2021",
       bullets: ["Differenz System", "India"],
     },
@@ -88,11 +58,13 @@ export default function Aboutus() {
       title: "UI/UX Designer – Remote Staff",
       duration: "Feb 2022 – Dec 2022",
       bullets: ["Engine B", "UK"],
+      images: ukicon,
     },
     {
       title: "UI/UX + Frontend Designer - Freelancer",
       duration: "Apr 2021 - Present",
       bullets: ["LIS", "India"],
+      images: indiaicon,
     },
   ];
 
@@ -122,16 +94,25 @@ export default function Aboutus() {
         <div className="flex justify-center items-center mt-[100px]">
           <img src={aboutimg} alt="" />
         </div>
+
         <div className="grid justify-center text-center mt-[60px]">
-          <h1 className="flex font-medium">
-            “Hey! <img src={handgif} alt="" className="w-[62px] h-[62px]" /> I’m
-            Jatin Chauhan”
+          <h1 className="flex font-medium gap-2 items-center">
+            “Hey!{" "}
+            <img src={hand} alt="" className="w-[62px] h-[62px] hand-wave" />{" "}
+            I’m Jatin Chauhan”
           </h1>
-          <h2 className="mt-[20px] font-medium">
-            I Am{" "}
-            <span className="bg-[#8CD565] rounded-[100px] py-[6px] px-[36px]">
-              UI/UX
-            </span>{" "}
+          <h2 className="mt-[20px] font-medium flex gap-2 items-center">
+            I Am
+            <span className="bg-[#8CD565] rounded-[100px] py-[6px] px-[36px] inline-block">
+              <div className="relative h-[50px] overflow-hidden text-white">
+                <div className="slide-text">
+                  <span>UI/UX</span>
+                  <span>Brand</span>
+                  <span>Product</span>
+                  <span>Website</span>
+                </div>
+              </div>
+            </span>
             Designer & Developer
           </h2>
 
@@ -140,7 +121,7 @@ export default function Aboutus() {
               to="/"
               className="my-[50px] border border-[#1E1E1E] py-3 px-6 inline-flex rounded-[40px] font-light transition-all duration-300 hover:bg-[#8CD565] hover:border-transparent"
             >
-              <h4>Say Hello Jatin</h4>
+              <h4>Say "Hello Jatin"</h4>
             </Link>
           </div>
         </div>
@@ -150,7 +131,7 @@ export default function Aboutus() {
           <h2 className="mt-[100px] mb-[60px] text-center">Work Experience</h2>
 
           <div className="flex">
-            <div className="flex gap-10">
+            <div className="flex gap-10 w-full">
               <div
                 ref={containerRef}
                 className="relative flex flex-col items-center"
@@ -170,7 +151,7 @@ export default function Aboutus() {
                   return (
                     <div
                       key={index}
-                      className="relative flex flex-col items-center pt-2 pb-28"
+                      className="relative flex flex-col items-center pt-2 pb-20"
                     >
                       <div
                         className={`w-5 h-5 rounded-full border-[5px] ${
@@ -184,16 +165,20 @@ export default function Aboutus() {
                 })}
               </div>
 
-              <div className="flex flex-col gap-8">
+              <div className="flex flex-col gap-8 w-full">
                 {steps.map((step, index) => (
                   <div key={index}>
-                    <h3 className="font-medium mb-2">{step.title}</h3>
-                    <h4 className="text-[#1E1E1E80] font-light mb-2">
-                      {step.duration}
-                    </h4>
-                    <ul className="flex gap-10 list-disc font-normal">
-                      <li className="ms-[25px]">{step.bullets[0]}</li>
-                      <li>{step.bullets[1]}</li>
+                    <div className="flex justify-between items-center">
+                      <div className="flex items-center gap-2.5">
+                        <h3 className="font-medium ">{step.title}</h3>
+                        <img src={step.images} alt="" />
+                      </div>
+                      <h4 className="text-[#1E1E1E] font-light">
+                        {step.duration}
+                      </h4>
+                    </div>
+                    <ul className=" font-normal mt-2.5">
+                      <li className="text-[#1E1E1E80]">{step.bullets[0]}</li>
                     </ul>
                   </div>
                 ))}
@@ -234,111 +219,41 @@ export default function Aboutus() {
         <div>
           <h2 className="text-center mt-[100px]">Tech Stack</h2>
 
-          <div className="flex gap-4 justify-center mt-[60px]">
-            <img
-              src={figma}
-              alt=""
-              className="bg-white p-[6px] rounded-[10px]"
-            />
-            <img
-              src={adobe}
-              alt=""
-              className="bg-white py-[10px] px-[9px] rounded-[10px]"
-            />
-            <img
-              src={xdimg}
-              alt=""
-              className="bg-white py-[10px] px-[9px] rounded-[10px]"
-            />
-            <img
-              src={javascript}
-              alt=""
-              className="bg-white py-[10px] px-[14px] rounded-[10px]"
-            />
-            <img
-              src={photoshop}
-              alt=""
-              className="bg-white p-[10px] rounded-[10px]"
-            />
-            <img
-              src={reactnative}
-              alt=""
-              className="bg-white px-[6px] py-[10px] rounded-[10px]"
-            />
-            <img
-              src={css}
-              alt=""
-              className="bg-white py-[10px] px-[14px] rounded-[10px]"
-            />
-            <img
-              src={bootstrap}
-              alt=""
-              className="bg-white py-[12px] px-[4px] rounded-[10px]"
-            />
+          <div className="flex justify-center mt-[60px]">
+            <div className="bg-white  rounded-[10px] TechStack-items">
+              <img src={figma} alt="" className="" />
+            </div>
+
+            <div className="bg-white  rounded-[10px] TechStack-items">
+              <img src={adobe} alt="" />
+            </div>
+
+            <div className="bg-white  rounded-[10px] TechStack-items">
+              <img src={xdimg} alt="" />
+            </div>
+
+            <div className="bg-white  rounded-[10px] TechStack-items">
+              <img src={javascript} alt="" />
+            </div>
+
+            <div className="bg-white  rounded-[10px] TechStack-items">
+              <img src={photoshop} alt="" />
+            </div>
+
+            <div className="bg-white  rounded-[10px] TechStack-items">
+              <img src={reactnative} alt="" />
+            </div>
+
+            <div className="bg-white  rounded-[10px] TechStack-items">
+              <img src={css} alt="" />
+            </div>
+
+            <div className="bg-white  rounded-[10px] TechStack-items">
+              <img src={bootstrap} alt="" />
+            </div>
           </div>
         </div>
-
-        {/* Voices of Trust & Success */}
-        <div>
-          <h2 className="text-center mt-[100px]">Voices of Trust & Success</h2>
-          <p className="text-[24px] mt-[60px] text-[#1E1E1E80] font-light">
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-            turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
-            nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-            tellus elit sed risus. Maecenas eget condimentum velit, sit amet
-            feugiat lectus.”
-          </p>
-        </div>
-
-        <div className="relative w-full max-w-5xl mx-auto">
-          <button className="swiper-button-prev-custom absolute left-[-40px] top-1/2 -translate-y-1/2 bg-[#8CD565] w-12 h-12 rounded-full flex items-center justify-center shadow-lg z-10">
-            <span className="text-2xl">←</span>
-          </button>
-
-          <button className="swiper-button-next-custom absolute right-[-40px] top-1/2 -translate-y-1/2 bg-[#8CD565] w-12 h-12 rounded-full flex items-center justify-center shadow-lg z-10">
-            <span className="text-2xl">→</span>
-          </button>
-
-          <Swiper
-            modules={[Navigation]}
-            navigation={{
-              nextEl: ".swiper-button-next-custom",
-              prevEl: ".swiper-button-prev-custom",
-            }}
-            slidesPerView={3}
-            centeredSlides={true}
-            loop={true}
-            spaceBetween={20}
-            onSlideChange={(swiper) => {
-              document.querySelectorAll(".swiper-slide").forEach((slide) => {
-                slide.style.transform = "scale(0.8)";
-                slide.style.transition = "0.4s";
-              });
-
-              swiper.slides[swiper.activeIndex].style.transform = "scale(1.2)";
-            }}
-            onInit={(swiper) => {
-              swiper.slides[swiper.activeIndex].style.transform = "scale(1.2)";
-            }}
-            className="pt-10"
-          >
-            {people.map((p, i) => (
-              <SwiperSlide key={i}>
-                <div className=" flex flex-col items-center w-full">
-                  <img
-                    src={p.img}
-                    alt={p.name}
-                    className="w-60 h-60 rounded-3xl object-cover"
-                  />
-                  <h3 className="text-xl text-center font-semibold mt-4">
-                    {p.name}
-                  </h3>
-                  <p className="text-gray-500 text-center">{p.role}</p>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+        <Testimonial></Testimonial>
       </div>
 
       <Cta></Cta>
