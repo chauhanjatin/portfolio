@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        .home-logo-wrapper {
+            margin-top: 2rem;
+        }
+
+        .clients-grid {
+            grid-column-gap: 30px;
+            opacity: 1;
+            flex: none;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-right: 0;
+            display: flex;
+            width: 100rem;
+            animation: slide 35s infinite linear;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(calc(0% + 50px));
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="logos-marquee">
+
+        <div class="home-logo-wrapper reverse">
+            <div class="clients-grid ">
+                <img src="assets/images/learnbud/learnbud1.png" alt="" >
+                <img src="assets/images/learnbud/learnbud2.png" alt="" >
+                <img src="assets/images/learnbud/learnbud3.png" alt="" >
+                <img src="assets/images/learnbud/learnbud4.png" alt="" >
+                <img src="assets/images/learnbud/learnbud5.png" alt="" >
+                <img src="assets/images/learnbud/learnbud6.png" alt="" >
+                <img src="assets/images/learnbud/learnbud7.png" alt="" >
+                <img src="assets/images/learnbud/learnbud8.png" alt="" >
+                <img src="assets/images/learnbud/learnbud9.png" alt="" >
+                <img src="assets/images/learnbud/learnbud10.png" alt="" >
+                <img src="assets/images/learnbud/learnbud11.png" alt="" >
+                <img src="assets/images/learnbud/learnbud12.png" alt="" >
+                <img src="assets/images/learnbud/learnbud13.png" alt="" >
+                <img src="assets/images/learnbud/learnbud14.png" alt="" >
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

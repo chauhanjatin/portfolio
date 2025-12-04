@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import Cta from "../components/Cta";
+import Footer from "../components/Footer";
 import aboutimg from "../assets/images/aboutus-img.png";
 import hand from "../assets/images/hand.png";
 import { Link } from "react-router-dom";
@@ -256,7 +256,7 @@ export default function Aboutus() {
         <Testimonial></Testimonial>
       </div>
 
-      <Cta></Cta>
+      <Footer></Footer>
     </div>
   );
 }

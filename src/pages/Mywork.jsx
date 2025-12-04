@@ -1,455 +1,1101 @@
 import { useState, useRef, useEffect } from "react";
-import filtericon from "../assets/images/icons/filter.svg";
-import heroimg1 from "../assets/images/hero-img1.png";
-import heroimg2 from "../assets/images/hero-img2.png";
-import heroimg3 from "../assets/images/hero-img3.png";
-import heroimg4 from "../assets/images/hero-img4.png";
-import heroimg5 from "../assets/images/hero-img5.png";
-import heroimg6 from "../assets/images/hero-img6.png";
-import heroimg7 from "../assets/images/hero-img7.png";
-import heroimg8 from "../assets/images/hero-img8.png";
-import heroimg9 from "../assets/images/hero-img9.png";
-import demysti from "../assets/images/demysti.png";
+import project1 from "../assets/images/project1.png";
+import project2 from "../assets/images/project2.png";
+import project3 from "../assets/images/project3.png";
+import project4 from "../assets/images/project4.png";
+import project5 from "../assets/images/project5.png";
+import project6 from "../assets/images/project6.png";
+import project7 from "../assets/images/project7.png";
+import project8 from "../assets/images/project8.png";
+import project9 from "../assets/images/project9.png";
+import project10 from "../assets/images/project10.png";
+import project11 from "../assets/images/project11.png";
+import project12 from "../assets/images/project12.png";
 import figmalink from "../assets/images/figma-link.png";
+import link from "../assets/images/link.png";
 import viewProjectArrow from "../assets/images/icons/viewproject-arrow.svg";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 import Cta from "../components/Cta";
 
 export default function Mywork() {
-  const [open, setOpen] = useState(false);
-  const [selected, setSelected] = useState("All");
-  const dropdownRef = useRef(null);
+  const [activeTab, setActiveTab] = useState("All");
 
-  const options = ["All", "Mobile App", "Website", "SaaS App"];
-
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  const handleFilter = (type) => {
+    setActiveTab(type);
+  };
 
   return (
     <div>
       <div className="containerX relative z-10">
-        <div className="flex justify-between items-center mt-10">
-          <h2>Work Showcase</h2>
-
-          <ul className="flex items-center gap-2.5">
-            <li className="py-2 px-10 bg-[#8CD565] rounded-[20px] cursor-pointer">
-              All
-            </li>
-            <li className="py-2 px-10 bg-transparent rounded-[20px] border border-[#1E1E1E] cursor-pointer">
-              Dashboard
-            </li>
-            <li className="py-2 px-10 bg-transparent rounded-[20px] border border-[#1E1E1E] cursor-pointer">
-              Website
-            </li>
-            <li className="py-2 px-10 bg-transparent rounded-[20px] border border-[#1E1E1E] cursor-pointer">
-              App
-            </li>
-          </ul>
-        </div>
-
-        <div className="Portfolio-grid mt-10">
-          <div className="bg-white p-5 rounded-[40px] Portfolio-items">
-            <p>Dashboard</p>
-            <div>
-              <img src={demysti} alt="" />
-            </div>
+        <div className="mt-[160px]">
+          <div className="flex justify-between items-center mt-10">
+            <h2>Work Showcase</h2>
+            <ul className="flex items-center gap-2.5">
+              {["All", "Dashboard", "Website", "App"].map((type) => (
+                <li
+                  key={type}
+                  onClick={() => handleFilter(type)}
+                  className={`py-2 px-10 rounded-[20px] cursor-pointer transition-all duration-300
+      ${
+        activeTab === type
+          ? "bg-[#8CD565] text-black border border-[#8CD565]"
+          : "bg-transparent border border-[#1E1E1E] text-black hover:bg-[#8CD565] hover:text-black hover:border-[#8CD565]"
+      }`}
+                >
+                  {type}
+                </li>
+              ))}
+            </ul>
           </div>
-          <div className="grid gap-10">
-            <div className="relative overflow-hidden rounded-[40px]">
-              <div className="bg-white p-5 ">
-                <p>Dashboard</p>
-                <div>
-                  <img src={demysti} alt="" />
-                </div>
-              </div>
 
-              <div className="Portfolio-contant">
-                <div className="w-full ">
-                  <div className="flex items-center gap-2.5">
-                    <h3 className="text-white">LearnBud AI</h3>
-                    <h4 className="text-white">(AI Learning)</h4>
+          {/* All */}
+          <div
+            className={`All-items ${
+              activeTab === "All" ? "block animate-fade" : "hidden"
+            }`}
+          >
+            <div className="Portfolio-grid">
+              <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
+                <div className="bg-white h-full project-imgage">
+                  <p className="text-[#1F1E1E99] mb-2.5">Dashboard</p>
+                  <div>
+                    <img src={project1} alt="" />
                   </div>
-                  <div className="flex justify-between items-center mt-2.5">
-                    <div>
-                      <Link to="" className="link-items">
-                        <div>
-                          <img src={figmalink} alt="" />
-                        </div>
+                </div>
+                <div className="Portfolio-contant">
+                  <div className="w-full ">
+                    <div className="flex items-center gap-2.5">
+                      <h3 className="text-white">Dmysti5</h3>
+                      <h4 className="text-white">(Cybersecurity)</h4>
+                    </div>
+                    <div className="flex justify-between items-center mt-2.5">
+                      <div>
+                        <Link
+                          to="https://www.figma.com/proto/M1mnxz7Kp2nCc9XfIJj6cO/Demysti5?page-id=281%3A2344&node-id=281-2345&t=iPrv67yWIXXMa402-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=281%3A2345&hide-ui=1"
+                          target="_blank"
+                          className="link-items"
+                        >
+                          <div>
+                            <img src={figmalink} alt="" />
+                          </div>
+                        </Link>
+                      </div>
+
+                      <Link
+                        to="/"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                      >
+                        <h4>View Details</h4>
+                        <img src={viewProjectArrow} alt="" />
                       </Link>
                     </div>
+                  </div>
+                </div>
+              </div>
 
-                    <Link
-                      to="/"
-                      className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
-                    >
-                      <h4>View Details</h4>
-                      <img src={viewProjectArrow} alt="" />
-                    </Link>
+              <div className="grid gap-10">
+                <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
+                  <div className="bg-white p-5 ">
+                    <p className="text-[#1F1E1E99] mb-2.5">Dashboard</p>
+                    <div>
+                      <img src={project2} alt="" />
+                    </div>
+                  </div>
+
+                  <div className="Portfolio-contant">
+                    <div className="w-full ">
+                      <div className="flex items-center gap-2.5">
+                        <h3 className="text-white">Voicing AI</h3>
+                        <h4 className="text-white">(AI Video)</h4>
+                      </div>
+                      <div className="flex justify-between items-center mt-2.5">
+                        <div>
+                          <Link
+                            to="https://www.figma.com/proto/sgyXyzacg0ozPkOn9TGWyv/TheVoicing-Udemy--Internal-?page-id=0%3A1&node-id=1-33693&starting-point-node-id=13%3A4185&t=UTT9WEJBPZcOXfJ0-1"
+                            target="_blank"
+                            className="link-items"
+                          >
+                            <div>
+                              <img src={figmalink} alt="" />
+                            </div>
+                          </Link>
+                        </div>
+
+                        <Link
+                          to="/"
+                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                        >
+                          <h4>View Details</h4>
+                          <img src={viewProjectArrow} alt="" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
+                  <div className="bg-white p-5 ">
+                    <p className="text-[#1F1E1E99] mb-2.5">App</p>
+                    <div>
+                      <img src={project3} alt="" />
+                    </div>
+                  </div>
+
+                  <div className="Portfolio-contant">
+                    <div className="w-full ">
+                      <div className="flex items-center gap-2.5">
+                        <h3 className="text-white">LearnBud AI</h3>
+                        <h4 className="text-white">(AI Learning)</h4>
+                      </div>
+                      <div className="flex justify-between items-center mt-2.5">
+                        <div>
+                          <Link
+                            to="https://www.figma.com/proto/g2R0K4VjNGVWrtIBE1HfTm/Tutor-Note-AI--Final-?page-id=0%3A1&node-id=20-86106&viewport=-1241%2C799%2C0.18&t=15Il487dsvCaB3Qi-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=20%3A86106"
+                            target="_blank"
+                            className="link-items"
+                          >
+                            <div>
+                              <img src={figmalink} alt="" />
+                            </div>
+                          </Link>
+                        </div>
+
+                        <Link
+                          to="/Learnbud"
+                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                        >
+                          <h4>View Details</h4>
+                          <img src={viewProjectArrow} alt="" />
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white p-5 rounded-[40px]">
-              <p>Dashboard</p>
-              <div>
-                <img src={demysti} alt="" />
+            <div className="leftPortfolio-grid ">
+              <div className="grid gap-10">
+                <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
+                  <div className="bg-white p-5 ">
+                    <p className="text-[#1F1E1E99] mb-2.5">Website</p>
+                    <div>
+                      <img src={project4} alt="" />
+                    </div>
+                  </div>
+
+                  <div className="Portfolio-contant">
+                    <div className="w-full ">
+                      <div className="flex items-center gap-2.5">
+                        <h3 className="text-white">Uniqlearn</h3>
+                        <h4 className="text-white">(Learning)</h4>
+                      </div>
+                      <div className="flex justify-between items-center mt-2.5">
+                        <div>
+                          <Link
+                            to="https://www.figma.com/proto/Lpl14RL2PjUJ4d0zj1JK78/Uniqlearn?page-id=0%3A1&node-id=348-517&starting-point-node-id=348%3A517&t=7zHOPtYFpnOM5oZv-1"
+                            target="_blank"
+                            className="link-items"
+                          >
+                            <div>
+                              <img src={figmalink} alt="" />
+                            </div>
+                          </Link>
+                        </div>
+
+                        <Link
+                          to="/"
+                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                        >
+                          <h4>View Details</h4>
+                          <img src={viewProjectArrow} alt="" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
+                  <div className="bg-white p-5 ">
+                    <p className="text-[#1F1E1E99] mb-2.5">App</p>
+                    <div>
+                      <img src={project5} alt="" />
+                    </div>
+                  </div>
+
+                  <div className="Portfolio-contant">
+                    <div className="w-full ">
+                      <div className="flex items-center gap-2.5">
+                        <h3 className="text-white">Workista</h3>
+                        <h4 className="text-white">(Job)</h4>
+                      </div>
+                      <div className="flex justify-between items-center mt-2.5">
+                        <div>
+                          <Link
+                            to="https://www.figma.com/proto/oc2IcbgfPd55Q6yntMc2vE/Workiesta?page-id=820%3A1428&node-id=848-3225&viewport=363%2C826%2C0.34&t=rZWxkLYnW8Cd4xH4-1&scaling=scale-down&content-scaling=fixed"
+                            target="_blank"
+                            className="link-items"
+                          >
+                            <div>
+                              <img src={figmalink} alt="" />
+                            </div>
+                          </Link>
+                        </div>
+
+                        <Link
+                          to="/"
+                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                        >
+                          <h4>View Details</h4>
+                          <img src={viewProjectArrow} alt="" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
+                <div className="bg-white  h-full project-imgage">
+                  <p className="text-[#1F1E1E99] mb-2.5">Website</p>
+                  <div>
+                    <img src={project6} alt="" />
+                  </div>
+                </div>
+                <div className="Portfolio-contant">
+                  <div className="w-full ">
+                    <div className="flex items-center gap-2.5">
+                      <h3 className="text-white">Trudentz</h3>
+                      <h4 className="text-white">(Dental)</h4>
+                    </div>
+                    <div className="flex justify-between items-center mt-2.5">
+                      <div className="flex items-center gap-2.5">
+                        <Link
+                          to="https://www.figma.com/proto/BGFsjBvs58XcZ3K2GjrGSG/Trudentz?page-id=0%3A1&node-id=288-242&viewport=-23%2C293%2C0.07&t=tCYJABtzQnVGwQqq-1&scaling=min-zoom&content-scaling=fixed"
+                          target="_blank"
+                          className="link-items"
+                        >
+                          <div>
+                            <img src={figmalink} alt="" />
+                          </div>
+                        </Link>
+                        <Link
+                          to="https://trudentz.com/"
+                          target="_blank"
+                          className="link-items"
+                        >
+                          <div>
+                            <img src={link} alt="" />
+                          </div>
+                        </Link>
+                      </div>
+
+                      <Link
+                        to="/"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                      >
+                        <h4>View Details</h4>
+                        <img src={viewProjectArrow} alt="" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="Portfolio-grid ">
+              <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
+                <div className="bg-white  h-full project-imgage">
+                  <p className="text-[#1F1E1E99] mb-2.5">Website</p>
+                  <div>
+                    <img src={project7} alt="" />
+                  </div>
+                </div>
+                <div className="Portfolio-contant">
+                  <div className="w-full ">
+                    <div className="flex items-center gap-2.5">
+                      <h3 className="text-white">Cogentshift</h3>
+                      <h4 className="text-white">(Salesforce)</h4>
+                    </div>
+                    <div className="flex justify-between items-center mt-2.5">
+                      <div className="flex items-center gap-2.5">
+                        <Link
+                          to="https://www.figma.com/proto/Lrp1hSDeAewZpTGx8YF9cM/Cogent-Shift?page-id=0%3A1&node-id=259-7420&node-type=frame&t=gAQCSi0oZHcoA0Mx-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=259%3A7420&hide-ui=1"
+                          target="_blank"
+                          className="link-items"
+                        >
+                          <div>
+                            <img src={figmalink} alt="" />
+                          </div>
+                        </Link>
+                        <Link
+                          to="https://cogentshift.com/"
+                          target="_blank"
+                          className="link-items"
+                        >
+                          <div>
+                            <img src={link} alt="" />
+                          </div>
+                        </Link>
+                      </div>
+
+                      <Link
+                        to="/"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                      >
+                        <h4>View Details</h4>
+                        <img src={viewProjectArrow} alt="" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid gap-10">
+                <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
+                  <div className="bg-white p-5 ">
+                    <p className="text-[#1F1E1E99] mb-2.5">Website</p>
+                    <div>
+                      <img src={project8} alt="" />
+                    </div>
+                  </div>
+
+                  <div className="Portfolio-contant">
+                    <div className="w-full ">
+                      <div className="flex items-center gap-2.5">
+                        <h3 className="text-white">Salviali</h3>
+                        <h4 className="text-white">(Ecommerce)</h4>
+                      </div>
+                      <div className="flex justify-between items-center mt-2.5">
+                        <div className="flex items-center gap-2.5">
+                          <Link
+                            to="https://www.figma.com/proto/9I1fVJFTegwqHx109EQX3E/Salviali-Integrated-Medicine?page-id=0%3A1&node-id=251-109&starting-point-node-id=251%3A109&t=elpPQBUcFJGyethU-1"
+                            className="link-items"
+                            target="_blank"
+                          >
+                            <div>
+                              <img src={figmalink} alt="" />
+                            </div>
+                          </Link>
+                          <Link
+                            to="https://salviali.com/"
+                            target="_blank"
+                            className="link-items"
+                          >
+                            <div>
+                              <img src={link} alt="" />
+                            </div>
+                          </Link>
+                        </div>
+
+                        <Link
+                          to="/"
+                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                        >
+                          <h4>View Details</h4>
+                          <img src={viewProjectArrow} alt="" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
+                  <div className="bg-white p-5 ">
+                    <p className="text-[#1F1E1E99] mb-2.5">App</p>
+                    <div>
+                      <img src={project9} alt="" />
+                    </div>
+                  </div>
+
+                  <div className="Portfolio-contant">
+                    <div className="w-full ">
+                      <div className="flex items-center gap-2.5">
+                        <h3 className="text-white">Instant Smile</h3>
+                        <h4 className="text-white">(Dental)</h4>
+                      </div>
+                      <div className="flex justify-between items-center mt-2.5">
+                        <div>
+                          <Link
+                            to="https://www.figma.com/proto/CVSfIxEK6FSOXhTWJiei12/Instant-Smiles?page-id=57%3A53&node-id=76-20226&t=ODlS4EAzhAlHf2Dw-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=76%3A20226&hide-ui=1"
+                            target="_blank"
+                            className="link-items"
+                          >
+                            <div>
+                              <img src={figmalink} alt="" />
+                            </div>
+                          </Link>
+                        </div>
+
+                        <Link
+                          to="/"
+                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                        >
+                          <h4>View Details</h4>
+                          <img src={viewProjectArrow} alt="" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="leftPortfolio-grid ">
+              <div className="grid gap-10">
+                <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
+                  <div className="bg-white p-5 ">
+                    <p className="text-[#1F1E1E99] mb-2.5">Website</p>
+                    <div>
+                      <img src={project11} alt="" />
+                    </div>
+                  </div>
+
+                  <div className="Portfolio-contant">
+                    <div className="w-full ">
+                      <div className="flex items-center gap-2.5">
+                        <h3 className="text-white"> Dermatology</h3>
+                        <h4 className="text-white">(Skin Care)</h4>
+                      </div>
+                      <div className="flex justify-between items-center mt-2.5">
+                        <div>
+                          <Link
+                            to="https://www.figma.com/proto/QCOAQX1eFi13NUGxoJERwV/INTEGRATIVE-DERMATOLOGY?page-id=0%3A1&node-id=1003-418&viewport=-12070%2C-2050%2C0.26&t=nb4HHeETsdKbCV0a-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1003%3A418"
+                            target="_blank"
+                            className="link-items"
+                          >
+                            <div>
+                              <img src={figmalink} alt="" />
+                            </div>
+                          </Link>
+                        </div>
+
+                        <Link
+                          to="/"
+                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                        >
+                          <h4>View Details</h4>
+                          <img src={viewProjectArrow} alt="" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
+                  <div className="bg-white p-5 ">
+                    <p className="text-[#1F1E1E99] mb-2.5">App</p>
+                    <div>
+                      <img src={project12} alt="" />
+                    </div>
+                  </div>
+
+                  <div className="Portfolio-contant">
+                    <div className="w-full ">
+                      <div className="flex items-center gap-2.5">
+                        <h3 className="text-white">Arouzed</h3>
+                        <h4 className="text-white">(Dating)</h4>
+                      </div>
+                      <div className="flex justify-between items-center mt-2.5">
+                        <div>
+                          <Link
+                            to="https://www.figma.com/proto/2Uhw839q3KSYMhIAyImSZH/Final-Arouzed?page-id=0%3A1&node-id=113-1547&t=92OP6TmcQADF75wX-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=113%3A1629&hide-ui=1"
+                            target="_blank"
+                            className="link-items"
+                          >
+                            <div>
+                              <img src={figmalink} alt="" />
+                            </div>
+                          </Link>
+                        </div>
+
+                        <Link
+                          to="/"
+                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                        >
+                          <h4>View Details</h4>
+                          <img src={viewProjectArrow} alt="" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
+                <div className="bg-white  h-full project-imgage">
+                  <p className="text-[#1F1E1E99] mb-2.5">Website</p>
+                  <div>
+                    <img src={project10} alt="" />
+                  </div>
+                </div>
+                <div className="Portfolio-contant">
+                  <div className="w-full ">
+                    <div className="flex items-center gap-2.5">
+                      <h3 className="text-white">Youniverse Home Care</h3>
+                      <h4 className="text-white">(Health Care)</h4>
+                    </div>
+                    <div className="flex justify-between items-center mt-2.5">
+                      <div className="flex  items-center gap-2.5">
+                        <Link
+                          to="https://www.figma.com/proto/jRY59POwQdbsne6IiYD8Xq/Youniverse-Home-Care?page-id=0%3A1&node-id=303-1233&t=95gj1ofl2bGYnq5Y-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=303%3A1233&hide-ui=1"
+                          target="_blank"
+                          className="link-items"
+                        >
+                          <div>
+                            <img src={figmalink} alt="" />
+                          </div>
+                        </Link>
+                        <Link
+                          to="https://ynhc.com.au/"
+                          target="_blank"
+                          className="link-items"
+                        >
+                          <div>
+                            <img src={link} alt="" />
+                          </div>
+                        </Link>
+                      </div>
+
+                      <Link
+                        to="/"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                      >
+                        <h4>View Details</h4>
+                        <img src={viewProjectArrow} alt="" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Dashboard */}
+          <div
+            className={`Dashboard-items ${
+              activeTab === "Dashboard" ? "block animate-fade" : "hidden"
+            }`}
+          >
+            <div className="Dashboard-grid  mt-10">
+              <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
+                <div className="bg-white p-5">
+                  <p className="text-[#1F1E1E99] mb-2.5">Dashboard</p>
+                  <div>
+                    <img src={project4} alt="" />
+                  </div>
+                </div>
+                <div className="Portfolio-contant">
+                  <div className="w-full ">
+                    <div className="flex items-center gap-2.5">
+                      <h3 className="text-white">Uniqlearn</h3>
+                      <h4 className="text-white">(Learning)</h4>
+                    </div>
+                    <div className="flex justify-between items-center mt-2.5">
+                      <div>
+                        <Link
+                          to="https://www.figma.com/proto/Lpl14RL2PjUJ4d0zj1JK78/Uniqlearn?page-id=0%3A1&node-id=348-517&starting-point-node-id=348%3A517&t=7zHOPtYFpnOM5oZv-1"
+                          target="_blank"
+                          className="link-items"
+                        >
+                          <div>
+                            <img src={figmalink} alt="" />
+                          </div>
+                        </Link>
+                      </div>
+
+                      <Link
+                        to="/"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                      >
+                        <h4>View Details</h4>
+                        <img src={viewProjectArrow} alt="" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
+                <div className="bg-white p-5">
+                  <p className="text-[#1F1E1E99] mb-2.5">Dashboard</p>
+                  <div>
+                    <img src={project1} alt="" />
+                  </div>
+                </div>
+                <div className="Portfolio-contant">
+                  <div className="w-full ">
+                    <div className="flex items-center gap-2.5">
+                      <h3 className="text-white">Dmysti5</h3>
+                      <h4 className="text-white">(Cybersecurity)</h4>
+                    </div>
+                    <div className="flex justify-between items-center mt-2.5">
+                      <div>
+                        <Link
+                          to="https://www.figma.com/proto/M1mnxz7Kp2nCc9XfIJj6cO/Demysti5?page-id=281%3A2344&node-id=281-2345&t=iPrv67yWIXXMa402-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=281%3A2345&hide-ui=1"
+                          target="_blank"
+                          className="link-items"
+                        >
+                          <div>
+                            <img src={figmalink} alt="" />
+                          </div>
+                        </Link>
+                      </div>
+
+                      <Link
+                        to="/Learnbud"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                      >
+                        <h4>View Details</h4>
+                        <img src={viewProjectArrow} alt="" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
+                <div className="bg-white p-5">
+                  <p>Dashboard</p>
+                  <div>
+                    <img src={project2} alt="" />
+                  </div>
+                </div>
+                <div className="Portfolio-contant">
+                  <div className="w-full ">
+                    <div className="flex items-center gap-2.5">
+                      <h3 className="text-white">Voicing AI</h3>
+                      <h4 className="text-white">(AI Video)</h4>
+                    </div>
+                    <div className="flex justify-between items-center mt-2.5">
+                      <div>
+                        <Link
+                          to="https://www.figma.com/proto/sgyXyzacg0ozPkOn9TGWyv/TheVoicing-Udemy--Internal-?page-id=0%3A1&node-id=1-33693&starting-point-node-id=13%3A4185&t=UTT9WEJBPZcOXfJ0-1"
+                          target="_blank"
+                          className="link-items"
+                        >
+                          <div>
+                            <img src={figmalink} alt="" />
+                          </div>
+                        </Link>
+                      </div>
+
+                      <Link
+                        to="/"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                      >
+                        <h4>View Details</h4>
+                        <img src={viewProjectArrow} alt="" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Website */}
+          <div
+            className={`Website-items ${
+              activeTab === "Website" ? "block animate-fade" : "hidden"
+            }`}
+          >
+            <div className="Website-grid  mt-10">
+              <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
+                <div className="bg-white p-5">
+                  <p className="text-[#1F1E1E99] mb-2.5">Website</p>
+                  <div>
+                    <img src={project6} alt="" />
+                  </div>
+                </div>
+                <div className="Portfolio-contant">
+                  <div className="w-full ">
+                    <div className="flex items-center gap-2.5">
+                      <h3 className="text-white">Trudentz</h3>
+                      <h4 className="text-white">(Dental)</h4>
+                    </div>
+                    <div className="flex justify-between items-center mt-2.5">
+                      <div className="flex items-center gap-2.5">
+                        <Link
+                          to="https://www.figma.com/proto/BGFsjBvs58XcZ3K2GjrGSG/Trudentz?page-id=0%3A1&node-id=288-242&viewport=-23%2C293%2C0.07&t=tCYJABtzQnVGwQqq-1&scaling=min-zoom&content-scaling=fixed"
+                          target="_blank"
+                          className="link-items"
+                        >
+                          <div>
+                            <img src={figmalink} alt="" />
+                          </div>
+                        </Link>
+                        <Link
+                          to="https://trudentz.com/"
+                          target="_blank"
+                          className="link-items"
+                        >
+                          <div>
+                            <img src={link} alt="" />
+                          </div>
+                        </Link>
+                      </div>
+
+                      <Link
+                        to="/"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                      >
+                        <h4>View Details</h4>
+                        <img src={viewProjectArrow} alt="" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
+                <div className="bg-white p-5">
+                  <p className="text-[#1F1E1E99] mb-2.5">Website</p>
+                  <div>
+                    <img src={project7} alt="" />
+                  </div>
+                </div>
+                <div className="Portfolio-contant">
+                  <div className="w-full ">
+                    <div className="flex items-center gap-2.5">
+                      <h3 className="text-white">Cogentshift</h3>
+                      <h4 className="text-white">(Salesforce)</h4>
+                    </div>
+                    <div className="flex justify-between items-center mt-2.5">
+                      <div className="flex items-center gap-2.5">
+                        <Link
+                          to="https://www.figma.com/proto/Lrp1hSDeAewZpTGx8YF9cM/Cogent-Shift?page-id=0%3A1&node-id=259-7420&node-type=frame&t=gAQCSi0oZHcoA0Mx-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=259%3A7420&hide-ui=1"
+                          target="_blank"
+                          className="link-items"
+                        >
+                          <div>
+                            <img src={figmalink} alt="" />
+                          </div>
+                        </Link>
+                        <Link
+                          to="https://cogentshift.com/"
+                          target="_blank"
+                          className="link-items"
+                        >
+                          <div>
+                            <img src={link} alt="" />
+                          </div>
+                        </Link>
+                      </div>
+
+                      <Link
+                        to="/"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                      >
+                        <h4>View Details</h4>
+                        <img src={viewProjectArrow} alt="" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
+                <div className="bg-white p-5">
+                  <p className="text-[#1F1E1E99] mb-2.5">Website</p>
+                  <div>
+                    <img src={project8} alt="" />
+                  </div>
+                </div>
+                <div className="Portfolio-contant">
+                  <div className="w-full ">
+                    <div className="flex items-center gap-2.5">
+                      <h3 className="text-white">Salviali</h3>
+                      <h4 className="text-white">(Ecommerce)</h4>
+                    </div>
+                    <div className="flex justify-between items-center mt-2.5">
+                      <div className="flex items-center gap-2.5">
+                        <Link
+                          to="https://www.figma.com/proto/9I1fVJFTegwqHx109EQX3E/Salviali-Integrated-Medicine?page-id=0%3A1&node-id=251-109&starting-point-node-id=251%3A109&t=elpPQBUcFJGyethU-1"
+                          className="link-items"
+                          target="_blank"
+                        >
+                          <div>
+                            <img src={figmalink} alt="" />
+                          </div>
+                        </Link>
+                        <Link
+                          to="https://salviali.com/"
+                          target="_blank"
+                          className="link-items"
+                        >
+                          <div>
+                            <img src={link} alt="" />
+                          </div>
+                        </Link>
+                      </div>
+
+                      <Link
+                        to="/"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                      >
+                        <h4>View Details</h4>
+                        <img src={viewProjectArrow} alt="" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
+                <div className="bg-white p-5">
+                  <p className="text-[#1F1E1E99] mb-2.5">Website</p>
+                  <div>
+                    <img src={project10} alt="" />
+                  </div>
+                </div>
+                <div className="Portfolio-contant">
+                  <div className="w-full ">
+                    <div className="flex items-center gap-2.5">
+                      <h3 className="text-white">Youniverse Home Care</h3>
+                      <h4 className="text-white">(Health Care)</h4>
+                    </div>
+                    <div className="flex justify-between items-center mt-2.5">
+                      <div className="flex  items-center gap-2.5">
+                        <Link
+                          to="https://www.figma.com/proto/jRY59POwQdbsne6IiYD8Xq/Youniverse-Home-Care?page-id=0%3A1&node-id=303-1233&t=95gj1ofl2bGYnq5Y-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=303%3A1233&hide-ui=1"
+                          target="_blank"
+                          className="link-items"
+                        >
+                          <div>
+                            <img src={figmalink} alt="" />
+                          </div>
+                        </Link>
+                        <Link
+                          to="https://ynhc.com.au/"
+                          target="_blank"
+                          className="link-items"
+                        >
+                          <div>
+                            <img src={link} alt="" />
+                          </div>
+                        </Link>
+                      </div>
+
+                      <Link
+                        to="/"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                      >
+                        <h4>View Details</h4>
+                        <img src={viewProjectArrow} alt="" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
+                <div className="bg-white p-5">
+                  <p className="text-[#1F1E1E99] mb-2.5">Website</p>
+                  <div>
+                    <img src={project11} alt="" />
+                  </div>
+                </div>
+                <div className="Portfolio-contant">
+                  <div className="w-full ">
+                    <div className="flex items-center gap-2.5">
+                      <h3 className="text-white"> Dermatology</h3>
+                      <h4 className="text-white">(Skin Care)</h4>
+                    </div>
+                    <div className="flex justify-between items-center mt-2.5">
+                      <div>
+                        <Link
+                          to="https://www.figma.com/proto/QCOAQX1eFi13NUGxoJERwV/INTEGRATIVE-DERMATOLOGY?page-id=0%3A1&node-id=1003-418&viewport=-12070%2C-2050%2C0.26&t=nb4HHeETsdKbCV0a-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1003%3A418"
+                          target="_blank"
+                          className="link-items"
+                        >
+                          <div>
+                            <img src={figmalink} alt="" />
+                          </div>
+                        </Link>
+                      </div>
+
+                      <Link
+                        to="/"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                      >
+                        <h4>View Details</h4>
+                        <img src={viewProjectArrow} alt="" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* App */}
+          <div
+            className={`App-items ${
+              activeTab === "App" ? "block animate-fade" : "hidden"
+            }`}
+          >
+            <div className="App-grid  mt-10">
+              <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
+                <div className="bg-white p-5">
+                  <p className="text-[#1F1E1E99] mb-2.5">App</p>
+                  <div>
+                    <img src={project3} alt="" />
+                  </div>
+                </div>
+                <div className="Portfolio-contant">
+                  <div className="w-full ">
+                    <div className="flex items-center gap-2.5">
+                      <h3 className="text-white">LearnBud AI</h3>
+                      <h4 className="text-white">(AI Learning)</h4>
+                    </div>
+                    <div className="flex justify-between items-center mt-2.5">
+                      <div>
+                        <Link
+                          to="https://www.figma.com/proto/g2R0K4VjNGVWrtIBE1HfTm/Tutor-Note-AI--Final-?page-id=0%3A1&node-id=20-86106&viewport=-1241%2C799%2C0.18&t=15Il487dsvCaB3Qi-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=20%3A86106"
+                          target="_blank"
+                          className="link-items"
+                        >
+                          <div>
+                            <img src={figmalink} alt="" />
+                          </div>
+                        </Link>
+                      </div>
+
+                      <Link
+                        to="/Learnbud"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                      >
+                        <h4>View Details</h4>
+                        <img src={viewProjectArrow} alt="" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
+                <div className="bg-white p-5">
+                  <p className="text-[#1F1E1E99] mb-2.5">App</p>
+                  <div>
+                    <img src={project5} alt="" />
+                  </div>
+                </div>
+                <div className="Portfolio-contant">
+                  <div className="w-full ">
+                    <div className="flex items-center gap-2.5">
+                      <h3 className="text-white">Workista</h3>
+                      <h4 className="text-white">(Job)</h4>
+                    </div>
+                    <div className="flex justify-between items-center mt-2.5">
+                      <div>
+                        <Link
+                          to="https://www.figma.com/proto/oc2IcbgfPd55Q6yntMc2vE/Workiesta?page-id=820%3A1428&node-id=848-3225&viewport=363%2C826%2C0.34&t=rZWxkLYnW8Cd4xH4-1&scaling=scale-down&content-scaling=fixed"
+                          target="_blank"
+                          className="link-items"
+                        >
+                          <div>
+                            <img src={figmalink} alt="" />
+                          </div>
+                        </Link>
+                      </div>
+
+                      <Link
+                        to="/"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                      >
+                        <h4>View Details</h4>
+                        <img src={viewProjectArrow} alt="" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
+                <div className="bg-white p-5">
+                  <p className="text-[#1F1E1E99] mb-2.5">App</p>
+                  <div>
+                    <img src={project9} alt="" />
+                  </div>
+                </div>
+                <div className="Portfolio-contant">
+                  <div className="w-full ">
+                    <div className="flex items-center gap-2.5">
+                      <h3 className="text-white">Instant Smile</h3>
+                      <h4 className="text-white">(Dental)</h4>
+                    </div>
+                    <div className="flex justify-between items-center mt-2.5">
+                      <div>
+                        <Link
+                          to="https://www.figma.com/proto/CVSfIxEK6FSOXhTWJiei12/Instant-Smiles?page-id=57%3A53&node-id=76-20226&t=ODlS4EAzhAlHf2Dw-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=76%3A20226&hide-ui=1"
+                          target="_blank"
+                          className="link-items"
+                        >
+                          <div>
+                            <img src={figmalink} alt="" />
+                          </div>
+                        </Link>
+                      </div>
+
+                      <Link
+                        to="/"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                      >
+                        <h4>View Details</h4>
+                        <img src={viewProjectArrow} alt="" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
+                <div className="bg-white p-5">
+                  <p className="text-[#1F1E1E99] mb-2.5">App</p>
+                  <div>
+                    <img src={project12} alt="" />
+                  </div>
+                </div>
+                <div className="Portfolio-contant">
+                  <div className="w-full ">
+                    <div className="flex items-center gap-2.5">
+                      <h3 className="text-white">Arouzed</h3>
+                      <h4 className="text-white">(Dating)</h4>
+                    </div>
+                    <div className="flex justify-between items-center mt-2.5">
+                      <div>
+                        <Link
+                          to="https://www.figma.com/proto/2Uhw839q3KSYMhIAyImSZH/Final-Arouzed?page-id=0%3A1&node-id=113-1547&t=92OP6TmcQADF75wX-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=113%3A1629&hide-ui=1"
+                          target="_blank"
+                          className="link-items"
+                        >
+                          <div>
+                            <img src={figmalink} alt="" />
+                          </div>
+                        </Link>
+                      </div>
+
+                      <Link
+                        to="/"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                      >
+                        <h4>View Details</h4>
+                        <img src={viewProjectArrow} alt="" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
+        <Cta></Cta>
       </div>
 
-      <div className="containerX relative z-10 hidden">
-        <div className="mt-[160px] flex justify-between">
-          <h2 className="text-[#1E1E1E]">Work Showcase</h2>
-
-          <div ref={dropdownRef} className="relative inline-block filter-items">
-            <div
-              onClick={() => setOpen(!open)}
-              className="filter-btn flex items-center justify-between gap-2 px-4 w-[180px] h-[40px] rounded-full bg-white cursor-pointer"
-            >
-              <span>{selected}</span>
-              <img src={filtericon} alt="" />
-            </div>
-
-            {open && (
-              <ul className="absolute left-0 mt-2 w-40 bg-white rounded-xl shadow-md overflow-hidden z-20">
-                {options.map((item) => (
-                  <li
-                    key={item}
-                    onClick={() => {
-                      setSelected(item);
-                      setOpen(false);
-                    }}
-                    className={`py-2 px-4 cursor-pointer hover:bg-[#8CD565] ${
-                      selected === item ? "bg-[#8CD565]" : ""
-                    }`}
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-start mt-[60px]">
-          <div className="col-span-1 md:col-span-2 relative group overflow-hidden rounded-[40px]">
-            <img
-              className="w-full h-auto rounded-[40px] block"
-              src={heroimg1}
-              alt=""
-            />
-
-            <div
-              className="absolute w-[calc(100%-20px)] left-1/2 -translate-x-1/2 bg-white rounded-[29px] py-4 px-5 bottom-[-120%] group-hover:bottom-2.5   
-            transition-all duration-700 ease-in-out"
-            >
-              <div className="flex items-center gap-2.5">
-                <h3>Overc360</h3>
-                <span className="text-[#3E3B3980]">(Transport)</span>
-              </div>
-
-              <p className="mt-2">
-                lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                eu turpis molestie, dictum est a, mattis tellus.
-              </p>
-
-              <div className="mt-3 flex justify-end">
-                <Link
-                  to="/"
-                  className="flex gap-2.5 bg-[#1F1E1E1A] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
-                >
-                  <h4>View Project</h4>
-                  <img src={viewProjectArrow} alt="" />
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid gap-4">
-            <div className="relative group overflow-hidden rounded-[40px]">
-              <img
-                className="w-full h-auto rounded-[40px]"
-                src={heroimg2}
-                alt=""
-              />
-              <div
-                className="absolute w-[calc(100%-20px)] left-1/2 -translate-x-1/2 bg-white rounded-[29px] py-4 px-5 bottom-[-120%] group-hover:bottom-2.5   
-            transition-all duration-700 ease-in-out"
-              >
-                <div className="flex items-center gap-2.5">
-                  <h3>Trudentz</h3>
-                  <span className="text-[#3E3B3980]">(Dental)</span>
-                </div>
-                <p className="mt-2">
-                  Trudentz is a multispeciality dental & orthodontic centre that
-                  blends advanced digital dentistry with aesthetic precision. It
-                  offers services like Digital Smile Design (using in-house DTS
-                  PRO software), braces/aligners, implants, and biomimetic
-                  restorations.
-                </p>
-                <div className="mt-3 flex justify-end">
-                  <Link
-                    to="/"
-                    className="flex gap-2.5 bg-[#1F1E1E1A] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
-                  >
-                    <h4>View Project</h4>
-                    <img src={viewProjectArrow} alt="" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative group overflow-hidden rounded-[40px]">
-              <img
-                className="w-full h-auto rounded-[40px]"
-                src={heroimg3}
-                alt=""
-              />
-
-              <div
-                className="absolute w-[calc(100%-20px)] left-1/2 -translate-x-1/2 bg-white rounded-[29px] py-4 px-5 bottom-[-120%] group-hover:bottom-2.5   
-            transition-all duration-700 ease-in-out"
-              >
-                <div className="flex items-center gap-2.5">
-                  <h3>Overc360</h3>
-                  <span className="text-[#3E3B3980]">(Transport)</span>
-                </div>
-
-                <p className="mt-2">
-                  lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  eu turpis molestie, dictum est a, mattis tellus.
-                </p>
-
-                <div className="mt-3 flex justify-end">
-                  <Link
-                    to="/"
-                    className="flex gap-2.5 bg-[#1F1E1E1A] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
-                  >
-                    <h4>View Project</h4>
-                    <img src={viewProjectArrow} alt="" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid gap-4">
-            <div className="relative group overflow-hidden rounded-[40px]">
-              <img
-                className="w-full h-auto rounded-[40px]"
-                src={heroimg4}
-                alt=""
-              />
-
-              <div
-                className="absolute w-[calc(100%-20px)] left-1/2 -translate-x-1/2 bg-white rounded-[29px] py-4 px-5 bottom-[-120%] group-hover:bottom-2.5   
-            transition-all duration-700 ease-in-out"
-              >
-                <div className="flex items-center gap-2.5">
-                  <h3>Overc360</h3>
-                  <span className="text-[#3E3B3980]">(Transport)</span>
-                </div>
-
-                <p className="mt-2">
-                  lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  eu turpis molestie, dictum est a, mattis tellus.
-                </p>
-
-                <div className="mt-3 flex justify-end">
-                  <Link
-                    to="/"
-                    className="flex gap-2.5 bg-[#1F1E1E1A] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
-                  >
-                    <h4>View Project</h4>
-                    <img src={viewProjectArrow} alt="" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative group overflow-hidden rounded-[40px]">
-              <img
-                className="w-full h-auto rounded-[40px]"
-                src={heroimg5}
-                alt=""
-              />
-
-              <div
-                className="absolute w-[calc(100%-20px)] left-1/2 -translate-x-1/2 bg-white rounded-[29px] py-4 px-5 bottom-[-120%] group-hover:bottom-2.5   
-            transition-all duration-700 ease-in-out"
-              >
-                <div className="flex items-center gap-2.5">
-                  <h3>Overc360</h3>
-                  <span className="text-[#3E3B3980]">(Transport)</span>
-                </div>
-
-                <p className="mt-2">
-                  lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  eu turpis molestie, dictum est a, mattis tellus.
-                </p>
-
-                <div className="mt-3 flex justify-end">
-                  <Link
-                    to="/project-details-1"
-                    className="flex gap-2.5 bg-[#1F1E1E1A] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
-                  >
-                    <h4>View Project</h4>
-                    <img src={viewProjectArrow} alt="" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid gap-4">
-            <div className="relative group overflow-hidden rounded-[40px]">
-              <img
-                className="w-full h-auto rounded-[40px]"
-                src={heroimg6}
-                alt=""
-              />
-              <div
-                className="absolute w-[calc(100%-20px)] left-1/2 -translate-x-1/2 bg-white rounded-[29px] py-4 px-5 bottom-[-120%] group-hover:bottom-2.5   
-            transition-all duration-700 ease-in-out"
-              >
-                <div className="flex items-center gap-2.5">
-                  <h3>Trudentz</h3>
-                  <span className="text-[#3E3B3980]">(Dental)</span>
-                </div>
-                <p className="mt-2">
-                  Trudentz is a multispeciality dental & orthodontic centre that
-                  blends advanced digital dentistry with aesthetic precision. It
-                  offers services like Digital Smile Design (using in-house DTS
-                  PRO software), braces/aligners, implants, and biomimetic
-                  restorations.
-                </p>
-                <div className="mt-3 flex justify-end">
-                  <Link
-                    to="/"
-                    className="flex gap-2.5 bg-[#1F1E1E1A] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
-                  >
-                    <h4>View Project</h4>
-                    <img src={viewProjectArrow} alt="" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative group overflow-hidden rounded-[40px]">
-              <img
-                className="w-full h-auto rounded-[40px]"
-                src={heroimg7}
-                alt=""
-              />
-
-              <div
-                className="absolute w-[calc(100%-20px)] left-1/2 -translate-x-1/2 bg-white rounded-[29px] py-4 px-5 bottom-[-120%] group-hover:bottom-2.5   
-            transition-all duration-700 ease-in-out"
-              >
-                <div className="flex items-center gap-2.5">
-                  <h3>Overc360</h3>
-                  <span className="text-[#3E3B3980]">(Transport)</span>
-                </div>
-
-                <p className="mt-2">
-                  lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  eu turpis molestie, dictum est a, mattis tellus.
-                </p>
-
-                <div className="mt-3 flex justify-end">
-                  <Link
-                    to="/"
-                    className="flex gap-2.5 bg-[#1F1E1E1A] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
-                  >
-                    <h4>View Project</h4>
-                    <img src={viewProjectArrow} alt="" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid gap-4">
-            <div className="relative group overflow-hidden rounded-[40px]">
-              <img
-                className="w-full h-auto rounded-[40px]"
-                src={heroimg8}
-                alt=""
-              />
-
-              <div
-                className="absolute w-[calc(100%-20px)] left-1/2 -translate-x-1/2 bg-white rounded-[29px] py-4 px-5 bottom-[-120%] group-hover:bottom-2.5   
-            transition-all duration-700 ease-in-out"
-              >
-                <div className="flex items-center gap-2.5">
-                  <h3>Overc360</h3>
-                  <span className="text-[#3E3B3980]">(Transport)</span>
-                </div>
-
-                <p className="mt-2">
-                  lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  eu turpis molestie, dictum est a, mattis tellus.
-                </p>
-
-                <div className="mt-3 flex justify-end">
-                  <Link
-                    to="/"
-                    className="flex gap-2.5 bg-[#1F1E1E1A] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
-                  >
-                    <h4>View Project</h4>
-                    <img src={viewProjectArrow} alt="" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative group overflow-hidden rounded-[40px]">
-              <img
-                className="w-full h-auto rounded-[40px]"
-                src={heroimg9}
-                alt=""
-              />
-
-              <div
-                className="absolute w-[calc(100%-20px)] left-1/2 -translate-x-1/2 bg-white rounded-[29px] py-4 px-5 bottom-[-120%] group-hover:bottom-2.5   
-            transition-all duration-700 ease-in-out"
-              >
-                <div className="flex items-center gap-2.5">
-                  <h3>Overc360</h3>
-                  <span className="text-[#3E3B3980]">(Transport)</span>
-                </div>
-
-                <p className="mt-2">
-                  lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  eu turpis molestie, dictum est a, mattis tellus.
-                </p>
-
-                <div className="mt-3 flex justify-end">
-                  <Link
-                    to="/"
-                    className="flex gap-2.5 bg-[#1F1E1E1A] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
-                  >
-                    <h4>View Project</h4>
-                    <img src={viewProjectArrow} alt="" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <Cta></Cta>
+      <Footer></Footer>
     </div>
   );
 }

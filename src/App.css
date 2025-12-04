@@ -12,7 +12,7 @@ h1 {
 
 h2 {
   font-size: 50px;
-  line-height: 50px;
+  line-height: 55px;
 }
 
 h3 {
@@ -346,22 +346,43 @@ p {
 .Portfolio-grid {
   display: grid;
   grid-template-columns: auto 400px;
-  grid-gap: 20px;
+  grid-gap: 42px;
+  margin-top: 42px;
+}
+
+.leftPortfolio-grid {
+  display: grid;
+  grid-template-columns: 400px auto;
+  grid-gap: 42px;
+  margin-top: 42px;
+}
+
+.Website-grid,
+.Dashboard-grid,
+.App-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 42px;
 }
 
 .Portfolio-contant {
   background: linear-gradient(
     180deg,
     rgba(30, 30, 30, 0) 0%,
-    rgba(30, 30, 30, 0.6) 115.35%
+    rgba(30, 30, 30, 0.8) 115.35%
   );
   padding: 20px;
   position: absolute;
   width: 100%;
-  bottom: 0;
+  bottom: -100%;
   height: 170px;
   display: flex;
   align-items: end;
+  transition: 0.3s;
+}
+
+.Portfolio-items:hover .Portfolio-contant {
+  bottom: 0;
 }
 
 .link-items {
@@ -408,6 +429,27 @@ p {
 .link-items:hover img {
   opacity: 0;
 }
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade {
+  animation: fade 0.35s ease-in-out;
+}
+
+.project-imgage {
+  padding: 20px 20px 0 20px;
+}
+
+
 
 @media screen and (min-width: 1600px) and (max-width: 1799px) {
   .containerX {

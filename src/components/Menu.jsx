@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Menu() {
   const menuItems = [
@@ -9,7 +9,9 @@ export default function Menu() {
     { label: "Hire Me", path: "/hireme" },
   ];
 
-  const [active, setActive] = useState(0);
+  const location = useLocation();
+  const currentPath = location.pathname;
+
   const [open, setOpen] = useState(false);
 
   return (
@@ -65,29 +67,30 @@ export default function Menu() {
             `}
           >
             <ul className="text-[#1E1E1E] text-[18px] sm:text-[20px] md:text-[22px]">
-              {menuItems.map((item, index) => (
-                <li key={index}>
-                  <Link
-                    to={item.path}
-                    onClick={() => {
-                      setActive(index);
-                      setOpen(false);
-                    }}
-                    className={`
-                      py-2 sm:py-2.5 
-                      px-[40px] sm:px-[50px] md:px-[60px] 
-                      rounded-[100px] block transition-all 
-                      ${
-                        active === index
-                          ? "bg-black text-white"
-                          : "bg-transparent text-[#1E1E1E]"
-                      }
-                    `}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
+              {menuItems.map((item, index) => {
+                const isActive = currentPath === item.path;
+
+                return (
+                  <li key={index}>
+                    <Link
+                      to={item.path}
+                      onClick={() => setOpen(false)}
+                      className={`
+                        py-2 sm:py-2.5 
+                        px-[40px] sm:px-[50px] md:px-[60px] 
+                        rounded-[100px] block transition-all 
+                        ${
+                          isActive
+                            ? "bg-black text-white"
+                            : "bg-transparent text-[#1E1E1E]"
+                        }
+                      `}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
