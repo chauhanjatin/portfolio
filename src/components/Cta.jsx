@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Cta() {
@@ -10,7 +9,7 @@ export default function Cta() {
             Start a Conversation That <br /> Brings Ideas to Life
           </h2>
           <div >
-            <Link to="/" className="bg-[#8CD565] py-3 px-6 border-[#8CD565] border border-1 rounded-[40px] text-center inline-block transition-all duration-300 hover:bg-transparent hover:border-black">
+            <Link to="/contactus" className="bg-[#8CD565] py-3 px-6 border-[#8CD565] border border-1 rounded-[40px] text-center inline-block transition-all duration-300 hover:bg-transparent hover:border-black">
               <h4 className="font-light text-nowrap">Say "Hello Jatin"</h4>
             </Link>
           </div>

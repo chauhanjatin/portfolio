@@ -42,7 +42,7 @@ export default function Contactus() {
             </div>
 
             <div className="mt-8">
-              <button className="w-full bg-black text-white py-3 rounded-[40px] text-lg font-light">
+              <button className="w-full bg-black hover:bg-transparent border border-[#1E1E1E] hover:text-black   text-white py-3 rounded-[40px] text-lg font-light transition-all duration-300">
                 Send Message
               </button>
             </div>

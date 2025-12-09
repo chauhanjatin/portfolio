@@ -50,8 +50,8 @@ export default function Mywork() {
           </div>
 
           {/* All */}
-          <div
-            className={`All-items ${
+
+          <div className={`All-items ${
               activeTab === "All" ? "block animate-fade" : "hidden"
             }`}
           >
@@ -63,6 +63,7 @@ export default function Mywork() {
                     <img src={project1} alt="" />
                   </div>
                 </div>
+
                 <div className="Portfolio-contant">
                   <div className="w-full ">
                     <div className="flex items-center gap-2.5">
@@ -83,7 +84,7 @@ export default function Mywork() {
                       </div>
 
                       <Link
-                        to="/"
+                        to="/project/dmysti5"
                         className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
                       >
                         <h4>View Details</h4>
@@ -96,7 +97,7 @@ export default function Mywork() {
 
               <div className="grid gap-10">
                 <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
-                  <div className="bg-white p-5 ">
+                  <div className="bg-white p-5 h-full ">
                     <p className="text-[#1F1E1E99] mb-2.5">Dashboard</p>
                     <div>
                       <img src={project2} alt="" />
@@ -107,7 +108,7 @@ export default function Mywork() {
                     <div className="w-full ">
                       <div className="flex items-center gap-2.5">
                         <h3 className="text-white">Voicing AI</h3>
-                        <h4 className="text-white">(AI Video)</h4>
+                        <h4 className="text-white">(AI Learning)</h4>
                       </div>
                       <div className="flex justify-between items-center mt-2.5">
                         <div>
@@ -123,7 +124,7 @@ export default function Mywork() {
                         </div>
 
                         <Link
-                          to="/"
+                          to="/project/voicing"
                           className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
                         >
                           <h4>View Details</h4>
@@ -135,7 +136,7 @@ export default function Mywork() {
                 </div>
 
                 <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
-                  <div className="bg-white p-5 ">
+                  <div className="bg-white p-5 h-full ">
                     <p className="text-[#1F1E1E99] mb-2.5">App</p>
                     <div>
                       <img src={project3} alt="" />
@@ -162,7 +163,7 @@ export default function Mywork() {
                         </div>
 
                         <Link
-                          to="/Learnbud"
+                          to="/project/learnbud"
                           className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
                         >
                           <h4>View Details</h4>
@@ -178,7 +179,7 @@ export default function Mywork() {
             <div className="leftPortfolio-grid ">
               <div className="grid gap-10">
                 <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
-                  <div className="bg-white p-5 ">
+                  <div className="bg-white p-5 h-full ">
                     <p className="text-[#1F1E1E99] mb-2.5">Website</p>
                     <div>
                       <img src={project4} alt="" />
@@ -186,10 +187,10 @@ export default function Mywork() {
                   </div>
 
                   <div className="Portfolio-contant">
-                    <div className="w-full ">
+                    <div className="w-full">
                       <div className="flex items-center gap-2.5">
                         <h3 className="text-white">Uniqlearn</h3>
-                        <h4 className="text-white">(Learning)</h4>
+                        <h4 className="text-white">(AI Learning)</h4>
                       </div>
                       <div className="flex justify-between items-center mt-2.5">
                         <div>
@@ -205,7 +206,7 @@ export default function Mywork() {
                         </div>
 
                         <Link
-                          to="/"
+                          to="/project/uniqLearn"
                           className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
                         >
                           <h4>View Details</h4>
@@ -217,7 +218,7 @@ export default function Mywork() {
                 </div>
 
                 <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
-                  <div className="bg-white p-5 ">
+                  <div className="bg-white p-5 h-full ">
                     <p className="text-[#1F1E1E99] mb-2.5">App</p>
                     <div>
                       <img src={project5} alt="" />
@@ -228,7 +229,7 @@ export default function Mywork() {
                     <div className="w-full ">
                       <div className="flex items-center gap-2.5">
                         <h3 className="text-white">Workista</h3>
-                        <h4 className="text-white">(Job)</h4>
+                        <h4 className="text-white">(AI Learning)</h4>
                       </div>
                       <div className="flex justify-between items-center mt-2.5">
                         <div>
@@ -244,7 +245,7 @@ export default function Mywork() {
                         </div>
 
                         <Link
-                          to="/"
+                          to="/project/workista"
                           className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
                         >
                           <h4>View Details</h4>
@@ -256,6 +257,7 @@ export default function Mywork() {
                 </div>
               </div>
 
+              {/* Trudentz */}
               <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
                 <div className="bg-white  h-full project-imgage">
                   <p className="text-[#1F1E1E99] mb-2.5">Website</p>
@@ -267,7 +269,7 @@ export default function Mywork() {
                   <div className="w-full ">
                     <div className="flex items-center gap-2.5">
                       <h3 className="text-white">Trudentz</h3>
-                      <h4 className="text-white">(Dental)</h4>
+                      <h4 className="text-white">(AI Learning)</h4>
                     </div>
                     <div className="flex justify-between items-center mt-2.5">
                       <div className="flex items-center gap-2.5">
@@ -292,7 +294,7 @@ export default function Mywork() {
                       </div>
 
                       <Link
-                        to="/"
+                        to="/project/trudentz"
                         className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
                       >
                         <h4>View Details</h4>
@@ -316,7 +318,7 @@ export default function Mywork() {
                   <div className="w-full ">
                     <div className="flex items-center gap-2.5">
                       <h3 className="text-white">Cogentshift</h3>
-                      <h4 className="text-white">(Salesforce)</h4>
+                      <h4 className="text-white">(AI Learning)</h4>
                     </div>
                     <div className="flex justify-between items-center mt-2.5">
                       <div className="flex items-center gap-2.5">
@@ -341,7 +343,7 @@ export default function Mywork() {
                       </div>
 
                       <Link
-                        to="/"
+                        to="/project/cogentshift"
                         className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
                       >
                         <h4>View Details</h4>
@@ -354,7 +356,7 @@ export default function Mywork() {
 
               <div className="grid gap-10">
                 <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
-                  <div className="bg-white p-5 ">
+                  <div className="bg-white p-5 h-full ">
                     <p className="text-[#1F1E1E99] mb-2.5">Website</p>
                     <div>
                       <img src={project8} alt="" />
@@ -365,14 +367,13 @@ export default function Mywork() {
                     <div className="w-full ">
                       <div className="flex items-center gap-2.5">
                         <h3 className="text-white">Salviali</h3>
-                        <h4 className="text-white">(Ecommerce)</h4>
+                        <h4 className="text-white">(AI Learning)</h4>
                       </div>
                       <div className="flex justify-between items-center mt-2.5">
                         <div className="flex items-center gap-2.5">
                           <Link
                             to="https://www.figma.com/proto/9I1fVJFTegwqHx109EQX3E/Salviali-Integrated-Medicine?page-id=0%3A1&node-id=251-109&starting-point-node-id=251%3A109&t=elpPQBUcFJGyethU-1"
                             className="link-items"
-                            target="_blank"
                           >
                             <div>
                               <img src={figmalink} alt="" />
@@ -380,7 +381,6 @@ export default function Mywork() {
                           </Link>
                           <Link
                             to="https://salviali.com/"
-                            target="_blank"
                             className="link-items"
                           >
                             <div>
@@ -390,7 +390,7 @@ export default function Mywork() {
                         </div>
 
                         <Link
-                          to="/"
+                          to="/project/salviali"
                           className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
                         >
                           <h4>View Details</h4>
@@ -402,7 +402,7 @@ export default function Mywork() {
                 </div>
 
                 <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
-                  <div className="bg-white p-5 ">
+                  <div className="bg-white p-5 h-full ">
                     <p className="text-[#1F1E1E99] mb-2.5">App</p>
                     <div>
                       <img src={project9} alt="" />
@@ -413,7 +413,7 @@ export default function Mywork() {
                     <div className="w-full ">
                       <div className="flex items-center gap-2.5">
                         <h3 className="text-white">Instant Smile</h3>
-                        <h4 className="text-white">(Dental)</h4>
+                        <h4 className="text-white">(AI Learning)</h4>
                       </div>
                       <div className="flex justify-between items-center mt-2.5">
                         <div>
@@ -429,7 +429,7 @@ export default function Mywork() {
                         </div>
 
                         <Link
-                          to="/"
+                          to="/project/instantsmiles"
                           className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
                         >
                           <h4>View Details</h4>
@@ -445,7 +445,7 @@ export default function Mywork() {
             <div className="leftPortfolio-grid ">
               <div className="grid gap-10">
                 <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
-                  <div className="bg-white p-5 ">
+                  <div className="bg-white p-5 h-full ">
                     <p className="text-[#1F1E1E99] mb-2.5">Website</p>
                     <div>
                       <img src={project11} alt="" />
@@ -456,7 +456,7 @@ export default function Mywork() {
                     <div className="w-full ">
                       <div className="flex items-center gap-2.5">
                         <h3 className="text-white"> Dermatology</h3>
-                        <h4 className="text-white">(Skin Care)</h4>
+                        <h4 className="text-white">(AI Learning)</h4>
                       </div>
                       <div className="flex justify-between items-center mt-2.5">
                         <div>
@@ -472,7 +472,7 @@ export default function Mywork() {
                         </div>
 
                         <Link
-                          to="/"
+                          to="/project/integrativedermatology"
                           className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
                         >
                           <h4>View Details</h4>
@@ -484,7 +484,7 @@ export default function Mywork() {
                 </div>
 
                 <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
-                  <div className="bg-white p-5 ">
+                  <div className="bg-white p-5 h-full ">
                     <p className="text-[#1F1E1E99] mb-2.5">App</p>
                     <div>
                       <img src={project12} alt="" />
@@ -495,7 +495,7 @@ export default function Mywork() {
                     <div className="w-full ">
                       <div className="flex items-center gap-2.5">
                         <h3 className="text-white">Arouzed</h3>
-                        <h4 className="text-white">(Dating)</h4>
+                        <h4 className="text-white">(AI Learning)</h4>
                       </div>
                       <div className="flex justify-between items-center mt-2.5">
                         <div>
@@ -511,7 +511,7 @@ export default function Mywork() {
                         </div>
 
                         <Link
-                          to="/"
+                          to="/project/arouzed"
                           className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
                         >
                           <h4>View Details</h4>
@@ -534,7 +534,7 @@ export default function Mywork() {
                   <div className="w-full ">
                     <div className="flex items-center gap-2.5">
                       <h3 className="text-white">Youniverse Home Care</h3>
-                      <h4 className="text-white">(Health Care)</h4>
+                      <h4 className="text-white">(AI Learning)</h4>
                     </div>
                     <div className="flex justify-between items-center mt-2.5">
                       <div className="flex  items-center gap-2.5">
@@ -559,7 +559,7 @@ export default function Mywork() {
                       </div>
 
                       <Link
-                        to="/"
+                        to="/project/youniversalhomecare"
                         className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
                       >
                         <h4>View Details</h4>
@@ -573,14 +573,13 @@ export default function Mywork() {
           </div>
 
           {/* Dashboard */}
-          <div
-            className={`Dashboard-items ${
+          <div className={`Dashboard-items ${
               activeTab === "Dashboard" ? "block animate-fade" : "hidden"
             }`}
           >
             <div className="Dashboard-grid  mt-10">
               <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
-                <div className="bg-white p-5">
+                <div className="bg-white p-5 h-full">
                   <p className="text-[#1F1E1E99] mb-2.5">Dashboard</p>
                   <div>
                     <img src={project4} alt="" />
@@ -606,7 +605,7 @@ export default function Mywork() {
                       </div>
 
                       <Link
-                        to="/"
+                        to="/project/uniqLearn"
                         className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
                       >
                         <h4>View Details</h4>
@@ -618,7 +617,7 @@ export default function Mywork() {
               </div>
 
               <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
-                <div className="bg-white p-5">
+                <div className="bg-white p-5 h-full">
                   <p className="text-[#1F1E1E99] mb-2.5">Dashboard</p>
                   <div>
                     <img src={project1} alt="" />
@@ -644,7 +643,7 @@ export default function Mywork() {
                       </div>
 
                       <Link
-                        to="/Learnbud"
+                        to="/project/dmysti5"
                         className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
                       >
                         <h4>View Details</h4>
@@ -656,7 +655,7 @@ export default function Mywork() {
               </div>
 
               <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
-                <div className="bg-white p-5">
+                <div className="bg-white p-5 h-full">
                   <p>Dashboard</p>
                   <div>
                     <img src={project2} alt="" />
@@ -682,7 +681,7 @@ export default function Mywork() {
                       </div>
 
                       <Link
-                        to="/"
+                        to="/project/voicing"
                         className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
                       >
                         <h4>View Details</h4>
@@ -696,14 +695,13 @@ export default function Mywork() {
           </div>
 
           {/* Website */}
-          <div
-            className={`Website-items ${
+          <div className={`Website-items ${
               activeTab === "Website" ? "block animate-fade" : "hidden"
             }`}
           >
             <div className="Website-grid  mt-10">
               <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
-                <div className="bg-white p-5">
+                <div className="bg-white p-5 h-full">
                   <p className="text-[#1F1E1E99] mb-2.5">Website</p>
                   <div>
                     <img src={project6} alt="" />
@@ -738,7 +736,7 @@ export default function Mywork() {
                       </div>
 
                       <Link
-                        to="/"
+                        to="/project/trudentz"
                         className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
                       >
                         <h4>View Details</h4>
@@ -750,7 +748,7 @@ export default function Mywork() {
               </div>
 
               <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
-                <div className="bg-white p-5">
+                <div className="bg-white p-5 h-full">
                   <p className="text-[#1F1E1E99] mb-2.5">Website</p>
                   <div>
                     <img src={project7} alt="" />
@@ -785,7 +783,7 @@ export default function Mywork() {
                       </div>
 
                       <Link
-                        to="/"
+                        to="/project/cogentshift"
                         className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
                       >
                         <h4>View Details</h4>
@@ -797,7 +795,7 @@ export default function Mywork() {
               </div>
 
               <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
-                <div className="bg-white p-5">
+                <div className="bg-white p-5 h-full">
                   <p className="text-[#1F1E1E99] mb-2.5">Website</p>
                   <div>
                     <img src={project8} alt="" />
@@ -832,7 +830,7 @@ export default function Mywork() {
                       </div>
 
                       <Link
-                        to="/"
+                        to="/project/salviali"
                         className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
                       >
                         <h4>View Details</h4>
@@ -844,7 +842,7 @@ export default function Mywork() {
               </div>
 
               <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
-                <div className="bg-white p-5">
+                <div className="bg-white p-5 h-full">
                   <p className="text-[#1F1E1E99] mb-2.5">Website</p>
                   <div>
                     <img src={project10} alt="" />
@@ -879,7 +877,7 @@ export default function Mywork() {
                       </div>
 
                       <Link
-                        to="/"
+                        to="/project/youniversalhomecare"
                         className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
                       >
                         <h4>View Details</h4>
@@ -891,7 +889,7 @@ export default function Mywork() {
               </div>
 
               <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
-                <div className="bg-white p-5">
+                <div className="bg-white p-5 h-full">
                   <p className="text-[#1F1E1E99] mb-2.5">Website</p>
                   <div>
                     <img src={project11} alt="" />
@@ -917,7 +915,7 @@ export default function Mywork() {
                       </div>
 
                       <Link
-                        to="/"
+                        to="/project/integrativedermatology"
                         className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
                       >
                         <h4>View Details</h4>
@@ -931,14 +929,13 @@ export default function Mywork() {
           </div>
 
           {/* App */}
-          <div
-            className={`App-items ${
+          <div className={`App-items ${
               activeTab === "App" ? "block animate-fade" : "hidden"
             }`}
           >
             <div className="App-grid  mt-10">
               <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
-                <div className="bg-white p-5">
+                <div className="bg-white p-5 h-full">
                   <p className="text-[#1F1E1E99] mb-2.5">App</p>
                   <div>
                     <img src={project3} alt="" />
@@ -964,7 +961,7 @@ export default function Mywork() {
                       </div>
 
                       <Link
-                        to="/Learnbud"
+                        to="/project/learnbud"
                         className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
                       >
                         <h4>View Details</h4>
@@ -976,7 +973,7 @@ export default function Mywork() {
               </div>
 
               <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
-                <div className="bg-white p-5">
+                <div className="bg-white p-5 h-full">
                   <p className="text-[#1F1E1E99] mb-2.5">App</p>
                   <div>
                     <img src={project5} alt="" />
@@ -1002,7 +999,7 @@ export default function Mywork() {
                       </div>
 
                       <Link
-                        to="/"
+                        to="/project/workista"
                         className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
                       >
                         <h4>View Details</h4>
@@ -1014,7 +1011,7 @@ export default function Mywork() {
               </div>
 
               <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
-                <div className="bg-white p-5">
+                <div className="bg-white p-5 h-full">
                   <p className="text-[#1F1E1E99] mb-2.5">App</p>
                   <div>
                     <img src={project9} alt="" />
@@ -1040,7 +1037,7 @@ export default function Mywork() {
                       </div>
 
                       <Link
-                        to="/"
+                        to="/project/instantsmiles"
                         className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
                       >
                         <h4>View Details</h4>
@@ -1052,7 +1049,7 @@ export default function Mywork() {
               </div>
 
               <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
-                <div className="bg-white p-5">
+                <div className="bg-white p-5 h-full">
                   <p className="text-[#1F1E1E99] mb-2.5">App</p>
                   <div>
                     <img src={project12} alt="" />
@@ -1078,7 +1075,7 @@ export default function Mywork() {
                       </div>
 
                       <Link
-                        to="/"
+                        to="/project/arouzed"
                         className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
                       >
                         <h4>View Details</h4>
@@ -1090,8 +1087,8 @@ export default function Mywork() {
               </div>
             </div>
           </div>
-        </div>
 
+        </div>
         <Cta></Cta>
       </div>
 

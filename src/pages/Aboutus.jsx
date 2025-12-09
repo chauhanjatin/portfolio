@@ -16,7 +16,6 @@ import ukicon from "../assets/images/icons/uk-icon.svg";
 import useicon from "../assets/images/icons/use-icon.svg";
 import Testimonial from "../components/Testimonial";
 
-
 export default function Aboutus() {
   const containerRef = useRef(null);
   const [progress, setProgress] = useState(0);
@@ -103,7 +102,7 @@ export default function Aboutus() {
           </h1>
           <h2 className="mt-[20px] font-medium flex gap-2 items-center">
             I Am
-            <span className="bg-[#8CD565] rounded-[100px] py-[6px] px-[36px] inline-block">
+            {/* <span className="bg-[#8CD565] rounded-[100px] py-[6px] px-[36px] inline-block">
               <div className="relative h-[50px] overflow-hidden text-white">
                 <div className="slide-text">
                   <span>UI/UX</span>
@@ -112,13 +111,14 @@ export default function Aboutus() {
                   <span>Website</span>
                 </div>
               </div>
-            </span>
+            </span> */}
+            <span className="typewriter text-[#8CD565]"></span>
             Designer & Developer
           </h2>
 
           <div>
             <Link
-              to="/"
+             to="/contactus"
               className="my-[50px] border border-[#1E1E1E] py-3 px-6 inline-flex rounded-[40px] font-light transition-all duration-300 hover:bg-[#8CD565] hover:border-transparent"
             >
               <h4>Say "Hello Jatin"</h4>
@@ -151,7 +151,7 @@ export default function Aboutus() {
                   return (
                     <div
                       key={index}
-                      className="relative flex flex-col items-center pt-2 pb-20"
+                      className="relative flex flex-col items-center pt-2 dot-items"
                     >
                       <div
                         className={`w-5 h-5 rounded-full border-[5px] ${
@@ -167,18 +167,25 @@ export default function Aboutus() {
 
               <div className="flex flex-col gap-8 w-full">
                 {steps.map((step, index) => (
-                  <div key={index}>
+                  <div key={index} className="">
                     <div className="flex justify-between items-center">
                       <div className="flex items-center gap-2.5">
                         <h3 className="font-medium ">{step.title}</h3>
                         <img src={step.images} alt="" />
                       </div>
-                      <h4 className="text-[#1E1E1E] font-light">
-                        {step.duration}
-                      </h4>
+                      <div>
+                        <span className="text-[#1E1E1E80] text-sm">Year </span>
+                        <h4
+                          className="text-[#1E1E1E] font-light text-base">
+                          {step.duration}
+                        </h4>
+                      </div>
                     </div>
+
                     <ul className=" font-normal mt-2.5">
-                      <li className="text-[#1E1E1E80]">{step.bullets[0]}</li>
+                      <li className="text-[#1E1E1E80] border-b-1 pb-2.5 border-b border-[rgb(231 231 231)] ">
+                        {step.bullets[0]}
+                      </li>
                     </ul>
                   </div>
                 ))}

@@ -3,6 +3,7 @@
 body {
   background-color: #f4f4f4;
   font-family: "Geologica", sans-serif;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -257,7 +258,7 @@ p {
 }
 
 .circle-text {
-  animation: rotate-animation 10s infinite linear;
+  animation: rotate-animation 18s infinite linear;
 }
 
 @keyframes rotate-animation {
@@ -282,8 +283,13 @@ p {
   transform: translate(-50%, -50%);
 }
 
-.logos:before,
-.logos:after {
+.img-marquee{
+  position: relative;
+  margin-top: 80px;
+}
+
+.img-marquee:before,
+.img-marquee:after {
   position: absolute;
   top: 0;
   content: "";
@@ -292,7 +298,7 @@ p {
   z-index: 2;
 }
 
-.logos:before {
+.img-marquee:before {
   left: 0;
   background: linear-gradient(
     to left,
@@ -301,7 +307,7 @@ p {
   );
 }
 
-.logos:after {
+.img-marquee:after {
   right: 0;
   background: linear-gradient(
     to right,
@@ -311,29 +317,31 @@ p {
 }
 
 .logos {
-  overflow: hidden;
-  padding: 30px 0px;
-  white-space: nowrap;
-  position: relative;
+  grid-column-gap: 30px;
+  opacity: 1;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  display: grid;
+  width: 300rem;
+  animation: slide 35s infinite linear;
 }
 
-.logo_items {
-  display: inline-block;
-  margin-right: 30px;
-  animation: 5s slides infinite linear;
-}
-
-@keyframes slides {
-  from {
-    transform: translate(0, 0);
+@keyframes slide {
+  0% {
+    transform: translateX(calc(0% + 50px));
   }
-
-  to {
-    transform: translateX(-50%);
+  100% {
+    transform: translateX(-100%);
   }
 }
 
-.logos:hover .logo_items {
+.logo_items img {
+  max-width: inherit;
+}
+
+.logos:hover {
   animation-play-state: paused;
 }
 
@@ -449,7 +457,220 @@ p {
   padding: 20px 20px 0 20px;
 }
 
+.dot-items {
+  padding-bottom: 102px;
+}
 
+/* Typewriter effect 1 */
+.typing-text::after {
+  content: "";
+  animation: typing 12s steps(20) infinite;
+}
+
+@keyframes typing {
+  /* UI/UX */
+  0%,
+  5% {
+    content: "";
+  }
+  1% {
+    content: "U";
+  }
+  2% {
+    content: "UI";
+  }
+  3% {
+    content: "UI/";
+  }
+  4% {
+    content: "UI/U";
+  }
+  5% {
+    content: "UI/UX";
+  }
+
+  /* erase UI/UX */
+  10% {
+    content: "UI/UX";
+  }
+  12% {
+    content: "UI/U";
+  }
+  14% {
+    content: "UI/";
+  }
+  16% {
+    content: "UI";
+  }
+  18% {
+    content: "U";
+  }
+  20% {
+    content: "";
+  }
+
+  /* Brand */
+  21% {
+    content: "B";
+  }
+  22% {
+    content: "Br";
+  }
+  23% {
+    content: "Bra";
+  }
+  24% {
+    content: "Bran";
+  }
+  25% {
+    content: "Brand";
+  }
+
+  /* erase Brand */
+  30% {
+    content: "Brand";
+  }
+  32% {
+    content: "Bran";
+  }
+  34% {
+    content: "Bra";
+  }
+  36% {
+    content: "Br";
+  }
+  38% {
+    content: "B";
+  }
+  40% {
+    content: "";
+  }
+
+  /* Product */
+  41% {
+    content: "P";
+  }
+  42% {
+    content: "Pr";
+  }
+  43% {
+    content: "Pro";
+  }
+  44% {
+    content: "Prod";
+  }
+  45% {
+    content: "Produ";
+  }
+  46% {
+    content: "Produc";
+  }
+  47% {
+    content: "Product";
+  }
+
+  /* erase Product */
+  52% {
+    content: "Product";
+  }
+  54% {
+    content: "Produc";
+  }
+  56% {
+    content: "Produ";
+  }
+  58% {
+    content: "Prod";
+  }
+  60% {
+    content: "Pro";
+  }
+  62% {
+    content: "Pr";
+  }
+  64% {
+    content: "P";
+  }
+  66% {
+    content: "";
+  }
+
+  /* Website */
+  67% {
+    content: "W";
+  }
+  68% {
+    content: "We";
+  }
+  69% {
+    content: "Web";
+  }
+  70% {
+    content: "Webs";
+  }
+  71% {
+    content: "Websi";
+  }
+  72% {
+    content: "Websit";
+  }
+  73% {
+    content: "Website";
+  }
+
+  /* erase Website */
+  80% {
+    content: "Website";
+  }
+  82% {
+    content: "Websit";
+  }
+  84% {
+    content: "Websi";
+  }
+  86% {
+    content: "Webs";
+  }
+  88% {
+    content: "Web";
+  }
+  90% {
+    content: "We";
+  }
+  92% {
+    content: "W";
+  }
+  94% {
+    content: "";
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.typewriter {
+  --caret: currentcolor;
+  width: 210px;
+  text-align: center;
+}
+
+.typewriter::before {
+  content: "";
+  animation: typing 12s infinite;
+}
+
+.typewriter::after {
+  content: "";
+  border-right: 1px solid var(--caret);
+  animation: blink 0.5s linear infinite;
+}
 
 @media screen and (min-width: 1600px) and (max-width: 1799px) {
   .containerX {

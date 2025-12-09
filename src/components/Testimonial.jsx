@@ -59,17 +59,6 @@ export default function Testimonial() {
       <div>
         <h2 className="text-center mt-[100px]">Voices of Trust & Success</h2>
         {/* Dynamic Text */}
-        <p className="text-[24px] mt-[60px] text-[#1E1E1E80] font-light client-text relative z-10 mx-auto max-w-4xl leading-relaxed text-center">
-          <FontAwesomeIcon
-            icon={faQuoteLeft}
-            className="text-[40px] text-[#8CD565] relative top-[-10px] mr-2"
-          />
-          {activeText}
-          <FontAwesomeIcon
-            icon={faQuoteRight}
-            className="text-[40px] text-[#8CD565] relative top-[-6px] ml-2"
-          />
-        </p>
       </div>
 
       {/* Slider Section */}
@@ -129,6 +118,17 @@ export default function Testimonial() {
           ))}
         </Swiper>
       </div>
+          <p className="text-[24px] mt-[20px] text-[#1E1E1E80] font-light client-text relative z-10 mx-auto max-w-4xl leading-relaxed text-center">
+          <FontAwesomeIcon
+            icon={faQuoteLeft}
+            className="text-[40px] text-[#8CD565] relative top-[-10px] mr-2"
+          />
+          {activeText}
+          <FontAwesomeIcon
+            icon={faQuoteRight}
+            className="text-[40px] text-[#8CD565] relative top-[-6px] ml-2"
+          />
+        </p>
     </div>
   );
 }

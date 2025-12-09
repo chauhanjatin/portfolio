@@ -8,9 +8,9 @@ import Hero from "./pages/Hero";
 import Aboutus from "./pages/Aboutus";
 import Mywork from "./pages/Mywork";
 import Hireme from "./pages/Hireme";
-import Learnbud from "./pages/Learnbud";
 import Contactus from "./pages/Contactus";
 import ScrollToTop from "./components/ScrollToTop";
+import ProjectPage from "./pages/ProjectPage";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -35,6 +35,7 @@ function App() {
       {loading && <Loader />}
 
       <ScrollToTop />
+
       <Navbar />
       <Menu />
 
@@ -43,10 +44,9 @@ function App() {
         <Route path="/about" element={<Aboutus />} />
         <Route path="/mywork" element={<Mywork />} />
         <Route path="/hireme" element={<Hireme />} />
-        <Route path="/learnbud" element={<Learnbud />} />
         <Route path="/contactus" element={<Contactus />} />
+        <Route path="/project/:slug" element={<ProjectPage />} />
       </Routes>
-      
     </>
   );
 }
