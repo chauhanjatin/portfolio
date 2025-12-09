@@ -73,6 +73,7 @@ export default function Hero() {
           </div>
 
           <div>
+            <h2>Latest Work</h2>
             <div className="Portfolio-grid">
               <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
                 <div className="bg-white h-full project-imgage">
