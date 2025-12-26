@@ -30,14 +30,16 @@ export default function Mywork() {
       <div className="containerX relative z-10">
         
         <div className="mt-[160px]">
-          <div className="flex justify-between items-center mt-10">
+          <div className="mt-10
+    grid  gap-4
+    sm:flex sm:justify-between sm:items-center">
             <h2>Work Showcase</h2>
             <ul className="flex items-center gap-2.5">
               {["All", "Dashboard", "Website", "App"].map((type) => (
                 <li
                   key={type}
                   onClick={() => handleFilter(type)}
-                  className={`py-2 px-10 rounded-[20px] cursor-pointer transition-all duration-300
+                  className={`py-2 sm:px-10 px-3 rounded-[20px] cursor-pointer transition-all duration-300
       ${
         activeTab === type
           ? "bg-[--primary-color] text-black border border-[--primary-color]"

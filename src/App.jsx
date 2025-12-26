@@ -19,7 +19,7 @@ function App() {
   const location = useLocation();
   useEffect(() => {
     setLoading(true);
-    const timer = setTimeout(() => setLoading(false), 1200);
+    const timer = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(timer);
   }, [location.pathname]);
   useEffect(() => {
@@ -31,16 +31,12 @@ function App() {
   }, [loading]);
   return (
     <>
-
       {loading && <Loader />}
-
       <ScrollToTop />
       <CustomCursor />
-
       <Navbar />
-      <Header />    
+      <Header />
       <Colortheme />
-
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/about" element={<Aboutus />} />
@@ -49,7 +45,6 @@ function App() {
         <Route path="/contactus" element={<Contactus />} />
         <Route path="/project/:slug" element={<ProjectPage />} />
       </Routes>
-      
     </>
   );
 }

@@ -6,6 +6,7 @@ export default function Colortheme() {
     const savedIndex = localStorage.getItem("themeColorIndex");
     return savedIndex !== null ? Number(savedIndex) : 0;
   });
+
   useEffect(() => {
     document.documentElement.style.setProperty(
       "--primary-color",
@@ -13,8 +14,9 @@ export default function Colortheme() {
     );
     localStorage.setItem("themeColorIndex", activeIndex);
   }, [activeIndex]);
+
   return (
-    <div className="fixed top-1/2 left-[30px] -translate-y-1/2 z-10">
+    <div className="fixed top-1/2 left-[30px] -translate-y-1/2 z-[9999]">
       <ul className="grid gap-4">
         {colors.map((color, index) => (
           <li
@@ -25,8 +27,7 @@ export default function Colortheme() {
               border-2 transition-all border-dashed
               ${activeIndex === index ? "border-black" : "border-transparent"}
             `}
-            style={{ backgroundColor: color }}
-          />
+            style={{ backgroundColor: color }}/>
         ))}
       </ul>
     </div>

@@ -16,12 +16,14 @@ import viewProjectArrow from "../assets/images/icons/viewproject-arrow.svg";
 
 export default function Hero() {
   return (
+    
     <div>
       <div className="containerX relative z-10">
         <div className="text-center">
-          <div className="h-[calc(100vh-70px)] flex justify-center items-center">
+        
+          <div className="sm:h-[calc(100vh-70px)] h-full flex justify-center items-center">
             <div>
-              <div className="flex justify-center">
+              <div className="flex justify-center sm:mt-0 mt-6">
                 <div className="mb-2.5 py-2 px-2.5 inline-flex items-center gap-2.5 bg-white rounded-[80px]">
                   <div>
                     <img src={satisfiedclients} alt="" />
@@ -33,11 +35,11 @@ export default function Hero() {
               </div>
 
               <h1 className="text-[#1F1E1E]">
-                I design digital experiences that connect brands with users
+                I design digital experiences that connec brands with users
                 through creativity and strategy.
               </h1>
 
-              <h4 className="text-[#1F1E1E80] mt-[30px] mx-[126px]">
+              <h4 className="text-[#1F1E1E80] mt-[30px] sm:mx-[126px] mx-[20px]">
                 Creative UI/UX Designer with 10+ years of experience crafting
                 responsive, user-focused web and mobile apps. Blending
                 aesthetics with functionality, I help brands build seamless and
@@ -45,7 +47,7 @@ export default function Hero() {
                 value.
               </h4>
 
-              <div>
+              <div>  
                 <Link
                   to="/contactus"
                   className="xl:mt-[80px] lg:mt-[50px] mt-[50px] bg-[--primary-color] py-3 px-6 border-[--primary-color] border border-1 inline-flex rounded-[40px] transition-all duration-300 hover:bg-transparent hover:border hover:border-black"
@@ -54,7 +56,7 @@ export default function Hero() {
                 </Link>
               </div>
 
-              <div className="flex justify-center items-center xl:mt-[60px] mt-[40px] gap-5">
+              <div className="sm:flex grid justify-center items-center xl:mt-[60px] mt-[40px] gap-5">
                 <h4 className="italic">Also explore my creative side</h4>
                 <div>
                   <Link
@@ -100,10 +102,8 @@ export default function Hero() {
                         </Link>
                       </div>
 
-                      <Link
-                        to="/project/dmysti5"
-                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
-                      >
+                      <Link to="/project/dmysti5"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]">
                         <h4>View Details</h4>
                         <img src={viewProjectArrow} alt="" />
                       </Link>
@@ -330,19 +330,19 @@ export default function Hero() {
               <h4>View All</h4>
             </Link>
           </div>
+
         </div>
       </div>
 
       <Footer></Footer>
 
-      <Link
-        className="upwork-logo"
+      <Link className="upwork-logo hidden sm:block"
         to="https://upwork.com/freelancers/jatinchauhan"
-        target="_blank"
-      >
+        target="_blank">
         <img src={upworkring} alt="" className="circle-text" />
         <img src={uplogo} alt="" className="upwork-icon" />
-      </Link>
+      </Link>      
     </div>
+
   );
 }

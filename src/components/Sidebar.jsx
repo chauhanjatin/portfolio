@@ -33,9 +33,9 @@ export default function Sidebar({ open, setOpen }) {
     >
       <div className="w-full">
         <div className="containerX ">
-          <div className="grid grid-cols-2 gap-40 lg:gap-56">
+          <div className="grid sm:grid-cols-2 grid-cols-1 sm:gap-40 gap-30 lg:gap-56">
             <div className="flex justify-center">
-              <ul className="text-[#1E1E1E] lg:space-y-16 space-y-14">
+              <ul className="text-[#1E1E1E] lg:space-y-16 sm:space-y-14 space-y-6">
                 {menuItems.map((item, index) => {
                   const isActive = currentPath === item.path;
                   return (
@@ -55,7 +55,7 @@ export default function Sidebar({ open, setOpen }) {
                         onClick={() => setOpen(false)}
                         className={`
                       group inline-flex items-center gap-6 rounded-full
-                      lg:text-[60px] text-[50px] font-bold
+                      lg:text-[60px] sm:text-[50px] text-[30px] font-bold
                       transition-colors duration-300
                       ${isActive ? "text-white" : "text-[#1E1E1E]"}
                       `}
@@ -76,8 +76,7 @@ export default function Sidebar({ open, setOpen }) {
                           transition-transform duration-500 ease-out
                           will-change-transform
                           group-hover:scale-110
-                          "
-                        >
+                          ">
                           {item.label}
                         </span>
                       </Link>
@@ -87,7 +86,7 @@ export default function Sidebar({ open, setOpen }) {
               </ul>
             </div>
 
-            <div className="flex">
+            <div className="flex ">
               <div>
                 <p
                   style={{ transitionDelay: "0ms" }}
@@ -207,11 +206,18 @@ export default function Sidebar({ open, setOpen }) {
                   </li>
                 </ul>
 
-                <h4 className="italic text-[20px] lg:text-[22px] mt-12">
+                <h4
+                  style={{ transitionDelay: "480ms" }}
+                  className={`italic text-[20px] lg:text-[22px] mt-12 duration-700  ${
+                    open
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-8"
+                  }`}
+                >
                   Also explore my creative side
                 </h4>
                 <div
-                  style={{ transitionDelay: "480ms" }}
+                  style={{ transitionDelay: "540ms" }}
                   className={`flex items-center transition-all mt-5 duration-700 ease-in-out
       ${open ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
                 >
@@ -228,7 +234,6 @@ export default function Sidebar({ open, setOpen }) {
                     </Link>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
