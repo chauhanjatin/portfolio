@@ -17,7 +17,7 @@ import viewProjectArrow from "../assets/images/icons/viewproject-arrow.svg";
 export default function Hero() {
   return (
     
-    <div>
+    <div >
       <div className="containerX relative z-10">
         <div className="text-center">
         
@@ -60,7 +60,7 @@ export default function Hero() {
                 <h4 className="italic">Also explore my creative side</h4>
                 <div>
                   <Link
-                    className="flex gap-2.5"
+                    className="flex gap-2.5 justify-center sm:justify-normal "
                     to="https://www.instagram.com/jatin.an.artist"
                     target="_blank"
                   >
@@ -73,7 +73,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div>
+          <div className="sm:mt-0 mt-10">
             <h2>Latest Work</h2>
             <div className="Portfolio-grid">
               <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
@@ -112,7 +112,7 @@ export default function Hero() {
                 </div>
               </div>
 
-              <div className="grid gap-10">
+              <div className="grid sm:gap-10 gap-[20px]">
                 <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
                   <div className="bg-white p-5 ">
                     <p className="text-[#1F1E1E99] mb-2.5 text-start">Dashboard</p>
@@ -194,7 +194,7 @@ export default function Hero() {
             </div>
 
             <div className="leftPortfolio-grid ">
-              <div className="grid gap-10">
+              <div className="grid sm:gap-10 gap-[20px]">
                 <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
                   <div className="bg-white p-5 ">
                     <p className="text-[#1F1E1E99] mb-2.5 text-start">Website</p>

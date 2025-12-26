@@ -209,7 +209,7 @@ export default function Sidebar({ open, setOpen }) {
 
                 <h4
                   style={{ transitionDelay: "480ms" }}
-                  className={`italic text-[20px] lg:text-[22px] mt-12 duration-700  ${
+                  className={`italic text-[20px] lg:text-[22px] sm:mt-12 mt-8 duration-700  ${
                     open
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 translate-y-8"

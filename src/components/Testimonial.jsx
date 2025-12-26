@@ -62,14 +62,14 @@ export default function Testimonial() {
       </div>
 
       {/* Slider Section */}
-      <div className="relative w-full max-w-5xl mx-auto mt-10">
+      <div className="relative w-full  mx-auto mt-10 Testimonial-slider">
         {/* PREV BUTTON */}
-        <button className="swiper-button-prev-custom absolute left-[-40px] top-1/2 -translate-y-1/2 bg-[--primary-color] w-12 h-12 rounded-full flex items-center justify-center shadow-lg z-10">
+        <button className="swiper-button-prev-custom absolute left-[-40px] top-1/2 -translate-y-1/2 bg-[--primary-color] sm:w-12 sm:h-12 w-8 h-8 rounded-full flex items-center justify-center shadow-lg z-10">
           <span className="text-2xl">←</span>
         </button>
 
         {/* NEXT BUTTON */}
-        <button className="swiper-button-next-custom absolute right-[-40px] top-1/2 -translate-y-1/2 bg-[--primary-color] w-12 h-12 rounded-full flex items-center justify-center shadow-lg z-10">
+        <button className="swiper-button-next-custom absolute right-[-40px] top-1/2 -translate-y-1/2 bg-[--primary-color] sm:w-12 sm:h-12 w-8 h-8 rounded-full flex items-center justify-center shadow-lg z-10">
           <span className="text-2xl">→</span>
         </button>
 
@@ -80,7 +80,14 @@ export default function Testimonial() {
             nextEl: ".swiper-button-next-custom",
             prevEl: ".swiper-button-prev-custom",
           }}
-          slidesPerView={3}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+          }}
           centeredSlides={true}
           loop={true}
           spaceBetween={20}
@@ -109,7 +116,7 @@ export default function Testimonial() {
                   alt={p.name}
                   className="w-60 h-60 rounded-3xl object-cover "
                 />
-                <h3 className="text-xl text-center font-semibold mt-4">
+                <h3 className="sm:text-xl text-sm text-center font-semibold mt-4">
                   {p.name}
                 </h3>
                 <p className="text-gray-500 text-center">{p.role}</p>
@@ -118,17 +125,17 @@ export default function Testimonial() {
           ))}
         </Swiper>
       </div>
-          <p className="text-[24px] mt-[20px] text-[#1E1E1E80] font-light client-text relative z-10 mx-auto max-w-4xl leading-relaxed text-center">
-          <FontAwesomeIcon
-            icon={faQuoteLeft}
-            className="text-[40px] text-[--primary-color] relative top-[-10px] mr-2"
-          />
-          {activeText}
-          <FontAwesomeIcon
-            icon={faQuoteRight}
-            className="text-[40px] text-[--primary-color] relative top-[-6px] ml-2"
-          />
-        </p>
+      <p className="text-[24px] mt-[20px] text-[#1E1E1E80] font-light client-text relative z-10 mx-auto max-w-4xl leading-relaxed text-center">
+        <FontAwesomeIcon
+          icon={faQuoteLeft}
+          className="text-[40px] text-[--primary-color] relative top-[-10px] mr-2"
+        />
+        {activeText}
+        <FontAwesomeIcon
+          icon={faQuoteRight}
+          className="text-[40px] text-[--primary-color] relative top-[-6px] ml-2"
+        />
+      </p>
     </div>
   );
 }

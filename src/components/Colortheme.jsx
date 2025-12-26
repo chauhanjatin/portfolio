@@ -16,7 +16,7 @@ export default function Colortheme() {
   }, [activeIndex]);
 
   return (
-    <div className="fixed top-1/2 sm:left-[30px] left-[20px] -translate-y-1/2 z-[997]">
+    <div className="fixed top-1/2 sm:left-[30px] left-[10px] -translate-y-1/2 z-[997]">
       <ul className="grid sm:gap-4 gap-3">
         {colors.map((color, index) => (
           <li

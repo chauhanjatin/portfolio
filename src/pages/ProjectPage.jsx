@@ -17,22 +17,22 @@ export default function ProjectPage() {
   return (
     <div>
       <div className="containerX relative z-10">
-        <div className="mt-[150px] flex items-center justify-between">
+        <div className="sm:mt-[150px] mt-[80px] flex items-center justify-between">
           <Link to="/mywork">
-            <FontAwesomeIcon icon={faArrowLeft} className="text-[30px]" />
+            <FontAwesomeIcon icon={faArrowLeft} className="sm:text-[30px] text-[20px]" />
           </Link>
           <h2 className="text-center ">{project.title}</h2>
           <div></div>
         </div>
 
-        <div className="my-[60px]">
+        <div className="my-[60px] sm:my-[40px]">
           <img src={project.coverImage} alt="" className="w-full" />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* LEFT SIDEBAR */}
           <div className="lg:col-span-4">
-            <div className="border-[10px] border-white rounded-[40px] p-[30px] sticky top-[50px]">
+            <div className="border-[10px] border-white rounded-[40px] sm:p-[30px] p-[15px] sticky top-[50px]">
               <div className="mb-5">
                 <h4 className="text-[#1E1E1E80] font-light">Project</h4>
                 <h4 className="mt-[10px] font-medium">{project.title}</h4>

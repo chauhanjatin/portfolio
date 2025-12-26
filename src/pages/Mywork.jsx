@@ -29,7 +29,7 @@ export default function Mywork() {
     <div>
       <div className="containerX relative z-10">
         
-        <div className="mt-[160px]">
+        <div className="sm:mt-[160px] mt-[80px]">
           <div className="mt-10
     grid  gap-4
     sm:flex sm:justify-between sm:items-center">
@@ -86,7 +86,7 @@ export default function Mywork() {
 
                       <Link
                         to="/project/dmysti5"
-                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]">
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 sm:px-6 px-4 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]">
                         <h4>View Details</h4>
                         <img src={viewProjectArrow} alt="" />
                       </Link>
@@ -96,7 +96,7 @@ export default function Mywork() {
                 </div>
               </div>
 
-              <div className="grid gap-10">
+              <div className="grid sm:gap-10 gap-[20px]">
                 <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
                   <div className="bg-white p-5 h-full ">
                     <p className="text-[#1F1E1E99] mb-2.5">Dashboard</p>
@@ -178,7 +178,7 @@ export default function Mywork() {
             </div>
 
             <div className="leftPortfolio-grid ">
-              <div className="grid gap-10">
+              <div className="grid sm:gap-10 gap-[20px]">
                 <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
                   <div className="bg-white p-5 h-full ">
                     <p className="text-[#1F1E1E99] mb-2.5">Website</p>
@@ -356,7 +356,7 @@ export default function Mywork() {
                 </div>
               </div>
 
-              <div className="grid gap-10">
+              <div className="grid sm:gap-10 gap-[20px]">
                 <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
                   <div className="bg-white p-5 h-full ">
                     <p className="text-[#1F1E1E99] mb-2.5">Website</p>
@@ -445,7 +445,7 @@ export default function Mywork() {
             </div>
 
             <div className="leftPortfolio-grid ">
-              <div className="grid gap-10">
+              <div className="grid sm:gap-10 gap-[20px]">
                 <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
                   <div className="bg-white p-5 h-full ">
                     <p className="text-[#1F1E1E99] mb-2.5">Website</p>

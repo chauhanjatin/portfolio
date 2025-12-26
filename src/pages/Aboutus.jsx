@@ -94,23 +94,13 @@ export default function Aboutus() {
         </div>
 
         <div className="grid justify-center text-center mt-[60px]">
-          <h1 className="flex font-medium gap-2 items-center">
+          <h1 className="flex sm:justify-normal justify-center font-medium gap-2 items-center ">
             “Hey!{" "}
-            <img src={hand} alt="" className="w-[62px] h-[62px] hand-wave" />{" "}
+            <img src={hand} alt="" className="sm:w-[62px] w-[40px] sm:h-[62px] h-[40px] hand-wave" />{" "}
             I’m Jatin Chauhan”
           </h1>
-          <h2 className="mt-[20px] font-medium flex gap-2 items-center">
+          <h2 className="sm:mt-[20px] mt-[10px] font-medium flex gap-2 items-center Designe-text">
             I Am
-            {/* <span className="bg-[--primary-color] rounded-[100px] py-[6px] px-[36px] inline-block">
-              <div className="relative h-[50px] overflow-hidden text-white">
-                <div className="slide-text">
-                  <span>UI/UX</span>
-                  <span>Brand</span>
-                  <span>Product</span>
-                  <span>Website</span>
-                </div>
-              </div>
-            </span> */}
             <span className="typewriter text-[--primary-color]"></span>
             Designer & Developer
           </h2>
@@ -127,7 +117,7 @@ export default function Aboutus() {
 
         {/* Work Experience */}
         <div>
-          <h2 className="mt-[100px] mb-[60px] text-center">Work Experience</h2>
+          <h2 className="sm:mt-[100px] mt-[40px] mb-[60px] text-center">Work Experience</h2>
 
           <div className="flex">
             <div className="flex gap-6 lg:gap-10 w-full">
@@ -164,7 +154,7 @@ export default function Aboutus() {
               <div className="flex flex-col gap-8 w-full">
                 {steps.map((step, index) => (
                   <div key={index} className="">
-                    <div className="flex justify-between items-center">
+                    <div className="sm:flex block justify-between items-center">
                       <div className="flex items-center gap-2.5">
                         <h3 className="font-medium md:text-[18px]">{step.title}</h3>
                         <img src={step.images} alt="" />
@@ -194,10 +184,10 @@ export default function Aboutus() {
         <div className="educationBg_img rounded-[40px]">
           <div className="border-[10px] border-white rounded-[40px] mt-[100px] py-[35px] lg:py-[50px] px-[20px] shadow-[0_0_10px_0_#00000014]">
             <h2 className="text-center mb-[30px] lg:mb-[60px] font-medium">Education</h2>
-            <div className="flex justify-around items-center text-center">
+            <div className="sm:flex grid sm:gap-0 gap-8 justify-around items-center text-center">
               <div className="">
                 <h4 className="text-[#1E1E1E80]">2007</h4>
-                <p className="text-[24px] my-[10px]">
+                <p className="sm:text-[24px] text-[18px] my-[10px]">
                   Bachelor of Science (Mathematics)
                 </p>
                 <h4 className="text-[#1E1E1E80]">
@@ -207,7 +197,7 @@ export default function Aboutus() {
 
               <div className="">
                 <h4 className="text-[#1E1E1E80]">2010</h4>
-                <p className="text-[24px] my-[10px]">
+                <p className="sm:text-[24px] text-[18px] my-[10px]">
                   Master of Computer Applications
                 </p>
                 <h4 className="text-[#1E1E1E80]">
@@ -254,8 +244,8 @@ export default function Aboutus() {
             <div className="bg-white rounded-[10px] TechStack-items">
               <img src={bootstrap} alt="" />
             </div>
-
           </div>
+
         </div>
         <Testimonial></Testimonial>
       </div>

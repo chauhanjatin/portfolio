@@ -6,14 +6,14 @@ export default function Contactus() {
   return (
     <div>
       <div className="containerX relative z-10">
-        <div className="max-w-7xl mx-auto py-20">
+        <div className="max-w-7xl mx-auto sm:py-20 py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:gap-[100px] md:gap-[70px] gap-[50px]">
             <div>
-              <h2 className="font-medium text-[55px] leading-[70px] text-black">
+              <h2 className="font-medium sm:text-[55px] text-[30px] sm:leading-[70px] leading-[45px] text-black">
                 Send Me <br /> A Message
               </h2>
 
-              <h4 className="xl:mt-8 mt-5 text-[#1F1E1E80] text-[20px] leading-[32px]">
+              <h4 className="xl:mt-8 mt-5 text-[#1F1E1E80] sm:text-[20px] sm:leading-[32px] text-[16px] leading-[28px]">
                 Creative UI/UX Designer with 10+ years of experience crafting
                 responsive, user-focused web and mobile apps. Blending
                 aesthetics with functionality, I help brands build seamless and
