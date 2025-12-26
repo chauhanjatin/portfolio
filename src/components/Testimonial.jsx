@@ -125,17 +125,17 @@ export default function Testimonial() {
           ))}
         </Swiper>
       </div>
-      <p className="text-[24px] mt-[20px] text-[#1E1E1E80] font-light client-text relative z-10 mx-auto max-w-4xl leading-relaxed text-center">
-        <FontAwesomeIcon
-          icon={faQuoteLeft}
-          className="text-[40px] text-[--primary-color] relative top-[-10px] mr-2"
-        />
-        {activeText}
-        <FontAwesomeIcon
-          icon={faQuoteRight}
-          className="text-[40px] text-[--primary-color] relative top-[-6px] ml-2"
-        />
-      </p>
+      <div>
+        <div className="flex justify-center ">
+          <FontAwesomeIcon
+            icon={faQuoteLeft}
+            className="text-[60px] text-[--primary-color]  opacity-50 text-center"
+          />
+        </div>
+        <p className="text-[24px] mt-[15px] text-[#1E1E1E80] font-light client-text  z-10 mx-auto max-w-4xl leading-relaxed text-center">
+          {activeText}
+        </p>
+      </div>
     </div>
   );
 }

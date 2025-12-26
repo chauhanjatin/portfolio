@@ -6,7 +6,7 @@ import { faBehance } from "@fortawesome/free-brands-svg-icons";
 import { faDribbble } from "@fortawesome/free-brands-svg-icons";
 import gmailicon from "../assets/images/icons/gmail-icon.svg";
 import phoneicon from "../assets/images/icons/phone-icon.svg";
-import instagramicon from "../assets/images/icons/instagram-icon.svg";
+import instagramlogo from "../assets/images/icons/instagram-logo.svg";
 
 export default function Sidebar({ open, setOpen }) {
   const location = useLocation();
@@ -104,13 +104,13 @@ export default function Sidebar({ open, setOpen }) {
                   to="/"
                   style={{ transitionDelay: "160ms" }}
                   className={`
-      flex gap-2.5 items-center sm:mt-8 mt-4
+      flex gap-2.5 items-center sm:mt-10 mt-4
       transition-all duration-700 ease-in-out
       ${open ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
     `}
                 >
                   <img src={gmailicon} alt="" className="w-6 md:w-auto" />
-                  <p className="text-[20px] xl:text-[26px] font-light text-[#1E1E1E]">
+                  <p className="text-[20px] xl:text-[28px] font-normal text-[#1E1E1E]">
                     jatin_chauhan@gmail.com
                   </p>
                 </Link>
@@ -125,7 +125,7 @@ export default function Sidebar({ open, setOpen }) {
     `}
                 >
                   <img src={phoneicon} alt="" className="w-6 md:w-auto" />
-                  <p className="text-[20px] xl:text-[26px] font-light text-[#1E1E1E]">
+                  <p className="text-[20px] xl:text-[28px] font-normal text-[#1E1E1E]">
                     +91 70963 64801
                   </p>
                 </Link>
@@ -228,7 +228,7 @@ export default function Sidebar({ open, setOpen }) {
                       to="https://www.instagram.com/jatin.an.artist"
                       target="_blank"
                     >
-                      <img src={instagramicon} alt="" />
+                      <img src={instagramlogo} alt="" />
                       <h4 className="underline text-[20px] lg:text-[22px]">
                         @jatin.an.artis
                       </h4>

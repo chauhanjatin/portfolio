@@ -671,7 +671,7 @@ p {
 .typewriter {
   --caret: currentcolor;
   width: 210px;
-  text-align: start;
+  text-align: center;
 }
 
 .typewriter::before {
@@ -813,6 +813,47 @@ p {
 
 .Testimonial-slider {
   width: 80%;
+}
+
+.loader-45 {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  color: var(--primary-color);
+  -webkit-animation: animloader45 0.5s linear infinite alternate;
+  animation: animloader45 0.6s linear infinite alternate;
+  z-index: 99999;
+}
+
+@-webkit-keyframes animloader45 {
+  0% {
+    box-shadow: -38px -12px, -14px 0, 14px 0, 38px 0;
+  }
+  33% {
+    box-shadow: -38px 0px, -14px -12px, 14px 0, 38px 0;
+  }
+  66% {
+    box-shadow: -38px 0px, -14px 0, 14px -12px, 38px 0;
+  }
+  100% {
+    box-shadow: -38px 0, -14px 0, 14px 0, 38px -12px;
+  }
+}
+@keyframes animloader45 {
+  0% {
+    box-shadow: -38px -12px, -14px 0, 14px 0, 38px 0;
+  }
+  33% {
+    box-shadow: -38px 0px, -14px -12px, 14px 0, 38px 0;
+  }
+  66% {
+    box-shadow: -38px 0px, -14px 0, 14px -12px, 38px 0;
+  }
+  100% {
+    box-shadow: -38px 0, -14px 0, 14px 0, 38px -12px;
+  }
 }
 
 @media screen and (min-width: 1600px) and (max-width: 1799px) {

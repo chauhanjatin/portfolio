@@ -94,7 +94,7 @@ export default function Aboutus() {
         </div>
 
         <div className="grid justify-center text-center mt-[60px]">
-          <h1 className="flex sm:justify-normal justify-center font-medium gap-2 items-center ">
+          <h1 className="flex  justify-center font-medium gap-2 items-center ">
             “Hey!{" "}
             <img src={hand} alt="" className="sm:w-[62px] w-[40px] sm:h-[62px] h-[40px] hand-wave" />{" "}
             I’m Jatin Chauhan”

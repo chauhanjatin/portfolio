@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function Colortheme() {
-  const colors = ["#8CD565", "#f8a1a1", "#f8dba1", "#b7b2f6"];
+  const colors = ["#8CD565", "#65b8d5", "#d5ae65", "#d56565"];
   const [activeIndex, setActiveIndex] = useState(() => {
     const savedIndex = localStorage.getItem("themeColorIndex");
     return savedIndex !== null ? Number(savedIndex) : 0;
