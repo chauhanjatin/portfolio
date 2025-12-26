@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap");
 
+:root {
+  --primary-color: #8cd565;
+}
+
 body {
   background-color: #f4f4f4;
   font-family: "Geologica", sans-serif;
@@ -84,7 +88,9 @@ p {
 }
 
 .menu-list {
-  bottom: calc(100% + 10px);
+  left: 0;
+  top: 0;
+  z-index: 99999;
 }
 
 .educationBg_img {
@@ -283,7 +289,7 @@ p {
   transform: translate(-50%, -50%);
 }
 
-.img-marquee{
+.img-marquee {
   position: relative;
   margin-top: 80px;
 }
@@ -382,15 +388,18 @@ p {
   padding: 20px;
   position: absolute;
   width: 100%;
-  bottom: -100%;
   height: 170px;
   display: flex;
+  bottom: 0;
   align-items: end;
-  transition: 0.3s;
+  transition: 0.4s;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .Portfolio-items:hover .Portfolio-contant {
-  bottom: 0;
+  opacity: 1;
+  visibility: visible;
 }
 
 .link-items {
@@ -458,17 +467,15 @@ p {
 }
 
 .dot-items {
-  padding-bottom: 102px;
+  padding-bottom: 100px;
 }
 
-/* Typewriter effect 1 */
 .typing-text::after {
   content: "";
   animation: typing 12s steps(20) infinite;
 }
 
 @keyframes typing {
-  /* UI/UX */
   0%,
   5% {
     content: "";
@@ -658,7 +665,7 @@ p {
 .typewriter {
   --caret: currentcolor;
   width: 210px;
-  text-align: center;
+  text-align: start;
 }
 
 .typewriter::before {
@@ -672,6 +679,75 @@ p {
   animation: blink 0.5s linear infinite;
 }
 
+.ms-cursor-ring,
+.ms-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transform: scale(0);
+}
+
+.ms-cursor-ring {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+}
+
+.ms-cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--primary-color);
+  border-radius: 50%;
+}
+
+/* From Uiverse.io by xXJollyHAKERXx */
+.spinner {
+  background-image: linear-gradient(rgb(186, 66, 255) 35%, rgb(0, 225, 255));
+  width: 140px;
+  height: 140px;
+  animation: spinning82341 1.7s linear infinite;
+  text-align: center;
+  border-radius: 140px;
+  filter: blur(1px);
+  box-shadow: 0px -5px 20px 0px rgb(186, 66, 255),
+    0px 5px 20px 0px rgb(0, 225, 255);
+}
+
+.spinner1 {
+  background-color: transparent;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  filter: blur(10px);
+}
+
+@keyframes spinning82341 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Grayscale for non-active slides */
+.swiper-slide img {
+  transition: all 0.4s ease;
+}
+
+/* Remove grayscale for active slide */
+.swiper-slide-active img {
+  filter: grayscale(0%);
+}
+
+.swiper-slide {
+  opacity: 0.6;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+}
+
 @media screen and (min-width: 1600px) and (max-width: 1799px) {
   .containerX {
     margin: 0 250px;
@@ -681,6 +757,21 @@ p {
     font-size: 50px;
     line-height: 66px;
   }
+
+  h2 {
+    font-size: 46px;
+    line-height: 52px;
+  }
+
+  .Portfolio-grid {
+    grid-template-columns: auto 325px;
+    grid-gap: 38px;
+  }
+
+  .leftPortfolio-grid {
+    grid-template-columns: 325px auto;
+    grid-gap: 38px;
+  }
 }
 
 @media screen and (min-width: 1400px) and (max-width: 1599px) {
@@ -689,8 +780,46 @@ p {
   }
 
   h1 {
-    font-size: 50px;
-    line-height: 66px;
+    font-size: 45px;
+    line-height: 60px;
+  }
+
+  h2 {
+    font-size: 42px;
+    line-height: 52px;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 38px;
+  }
+
+  h4 {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .Portfolio-grid {
+    grid-template-columns: auto 300px;
+    grid-gap: 38px;
+  }
+
+  .leftPortfolio-grid {
+    grid-template-columns: 300px auto;
+    grid-gap: 38px;
+  }
+
+  .upwork-logo {
+    left: 35px;
+    bottom: 35px;
+  }
+
+  .upwork-icon {
+    width: 46px;
+  }
+
+  .circle-text {
+    width: 140px;
   }
 }
 
@@ -700,8 +829,55 @@ p {
   }
 
   h1 {
-    font-size: 38px;
-    line-height: 56px;
+    font-size: 40px;
+    line-height: 54px;
+  }
+
+  h2 {
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 38px;
+  }
+
+  h4 {
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .Portfolio-grid {
+    grid-template-columns: auto 240px;
+    grid-gap: 36px;
+  }
+
+  .leftPortfolio-grid {
+    grid-template-columns: 240px auto;
+    grid-gap: 36px;
+    margin-top: 38px;
+  }
+
+  .upwork-logo {
+    left: 30px;
+    bottom: 30px;
+  }
+
+  .upwork-icon {
+    width: 48px;
+  }
+
+  .circle-text {
+    width: 132px;
+  }
+
+  .workExperience_title h3 {
+    font-size: 22px;
+  }
+
+  .typewriter {
+    width: 200px;
   }
 }
 
@@ -714,4 +890,233 @@ p {
     font-size: 32px;
     line-height: 44px;
   }
+
+  h2 {
+    font-size: 30px;
+    line-height: 52px;
+  }
+
+  h3 {
+    font-size: 20px;
+    line-height: 38px;
+  }
+
+  h4 {
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  .Portfolio-grid {
+    grid-template-columns: none;
+    margin-top: 35px;
+  }
+
+  .leftPortfolio-grid {
+    grid-template-columns: none;
+    margin-top: 35px;
+  }
+
+  .typewriter {
+    width: 150px;
+  }
+
+  .upwork-logo {
+    left: 26px;
+    bottom: 26px;
+  }
+
+  .upwork-icon {
+    width: 45px;
+  }
+
+  .circle-text {
+    width: 125px;
+  }
+
+  .workExperience_title h3 {
+    font-size: 18px;
+  }
+
+  .workExperience_list li {
+    font-size: 14px;
+  }
+
+  .Website-grid,
+  .Dashboard-grid,
+  .App-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .TechStack-items {
+    width: 80px;
+    height: 80px;
+  }
+
+  .projectsSidebar h4 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .containerX {
+    margin: 0 50px;
+  }
+
+  h1 {
+    font-size: 30px;
+    line-height: 42px;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 36px;
+  }
+
+  h4 {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .Portfolio-grid {
+    grid-template-columns: none;
+    margin-top: 35px;
+  }
+
+  .leftPortfolio-grid {
+    grid-template-columns: none;
+    margin-top: 35px;
+  }
+
+  .typewriter {
+    width: 150px;
+  }
+
+  .upwork-logo {
+    left: 26px;
+    bottom: 26px;
+  }
+
+  .upwork-icon {
+    width: 38px;
+  }
+
+  .circle-text {
+    width: 108px;
+  }
+
+  .workExperience_title h3 {
+    font-size: 15px;
+    line-height: 28px;
+  }
+
+  .workExperience_year {
+    font-size: 14px;
+  }
+
+  .workExperience_list li {
+    font-size: 13px;
+  }
+
+  .Website-grid,
+  .Dashboard-grid,
+  .App-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .img-marquee {
+    overflow: hidden;
+  }
+
+  .dot-items {
+    padding-bottom: 84px;
+  }
+
+  .TechStack-items {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .containerX {
+    margin: 0 50px;
+  }
+
+  h1 {
+    font-size: 26px;
+    line-height: 35px;
+  }
+
+  h2 {
+    font-size: 22px;
+    line-height: 38px;
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 36px;
+  }
+
+  h4 {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .Portfolio-grid {
+    grid-template-columns: none;
+    margin-top: 30px;
+  }
+
+  .leftPortfolio-grid {
+    grid-template-columns: none;
+    margin-top: 35px;
+  }
+
+  .typewriter {
+    width: 118px;
+  }
+
+  .upwork-logo {
+    left: 26px;
+    bottom: 26px;
+  }
+
+  .upwork-icon {
+    width: 32px;
+  }
+
+  .circle-text {
+    width: 98px;
+  }
+
+  .workExperience_title h3 {
+    font-size: 12px;
+    line-height: 28px;
+  }
+
+  .workExperience_year {
+    font-size: 12px;
+  }
+
+  .workExperience_list li {
+    font-size: 13px;
+  }
+
+  .Website-grid,
+  .Dashboard-grid,
+  .App-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .dot-items {
+    padding-bottom: 88px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
 }

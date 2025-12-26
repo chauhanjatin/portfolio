@@ -11,11 +11,9 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 export default function ProjectPage() {
   const { slug } = useParams();
   const project = data.find((item) => item.slug === slug);
-
   if (!project) {
     return <h2 className="text-center mt-20">Project Not Found</h2>;
   }
-
   return (
     <div>
       <div className="containerX relative z-10">
@@ -64,18 +62,16 @@ export default function ProjectPage() {
                 <h4 className="text-[#1E1E1E80] font-light">Year</h4>
                 <h4 className="mt-[10px] font-medium">{project.year}</h4>
               </div>
-              <div
-                className={`grid gap-[10px] items-center ${
+
+              <div className={`grid gap-[10px] items-center ${
                   project.WebsiteLink ? "grid-cols-2" : "grid-cols-1"
-                }`}
-              >
+                }`}>
                 {/* Figma Button */}
                 <div>
                   <Link
                     to={project.figmaLink || "#"}
                     target="_blank"
-                    className="bg-[#8CD565] py-3 px-5 border-[#8CD565] border rounded-[40px] text-center hover:bg-transparent hover:border-black transition-all duration-300 block"
-                  >
+                    className="bg-[--primary-color] py-3 px-5 border-[--primary-color] border rounded-[40px] text-center hover:bg-transparent hover:border-black transition-all duration-300 block">
                     View Figma
                   </Link>
                 </div>
@@ -86,13 +82,13 @@ export default function ProjectPage() {
                     <Link
                       to={project.WebsiteLink}
                       target="_blank"
-                      className="bg-[#8CD565] py-3 px-5 border-[#8CD565] border rounded-[40px] text-center hover:bg-transparent hover:border-black transition-all duration-300 block"
-                    >
+                      className="bg-[--primary-color] py-3 px-5 border-[--primary-color] border rounded-[40px] text-center hover:bg-transparent hover:border-black transition-all duration-300 block">
                       View Website
                     </Link>
                   </div>
                 )}
               </div>
+
             </div>
           </div>
 
@@ -145,11 +141,9 @@ export default function ProjectPage() {
             {project.coreFeatures && (
               <div className="mb-[40px]">
                 <h3 className="font-medium">Core Features</h3>
-
                 <ul className="list-disc ms-[30px]">
                   {project.coreFeatures.map((feature, i) => {
                     const [left, right] = feature.split(/:(.+)/);
-
                     return (
                       <li
                         key={i}
@@ -165,7 +159,6 @@ export default function ProjectPage() {
             )}
           </div>
         </div>
-        
       </div>
 
       <div className="img-marquee">
@@ -182,7 +175,7 @@ export default function ProjectPage() {
         <Cta />
         <Testimonial />
       </div>
-
+      
       <Footer />
     </div>
   );

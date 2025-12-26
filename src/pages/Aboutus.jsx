@@ -22,6 +22,7 @@ export default function Aboutus() {
   const [index, setIndex] = useState(1);
 
   // TIMELINE DATA
+
   const steps = [
     {
       title: "Siya Soft",
@@ -68,17 +69,15 @@ export default function Aboutus() {
   ];
 
   // SCROLL EFFECT
+
   useEffect(() => {
     const handleScroll = () => {
       const rect = containerRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
-
       const start = windowHeight * 0.1;
       const end = windowHeight * 0.9;
-
       let p = (rect.top - start) / (end - start);
       p = 1 - Math.min(1, Math.max(0, p));
-
       setProgress(p);
     };
 
@@ -102,7 +101,7 @@ export default function Aboutus() {
           </h1>
           <h2 className="mt-[20px] font-medium flex gap-2 items-center">
             I Am
-            {/* <span className="bg-[#8CD565] rounded-[100px] py-[6px] px-[36px] inline-block">
+            {/* <span className="bg-[--primary-color] rounded-[100px] py-[6px] px-[36px] inline-block">
               <div className="relative h-[50px] overflow-hidden text-white">
                 <div className="slide-text">
                   <span>UI/UX</span>
@@ -112,14 +111,14 @@ export default function Aboutus() {
                 </div>
               </div>
             </span> */}
-            <span className="typewriter text-[#8CD565]"></span>
+            <span className="typewriter text-[--primary-color]"></span>
             Designer & Developer
           </h2>
 
           <div>
             <Link
              to="/contactus"
-              className="my-[50px] border border-[#1E1E1E] py-3 px-6 inline-flex rounded-[40px] font-light transition-all duration-300 hover:bg-[#8CD565] hover:border-transparent"
+              className="my-[50px] border border-[#1E1E1E] py-3 px-6 inline-flex rounded-[40px] font-light transition-all duration-300 hover:bg-[--primary-color] hover:border-transparent"
             >
               <h4>Say "Hello Jatin"</h4>
             </Link>
@@ -131,7 +130,7 @@ export default function Aboutus() {
           <h2 className="mt-[100px] mb-[60px] text-center">Work Experience</h2>
 
           <div className="flex">
-            <div className="flex gap-10 w-full">
+            <div className="flex gap-6 lg:gap-10 w-full">
               <div
                 ref={containerRef}
                 className="relative flex flex-col items-center"
@@ -139,7 +138,7 @@ export default function Aboutus() {
                 <div className="absolute top-[12px] bottom-0 w-[3px] flex flex-col">
                   <div
                     style={{ height: `${progress * 100}%` }}
-                    className="border-r-2 border-dashed border-[#8CD565]"
+                    className="border-r-2 border-dashed border-[--primary-color]"
                   ></div>
                   <div className="flex-1 border-r-2 border-dashed border-gray-400"></div>
                 </div>
@@ -151,15 +150,12 @@ export default function Aboutus() {
                   return (
                     <div
                       key={index}
-                      className="relative flex flex-col items-center pt-2 dot-items"
-                    >
-                      <div
-                        className={`w-5 h-5 rounded-full border-[5px] ${
+                      className="relative flex flex-col items-center pt-2 dot-items">
+                      <div className={`w-5 h-5 rounded-full border-[5px] ${
                           isCompleted
-                            ? "border-white bg-[#8CD565]"
+                            ? "border-white bg-[--primary-color]"
                             : "border-white bg-black"
-                        }`}
-                      ></div>
+                        }`}></div>
                     </div>
                   );
                 })}
@@ -170,7 +166,7 @@ export default function Aboutus() {
                   <div key={index} className="">
                     <div className="flex justify-between items-center">
                       <div className="flex items-center gap-2.5">
-                        <h3 className="font-medium ">{step.title}</h3>
+                        <h3 className="font-medium md:text-[18px]">{step.title}</h3>
                         <img src={step.images} alt="" />
                       </div>
                       <div>
@@ -196,8 +192,8 @@ export default function Aboutus() {
 
         {/* Education */}
         <div className="educationBg_img rounded-[40px]">
-          <div className="border-[10px] border-white rounded-[40px] mt-[100px] py-[50px] px-[20px] shadow-[0_0_10px_0_#00000014]">
-            <h2 className="text-center mb-[60px] font-medium">Education</h2>
+          <div className="border-[10px] border-white rounded-[40px] mt-[100px] py-[35px] lg:py-[50px] px-[20px] shadow-[0_0_10px_0_#00000014]">
+            <h2 className="text-center mb-[30px] lg:mb-[60px] font-medium">Education</h2>
             <div className="flex justify-around items-center text-center">
               <div className="">
                 <h4 className="text-[#1E1E1E80]">2007</h4>
@@ -227,37 +223,38 @@ export default function Aboutus() {
           <h2 className="text-center mt-[100px]">Tech Stack</h2>
 
           <div className="flex justify-center mt-[60px]">
-            <div className="bg-white  rounded-[10px] TechStack-items">
+            <div className="bg-white rounded-[10px] TechStack-items">
               <img src={figma} alt="" className="" />
             </div>
 
-            <div className="bg-white  rounded-[10px] TechStack-items">
+            <div className="bg-white rounded-[10px] TechStack-items">
               <img src={adobe} alt="" />
             </div>
 
-            <div className="bg-white  rounded-[10px] TechStack-items">
+            <div className="bg-white rounded-[10px] TechStack-items">
               <img src={xdimg} alt="" />
             </div>
 
-            <div className="bg-white  rounded-[10px] TechStack-items">
+            <div className="bg-white rounded-[10px] TechStack-items">
               <img src={javascript} alt="" />
             </div>
 
-            <div className="bg-white  rounded-[10px] TechStack-items">
+            <div className="bg-white rounded-[10px] TechStack-items">
               <img src={photoshop} alt="" />
             </div>
 
-            <div className="bg-white  rounded-[10px] TechStack-items">
+            <div className="bg-white rounded-[10px] TechStack-items">
               <img src={reactnative} alt="" />
             </div>
 
-            <div className="bg-white  rounded-[10px] TechStack-items">
+            <div className="bg-white rounded-[10px] TechStack-items">
               <img src={css} alt="" />
             </div>
 
-            <div className="bg-white  rounded-[10px] TechStack-items">
+            <div className="bg-white rounded-[10px] TechStack-items">
               <img src={bootstrap} alt="" />
             </div>
+
           </div>
         </div>
         <Testimonial></Testimonial>

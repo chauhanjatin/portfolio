@@ -20,7 +20,7 @@ import Cta from "../components/Cta";
 
 export default function Mywork() {
   const [activeTab, setActiveTab] = useState("All");
-
+  
   const handleFilter = (type) => {
     setActiveTab(type);
   };
@@ -28,6 +28,7 @@ export default function Mywork() {
   return (
     <div>
       <div className="containerX relative z-10">
+        
         <div className="mt-[160px]">
           <div className="flex justify-between items-center mt-10">
             <h2>Work Showcase</h2>
@@ -39,8 +40,8 @@ export default function Mywork() {
                   className={`py-2 px-10 rounded-[20px] cursor-pointer transition-all duration-300
       ${
         activeTab === type
-          ? "bg-[#8CD565] text-black border border-[#8CD565]"
-          : "bg-transparent border border-[#1E1E1E] text-black hover:bg-[#8CD565] hover:text-black hover:border-[#8CD565]"
+          ? "bg-[--primary-color] text-black border border-[--primary-color]"
+          : "bg-transparent border border-[#1E1E1E] text-black hover:bg-[--primary-color] hover:text-black hover:border-[--primary-color]"
       }`}
                 >
                   {type}
@@ -50,11 +51,9 @@ export default function Mywork() {
           </div>
 
           {/* All */}
-
           <div className={`All-items ${
-              activeTab === "All" ? "block animate-fade" : "hidden"
-            }`}
-          >
+              activeTab === "All" ? "block animate-fade" : "hidden"}`}>
+
             <div className="Portfolio-grid">
               <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
                 <div className="bg-white h-full project-imgage">
@@ -70,13 +69,13 @@ export default function Mywork() {
                       <h3 className="text-white">Dmysti5</h3>
                       <h4 className="text-white">(Cybersecurity)</h4>
                     </div>
+                    
                     <div className="flex justify-between items-center mt-2.5">
                       <div>
                         <Link
                           to="https://www.figma.com/proto/M1mnxz7Kp2nCc9XfIJj6cO/Demysti5?page-id=281%3A2344&node-id=281-2345&t=iPrv67yWIXXMa402-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=281%3A2345&hide-ui=1"
                           target="_blank"
-                          className="link-items"
-                        >
+                          className="link-items">
                           <div>
                             <img src={figmalink} alt="" />
                           </div>
@@ -85,12 +84,12 @@ export default function Mywork() {
 
                       <Link
                         to="/project/dmysti5"
-                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
-                      >
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]">
                         <h4>View Details</h4>
                         <img src={viewProjectArrow} alt="" />
                       </Link>
                     </div>
+
                   </div>
                 </div>
               </div>
@@ -125,7 +124,7 @@ export default function Mywork() {
 
                         <Link
                           to="/project/voicing"
-                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                         >
                           <h4>View Details</h4>
                           <img src={viewProjectArrow} alt="" />
@@ -164,7 +163,7 @@ export default function Mywork() {
 
                         <Link
                           to="/project/learnbud"
-                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                         >
                           <h4>View Details</h4>
                           <img src={viewProjectArrow} alt="" />
@@ -207,7 +206,7 @@ export default function Mywork() {
 
                         <Link
                           to="/project/uniqLearn"
-                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                         >
                           <h4>View Details</h4>
                           <img src={viewProjectArrow} alt="" />
@@ -246,7 +245,7 @@ export default function Mywork() {
 
                         <Link
                           to="/project/workista"
-                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                         >
                           <h4>View Details</h4>
                           <img src={viewProjectArrow} alt="" />
@@ -295,7 +294,7 @@ export default function Mywork() {
 
                       <Link
                         to="/project/trudentz"
-                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                       >
                         <h4>View Details</h4>
                         <img src={viewProjectArrow} alt="" />
@@ -307,6 +306,7 @@ export default function Mywork() {
             </div>
 
             <div className="Portfolio-grid ">
+
               <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
                 <div className="bg-white  h-full project-imgage">
                   <p className="text-[#1F1E1E99] mb-2.5">Website</p>
@@ -344,7 +344,7 @@ export default function Mywork() {
 
                       <Link
                         to="/project/cogentshift"
-                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                       >
                         <h4>View Details</h4>
                         <img src={viewProjectArrow} alt="" />
@@ -391,7 +391,7 @@ export default function Mywork() {
 
                         <Link
                           to="/project/salviali"
-                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                         >
                           <h4>View Details</h4>
                           <img src={viewProjectArrow} alt="" />
@@ -430,7 +430,7 @@ export default function Mywork() {
 
                         <Link
                           to="/project/instantsmiles"
-                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                         >
                           <h4>View Details</h4>
                           <img src={viewProjectArrow} alt="" />
@@ -473,7 +473,7 @@ export default function Mywork() {
 
                         <Link
                           to="/project/integrativedermatology"
-                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                         >
                           <h4>View Details</h4>
                           <img src={viewProjectArrow} alt="" />
@@ -512,7 +512,7 @@ export default function Mywork() {
 
                         <Link
                           to="/project/arouzed"
-                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                         >
                           <h4>View Details</h4>
                           <img src={viewProjectArrow} alt="" />
@@ -560,7 +560,7 @@ export default function Mywork() {
 
                       <Link
                         to="/project/youniversalhomecare"
-                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                       >
                         <h4>View Details</h4>
                         <img src={viewProjectArrow} alt="" />
@@ -606,7 +606,7 @@ export default function Mywork() {
 
                       <Link
                         to="/project/uniqLearn"
-                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                       >
                         <h4>View Details</h4>
                         <img src={viewProjectArrow} alt="" />
@@ -644,7 +644,7 @@ export default function Mywork() {
 
                       <Link
                         to="/project/dmysti5"
-                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                       >
                         <h4>View Details</h4>
                         <img src={viewProjectArrow} alt="" />
@@ -682,7 +682,7 @@ export default function Mywork() {
 
                       <Link
                         to="/project/voicing"
-                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                       >
                         <h4>View Details</h4>
                         <img src={viewProjectArrow} alt="" />
@@ -737,7 +737,7 @@ export default function Mywork() {
 
                       <Link
                         to="/project/trudentz"
-                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                       >
                         <h4>View Details</h4>
                         <img src={viewProjectArrow} alt="" />
@@ -784,7 +784,7 @@ export default function Mywork() {
 
                       <Link
                         to="/project/cogentshift"
-                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                       >
                         <h4>View Details</h4>
                         <img src={viewProjectArrow} alt="" />
@@ -831,7 +831,7 @@ export default function Mywork() {
 
                       <Link
                         to="/project/salviali"
-                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                       >
                         <h4>View Details</h4>
                         <img src={viewProjectArrow} alt="" />
@@ -878,7 +878,7 @@ export default function Mywork() {
 
                       <Link
                         to="/project/youniversalhomecare"
-                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                       >
                         <h4>View Details</h4>
                         <img src={viewProjectArrow} alt="" />
@@ -916,7 +916,7 @@ export default function Mywork() {
 
                       <Link
                         to="/project/integrativedermatology"
-                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                       >
                         <h4>View Details</h4>
                         <img src={viewProjectArrow} alt="" />
@@ -931,8 +931,7 @@ export default function Mywork() {
           {/* App */}
           <div className={`App-items ${
               activeTab === "App" ? "block animate-fade" : "hidden"
-            }`}
-          >
+            }`} >
             <div className="App-grid  mt-10">
               <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
                 <div className="bg-white p-5 h-full">
@@ -962,7 +961,7 @@ export default function Mywork() {
 
                       <Link
                         to="/project/learnbud"
-                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                       >
                         <h4>View Details</h4>
                         <img src={viewProjectArrow} alt="" />
@@ -1000,7 +999,7 @@ export default function Mywork() {
 
                       <Link
                         to="/project/workista"
-                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                       >
                         <h4>View Details</h4>
                         <img src={viewProjectArrow} alt="" />
@@ -1038,7 +1037,7 @@ export default function Mywork() {
 
                       <Link
                         to="/project/instantsmiles"
-                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                       >
                         <h4>View Details</h4>
                         <img src={viewProjectArrow} alt="" />
@@ -1076,7 +1075,7 @@ export default function Mywork() {
 
                       <Link
                         to="/project/arouzed"
-                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                       >
                         <h4>View Details</h4>
                         <img src={viewProjectArrow} alt="" />
@@ -1087,8 +1086,8 @@ export default function Mywork() {
               </div>
             </div>
           </div>
-
         </div>
+
         <Cta></Cta>
       </div>
 

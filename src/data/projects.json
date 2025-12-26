@@ -14,7 +14,6 @@
       "**LearnBud AI** is a modern mobile learning application designed to help students study smarter with the support of artificial intelligence. The app provides a complete digital learning experience where users can access courses, watch video lessons, generate AI-powered notes, attempt quizzes, track progress, and communicate with teachers — all within a sleek, futuristic dark-mode interface.",
       "The goal of the project is to create an intuitive, visually immersive, and highly functional platform that makes learning easier, faster, and more engaging for students of all levels."
     ],
-
     "primaryGoals": [
       "Create a seamless learning experience",
       "Build an easy and fast login flow",
@@ -22,7 +21,6 @@
       "Provide AI-based note generation",
       "Include a social/interactive element (profiles, chats, progress tracking)"
     ],
-
     "coreFeatures": [
       "AI-generated notes",
       "Video learning",
@@ -34,7 +32,6 @@
       "Notifications",
       "Dark theme interface"
     ],
-
     "gallery": [
       "/learnbud/learnbud1.png",
       "/learnbud/learnbud2.png",
@@ -52,7 +49,6 @@
       "/learnbud/learnbud14.png"
     ]
   },
-
   {
     "slug": "trudentz",
     "title": "Trudentz",
@@ -64,18 +60,15 @@
     "coverImage": "/trudentz/trudentz.png",
     "figmaLink": "https://www.figma.com/proto/BGFsjBvs58XcZ3K2GjrGSG/Trudentz?page-id=0%3A1&node-id=288-242&viewport=-23%2C293%2C0.07&t=tCYJABtzQnVGwQqq-1&scaling=min-zoom&content-scaling=fixed",
     "WebsiteLink": "https://www.trudentz.com/",
-
     "introduction": [
       "**Trudentz** is a multispeciality dental & orthodontic centre that blends advanced digital dentistry with aesthetic precision. It offers services like Digital Smile Design (using in-house DTS PRO software), braces/aligners, implants, and biomimetic restorations."
     ],
-
     "primaryGoals": [
       "Enhance Brand Trust",
       "Improve User Navigation",
       "Increase Engagement & Conversions",
       "Create a Scalable Design System"
     ],
-
     "coreFeatures": [
       "Easy-to-scan Treatment Pages",
       "Clear Information Cards with Icons",
@@ -84,7 +77,6 @@
       "Consistent branding across all pages",
       "Responsive design for mobile-first users"
     ],
-
     "gallery": [
       "/trudentz/trudentz1.png",
       "/trudentz/trudentz2.png",
@@ -97,7 +89,6 @@
       "/trudentz/trudentz9.png"
     ]
   },
-
   {
     "slug": "uniqLearn",
     "title": "UniqLearn",
@@ -108,18 +99,15 @@
     "tasks": "User Research & Testing, UI Design, Design Strategy",
     "coverImage": "/uniqlearn/uniqlearn.png",
     "figmaLink": "https://www.figma.com/proto/Lpl14RL2PjUJ4d0zj1JK78/Uniqlearn?page-id=0%3A1&node-id=348-517&starting-point-node-id=348%3A517&t=7zHOPtYFpnOM5oZv-1",
-
     "introduction": [
       "Introducing **UniqLearn**, a cutting-edge platform designed to revolutionize student-teacher collaboration. With its intuitive dashboard, UniqLearn simplifies assignment management and enhances productivity for educators and learners alike. Powered by advanced AI features, it offers personalized feedback, automates grading, and provides insights to foster academic growth. Elevate the learning experience with UniqLearn, where innovation meets education, empowering everyone to achieve their full potential."
     ],
-
     "primaryGoals": [
       "Learning outcomes",
       "Student motivation",
       "Academic performance analytics",
       "Teacher productivity"
     ],
-
     "coreFeatures": [
       "Personalized Learning Dashboard",
       "Adaptive Learning Modules",
@@ -128,7 +116,6 @@
       "Seamless Integrations",
       "District-Level Analytics"
     ],
-
     "gallery": [
       "/uniqlearn/uniqlearn1.png",
       "/uniqlearn/uniqlearn2.png",
@@ -141,7 +128,6 @@
       "/uniqlearn/uniqlearn9.png"
     ]
   },
-
   {
     "slug": "youniversalhomecare",
     "title": "Youniversal Home Care",
@@ -153,18 +139,15 @@
     "coverImage": "/homecare/homecare.png",
     "figmaLink": "https://www.figma.com/proto/jRY59POwQdbsne6IiYD8Xq/Youniverse-Home-Care?page-id=0%3A1&node-id=303-1233&t=95gj1ofl2bGYnq5Y-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=303%3A1233&hide-ui=1",
     "WebsiteLink": "https://ynhc.com.au/",
-
     "introduction": [
       "Introducing **Youniversal Home Care**, where compassionate caregiving meets individualized support. We're dedicated to providing personalized home care services that cater to your unique needs. Whether it's companionship, medical assistance, or daily activities, our team is committed to ensuring comfort and well-being within the familiar surroundings of your home. Experience care that revolves around you with Youniversal Home Care, because every individual deserves specialized attention and genuine compassion."
     ],
-
     "primaryGoals": [
       "Build Trust & Transparency",
       "Simple & Accessible Navigation",
       "Highlight Care Services Clearly",
       "Strengthen Brand Presence"
     ],
-
     "coreFeatures": [
       "Comprehensive Service Presentation",
       "Strong Trust & Credibility Framework",
@@ -173,7 +156,6 @@
       "Educational & Emotional Brand Messaging",
       "Responsive & Multi-Device Support"
     ],
-
     "gallery": [
       "/homecare/homecare1.png",
       "/homecare/homecare2.png",
@@ -186,7 +168,6 @@
       "/homecare/homecare9.png"
     ]
   },
-
   {
     "slug": "cogentshift",
     "title": "Cogent Shift",
@@ -198,11 +179,9 @@
     "coverImage": "/cogentshift/cogentshift.png",
     "figmaLink": "https://www.figma.com/proto/Lrp1hSDeAewZpTGx8YF9cM/Cogent-Shift?page-id=0%3A1&node-id=259-7420&node-type=frame&t=gAQCSi0oZHcoA0Mx-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=259%3A7420&hide-ui=1",
     "WebsiteLink": "https://www.cogentshift.com/",
-
     "introduction": [
       "**CogentShift** goes beyond the traditional CPQ solution that you know. CogentShift redefines conventional CPQ solutions, offering a paradigm shift in functionality. Experience innovation that transcends the familiar with CogentShift. Discover a new dimension of CPQ that revolutionizes your approach to configuration, pricing, and quoting."
     ],
-
     "primaryGoals": [
       "Strengthen Digital Brand Presence",
       "Drive Lead Generation & Conversions",
@@ -211,7 +190,6 @@
       "Simplify Navigation & Information Discovery",
       "Support Scalability for Future Service Expansion"
     ],
-
     "coreFeatures": [
       "Service Offerings & Solutions Hub",
       "Industry Solutions Section",
@@ -220,7 +198,6 @@
       "Optimized Contact & Inquiry Forms",
       " Scalable UI System"
     ],
-
     "gallery": [
       "/cogentshift/cogentshift1.png",
       "/cogentshift/cogentshift2.png",
@@ -233,7 +210,6 @@
       "/cogentshift/cogentshift9.png"
     ]
   },
-
   {
     "slug": "arouzed",
     "title": "Arouzed",
@@ -244,12 +220,10 @@
     "tasks": "User Research & Testing, UI Design, Design Strategy",
     "coverImage": "/arouzed/arouzed.png",
     "figmaLink": "https://www.figma.com/proto/2Uhw839q3KSYMhIAyImSZH/Final-Arouzed?page-id=0%3A1&node-id=113-1547&t=92OP6TmcQADF75wX-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=113%3A1629&hide-ui=1",
-
     "introduction": [
       "**Arouzed** is a modern, privacy-focused social and connection app designed to empower individuals to explore their attraction, desires, and intimate interests safely. The platform enables users to connect privately, engage in discreet conversations, and build meaningful relationships while maintaining full control over their identity and privacy. This project focuses on creating a visually appealing and experience-driven interface that blends confidence, elegance, and safety for users.",
       "This project focuses on creating a visually appealing and experience-driven interface that blends confidence, elegance, and safety for users."
     ],
-
     "primaryGoals": [
       "Create a secure and comfortable digital space for expressing attraction.",
       "Build a seamless matchmaking experience with user-centric interaction flows.",
@@ -257,7 +231,6 @@
       "Enable easy content discovery and real-time engagement between users.",
       "Ensure privacy-driven features that protect user identity and personal data."
     ],
-
     "coreFeatures": [
       "User Profile & Personal Preferences",
       "Smart Matchmaking & Discovery",
@@ -267,7 +240,6 @@
       "Real-Time Interaction Tools",
       "Content Protection"
     ],
-
     "gallery": [
       "/arouzed/arouzed1.png",
       "/arouzed/arouzed2.png",
@@ -280,7 +252,6 @@
       "/arouzed/arouzed9.png"
     ]
   },
-
   {
     "slug": "workista",
     "title": "Workista",
@@ -291,12 +262,10 @@
     "tasks": "User Research & Testing, UI Design, Design Strategy",
     "coverImage": "/workista/workista.png",
     "figmaLink": "https://www.figma.com/proto/oc2IcbgfPd55Q6yntMc2vE/Workiesta?page-id=820%3A1428&node-id=821-2257&viewport=363%2C826%2C0.34&t=rZWxkLYnW8Cd4xH4-1&scaling=scale-down&content-scaling=fixed",
-
     "introduction": [
       "**Workiesta** is a modern job marketplace that connects talented freelancers with businesses looking for specialized services. The platform supports both web and mobile experiences, enabling users to explore job opportunities, apply easily, and communicate with employers efficiently.",
       "Workiesta focuses on providing smarter job matching by analyzing user skills, preferences, and industry trends — helping people find meaningful jobs fast."
     ],
-
     "primaryGoals": [
       "Deliver a clean, modern, and professional interface that enhances user trust and usability.",
       "Ensure a consistent design experience across web and mobile platforms for seamless user interaction.",
@@ -305,7 +274,6 @@
       "Build a scalable design system with typography, color, and layout standards that maintain brand consistency.",
       "Create visually engaging dashboards and workflows that balance aesthetics with functionality."
     ],
-
     "coreFeatures": [
       "User Dashboard : Personalized overview with quick insights and activity tracking.",
       "Task & Workflow Management: Clean tables, sorting options, filters, and detailed task views.",
@@ -318,7 +286,6 @@
       "Secure Access & Authentication: Login, signup, user validation, and protected routing.",
       "Footer Navigation & Quick Actions: Consistent structure to support fast interaction across pages."
     ],
-
     "gallery": [
       "/workista/workista1.png",
       "/workista/workista2.png",
@@ -338,7 +305,6 @@
       "/workista/workista16.png"
     ]
   },
-
   {
     "slug": "instantsmiles",
     "title": "Instant Smiles",
@@ -349,18 +315,15 @@
     "tasks": "User Research & Testing, UI Design, Design Strategy",
     "coverImage": "/instantsmiles/instantsmiles.png",
     "figmaLink": "https://www.figma.com/proto/CVSfIxEK6FSOXhTWJiei12/Instant-Smiles?page-id=57%3A53&node-id=76-20226&t=ODlS4EAzhAlHf2Dw-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=76%3A20226&hide-ui=1",
-
     "introduction": [
       "**Instant Smile** is a digital dental planning app that helps dentists quickly create realistic smile simulations for their patients. With photo-based editing and real-time previews, it improves communication, speeds up treatment decisions, and enhances patient confidence—all through a sleek and user-friendly interface."
     ],
-
     "primaryGoals": [
       "Enhance Dental Treatment Visualization",
       "Streamline Chair-Side Consultations",
       "Increase Patient Confidence & Conversion",
       "Provide a Professional Digital Workflow"
     ],
-
     "coreFeatures": [
       "Digital Smile Simulation",
       "Advanced Editing Tools",
@@ -370,7 +333,6 @@
       "Export & Share",
       "Content Protection"
     ],
-
     "gallery": [
       "/instantsmiles/instantsmiles1.png",
       "/instantsmiles/instantsmiles2.png",
@@ -381,7 +343,6 @@
       "/instantsmiles/instantsmiles7.png"
     ]
   },
-
   {
     "slug": "integrativedermatology",
     "title": "Integrative Dermatology",
@@ -392,11 +353,9 @@
     "tasks": "User Research & Testing, UI Design, Design Strategy",
     "coverImage": "/dermatology/integrativedermatology.png",
     "figmaLink": "https://www.figma.com/proto/QCOAQX1eFi13NUGxoJERwV/INTEGRATIVE-DERMATOLOGY?page-id=0%3A1&node-id=1003-418&viewport=-12070%2C-2050%2C0.26&t=nb4HHeETsdKbCV0a-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1003%3A418",
-
     "introduction": [
       "**Integrative Dermatology** is a comprehensive skin-health and wellness clinic dedicated to providing medical, cosmetic, and surgical dermatology services under one roof. With a patient-centered philosophy, the clinic combines expert dermatological care with a holistic approach — addressing skin, body, and overall wellness. Their website aims to clearly communicate their full spectrum of treatments, build patient trust through transparency and testimonials, and simplify access to consultations and care for both existing and prospective patients."
     ],
-
     "primaryGoals": [
       "Offer Transparent, Comprehensive Care Information",
       "Build Trust & Credibility",
@@ -404,7 +363,6 @@
       "Support Holistic & Personalized Care",
       "Enhance Online Presence & Patient Education"
     ],
-
     "coreFeatures": [
       "Responsive Web Layouts",
       "Comprehensive Services Catalog",
@@ -416,7 +374,6 @@
       "Patient Education & Resources (Blog / FAQs / Aftercare Info)",
       "Clear & Accessible UX for Diverse Audience"
     ],
-
     "gallery": [
       "/dermatology/dermatology1.png",
       "/dermatology/dermatology2.png",
@@ -434,7 +391,6 @@
       "/dermatology/dermatology14.png"
     ]
   },
-
   {
     "slug": "salviali",
     "title": "Salviali Integrated Medicine",
@@ -446,11 +402,9 @@
     "coverImage": "/salviali/salviali.png",
     "figmaLink": "https://www.figma.com/proto/9I1fVJFTegwqHx109EQX3E/Salviali-Integrated-Medicine?page-id=0%3A1&node-id=251-109&starting-point-node-id=251%3A109&t=elpPQBUcFJGyethU-1",
     "WebsiteLink": "https://salviali.com/",
-
     "introduction": [
       "**Salviali** is a holistic health and natural-remedy platform dedicated to sharing alternative treatments, remedies, and wellness approaches for various conditions. The website aims to provide well-researched, natural-based guidance — from post-extraction care (dry sockets) to viral skin conditions — empowering readers with safe, accessible, and compassionate solutions. By offering easy-to-understand instructions and holistic advice, Salviali connects traditional healing wisdom with modern information access, helping individuals take control of their health and well-being."
     ],
-
     "primaryGoals": [
       "Educate and Inform",
       "Promote Natural & Holistic Care",
@@ -458,7 +412,6 @@
       "Provide Practical Healing Guidance",
       "Support Wide Accessibility"
     ],
-
     "coreFeatures": [
       "Holistic Remedy Library",
       "Product Marketplace",
@@ -466,7 +419,6 @@
       "Engaging & User-Friendly Interface",
       "Educational Sections"
     ],
-
     "gallery": [
       "/salviali/salviali1.png",
       "/salviali/salviali2.png",
@@ -479,7 +431,6 @@
       "/salviali/salviali9.png"
     ]
   },
-
   {
     "slug": "voicing",
     "title": "Voicing AI",
@@ -490,13 +441,11 @@
     "tasks": "User Research & Testing, UI Design, Design Strategy",
     "coverImage": "/voicing/voicing.png",
     "figmaLink": "https://www.figma.com/proto/sgyXyzacg0ozPkOn9TGWyv/TheVoicing-Udemy--Internal-?page-id=0%3A1&node-id=13-4185&starting-point-node-id=13%3A4185&t=UTT9WEJBPZcOXfJ0-1",
-
     "introduction": [
       "**Voicing AI** is an intelligent digital platform designed to help professionals create, manage, and showcase AI-powered voice and video profiles effortlessly. The goal is to empower users with a modern tool where they can present their expertise, achievements, and personality through high-quality, AI-enhanced media.",
       "By integrating a clean and intuitive UI with smart categorization, seamless uploading, and personalized profile features — Voicing AI transforms the way professionals build their digital identity. The platform ensures smooth navigation, strong visual hierarchy, and real-time engagement insights, helping users grow their reach and credibility in the digital world.",
       "**Voicing AI** makes professional storytelling smarter, enabling every user to communicate confidently using the power of voice, video, and AI."
     ],
-
     "primaryGoals": [
       "Enable Seamless Content Discovery",
       "Create a Centralized Digital Presence",
@@ -504,7 +453,6 @@
       "Enhance Viewer Engagement through Insights",
       "Deliver a Consistent Multiplatform Experience"
     ],
-
     "coreFeatures": [
       "Interactive Dashboard",
       "Expert Profiles",
@@ -512,7 +460,6 @@
       "Upload & Content Publishing System",
       "Search & Smart Filters"
     ],
-
     "gallery": [
       "/voicing/voicing1.png",
       "/voicing/voicing2.png",
@@ -522,7 +469,6 @@
       "/voicing/voicing6.png"
     ]
   },
-
   {
     "slug": "dmysti5",
     "title": "Dmysti5",
@@ -533,11 +479,9 @@
     "tasks": "User Research & Testing, UI Design, Design Strategy",
     "coverImage": "/dmysti/dmysti.png",
     "figmaLink": "https://www.figma.com/proto/M1mnxz7Kp2nCc9XfIJj6cO/Demysti5?page-id=281%3A2344&node-id=281-2345&t=iPrv67yWIXXMa402-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=281%3A2345&hide-ui=1",
-
     "introduction": [
       "Manage your digital security effortlessly with our intuitive app interface. Customize settings, schedule scans, and view detailed reports — all from one streamlined dashboard. Designed to act as your personal digital bodyguard, the app ensures protection in today’s interconnected world. Enjoy smooth, hassle-free security management with a seamless and user-friendly experience."
     ],
-
     "primaryGoals": [
       "Modernize the Digital Experience",
       "Improve User Flow & Task Efficiency",
@@ -545,7 +489,6 @@
       "Build a Scalable Design System",
       "Enhance Performance & Responsiveness"
     ],
-
     "coreFeatures": [
       "Dashboard Overview",
       "User Profiles & Role Management",
@@ -556,7 +499,6 @@
       "Responsive Mobile-First Design",
       "Scalable Component Library"
     ],
-
     "gallery": [
       "/dmysti/dmysti1.png",
       "/dmysti/dmysti2.png",

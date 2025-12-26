@@ -1,11 +1,9 @@
 import satisfiedclients from "../assets/images/satisfied-clients.png";
 import instagramicon from "../assets/images/icons/instagram-icon.svg";
-
 import upworkring from "../assets/images/upwork-ring.png";
 import uplogo from "../assets/images/up-logo.png";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-
 import project1 from "../assets/images/project1.png";
 import project2 from "../assets/images/project2.png";
 import project3 from "../assets/images/project3.png";
@@ -31,7 +29,7 @@ export default function Hero() {
                   <div>
                     <strong>100+</strong> Satisfied Clients
                   </div>
-                </div>
+                </div>                
               </div>
 
               <h1 className="text-[#1F1E1E]">
@@ -50,13 +48,13 @@ export default function Hero() {
               <div>
                 <Link
                   to="/contactus"
-                  className="xl:mt-[80px] lg:mt-[50px] mt-[50px] bg-[#8CD565] py-3 px-6 border-[#8CD565] border border-1 inline-flex rounded-[40px] transition-all duration-300 hover:bg-transparent hover:border hover:border-black"
+                  className="xl:mt-[80px] lg:mt-[50px] mt-[50px] bg-[--primary-color] py-3 px-6 border-[--primary-color] border border-1 inline-flex rounded-[40px] transition-all duration-300 hover:bg-transparent hover:border hover:border-black"
                 >
                   <h4 className="font-light">Say "Hello Jatin"</h4>
                 </Link>
               </div>
 
-              <div className="flex justify-center items-center xl:mt-[60px] lg:mt-[40px] md:mt[30px] gap-5">
+              <div className="flex justify-center items-center xl:mt-[60px] mt-[40px] gap-5">
                 <h4 className="italic">Also explore my creative side</h4>
                 <div>
                   <Link
@@ -69,6 +67,7 @@ export default function Hero() {
                   </Link>
                 </div>
               </div>
+
             </div>
           </div>
 
@@ -103,7 +102,7 @@ export default function Hero() {
 
                       <Link
                         to="/project/dmysti5"
-                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                       >
                         <h4>View Details</h4>
                         <img src={viewProjectArrow} alt="" />
@@ -143,7 +142,7 @@ export default function Hero() {
 
                         <Link
                           to="/project/voicing"
-                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                         >
                           <h4>View Details</h4>
                           <img src={viewProjectArrow} alt="" />
@@ -182,7 +181,7 @@ export default function Hero() {
 
                         <Link
                           to="/project/learnbud"
-                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                         >
                           <h4>View Details</h4>
                           <img src={viewProjectArrow} alt="" />
@@ -225,7 +224,7 @@ export default function Hero() {
 
                         <Link
                           to="/project/uniqLearn"
-                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                         >
                           <h4>View Details</h4>
                           <img src={viewProjectArrow} alt="" />
@@ -234,7 +233,6 @@ export default function Hero() {
                     </div>
                   </div>
                 </div>
-
                 <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
                   <div className="bg-white p-5 ">
                     <p className="text-[#1F1E1E99] mb-2.5 text-start">App</p>
@@ -264,7 +262,7 @@ export default function Hero() {
 
                         <Link
                           to="/project/workista"
-                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                          className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                         >
                           <h4>View Details</h4>
                           <img src={viewProjectArrow} alt="" />
@@ -313,7 +311,7 @@ export default function Hero() {
 
                       <Link
                         to="/project/trudentz"
-                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[#8CD565]"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                       >
                         <h4>View Details</h4>
                         <img src={viewProjectArrow} alt="" />
@@ -322,11 +320,12 @@ export default function Hero() {
                   </div>
                 </div>
               </div>
+
             </div>
 
             <Link
               to="/mywork"
-              className="my-[50px] border border-[#1E1E1E] py-3 px-6 inline-flex rounded-[40px] font-light transition-all duration-300 hover:bg-[#8CD565] hover:border-transparent"
+              className="my-[50px] border border-[#1E1E1E] py-3 px-6 inline-flex rounded-[40px] font-light transition-all duration-300 hover:bg-[--primary-color] hover:border-transparent"
             >
               <h4>View All</h4>
             </Link>

@@ -6,45 +6,58 @@ export default function Contactus() {
   return (
     <div>
       <div className="containerX relative z-10">
-        <h2 className="text-center mb-[60px] mt-[160px]">
-          Your Next Big Idea Begins Here <br /> Contact Us Today
-        </h2>
+        <div className="max-w-7xl mx-auto py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:gap-[100px] md:gap-[70px] gap-[50px]">
+            <div>
+              <h2 className="font-medium text-[55px] leading-[70px] text-black">
+                Send Me <br /> A Message
+              </h2>
 
-        <div className="w-full flex justify-center">
-          <div className="w-[90%] md:w-[70%] lg:w-[60%] bg-[#8CD565] p-[50px] rounded-[30px] shadow-xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <h4 className="xl:mt-8 mt-5 text-[#1F1E1E80] text-[20px] leading-[32px]">
+                Creative UI/UX Designer with 10+ years of experience crafting
+                responsive, user-focused web and mobile apps. Blending
+                aesthetics with functionality, I help brands build seamless and
+                meaningful digital experiences that deliver both beauty and
+                value.
+              </h4>
+            </div>
+
+            <div className="bg-white p-8 xl:p-12 rounded-[32px] shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
               <input
                 type="text"
                 placeholder="Enter Name"
-                className="w-full py-3 px-5 rounded-[40px] placeholder:text-black border border-[#1E1E1E] outline-none bg-transparent"
+                className="w-full py-3 px-5 rounded-[40px] border border-[#1E1E1E] placeholder:text-[#1E1E1E] outline-none bg-transparent"
               />
-              <input
-                type="email"
-                placeholder="Enter Email Address"
-                className="w-full py-3 px-5 rounded-[40px] placeholder:text-black border border-[#1E1E1E] outline-none bg-transparent"
-              />
-            </div>
 
-            <div className="mt-5">
-              <input
-                type="text"
-                placeholder="Enter Project Type"
-                className="w-full py-3 px-5 rounded-[40px] placeholder:text-black border border-[#1E1E1E] outline-none bg-transparent"
-              />
-            </div>
+              <div className="xl:mt-5 mt-4">
+                <input
+                  type="email"
+                  placeholder="Enter Email Address"
+                  className="w-full py-3 px-5 rounded-[40px] border border-[#1E1E1E] placeholder:text-[#1E1E1E] outline-none bg-transparent"
+                />
+              </div>
 
-            <div className="mt-5">
-              <textarea
-                placeholder="Enter Message"
-                rows="5"
-                className="w-full py-3 px-5 rounded-[20px] placeholder:text-black border border-[#1E1E1E] outline-none resize-none bg-transparent"
-              />
-            </div>
+              <div className="xl:mt-5 mt-4">
+                <input
+                  type="text"
+                  placeholder="Enter Project Type"
+                  className="w-full py-3 px-5 rounded-[40px] border border-[#1E1E1E] placeholder:text-[#1E1E1E] outline-none bg-transparent"
+                />
+              </div>
 
-            <div className="mt-8">
-              <button className="w-full bg-black hover:bg-transparent border border-[#1E1E1E] hover:text-black   text-white py-3 rounded-[40px] text-lg font-light transition-all duration-300">
-                Send Message
-              </button>
+              <div className="xl:mt-5 mt-4">
+                <textarea
+                  rows="5"
+                  placeholder="Enter Message"
+                  className="w-full py-3 px-5 rounded-[20px] border border-[#1E1E1E] placeholder:text-[#1E1E1E] outline-none resize-none bg-transparent"
+                />
+              </div>
+
+              <div className="xl:mt-8 mt-6">
+                <button className="w-full bg-[#1E1E1E] text-white py-3 rounded-[40px] text-[16px] font-light transition-all duration-300 hover:bg-transparent hover:text-black border border-black">
+                  Send Message
+                </button>
+              </div>
             </div>
           </div>
         </div>
