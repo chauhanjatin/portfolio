@@ -23,7 +23,7 @@ export default function Sidebar({ open, setOpen }) {
     <div
       className={`fixed inset-0 bg-[--primary-color]
         flex items-center justify-center
-        h-screen w-full z-50
+        h-screen w-full z-[998]
         transition-all duration-700 ease-in-out
         transform${
           open
@@ -34,8 +34,8 @@ export default function Sidebar({ open, setOpen }) {
       <div className="w-full">
         <div className="containerX ">
           <div className="grid sm:grid-cols-2 grid-cols-1 sm:gap-40 gap-30 lg:gap-56">
-            <div className="flex justify-center">
-              <ul className="text-[#1E1E1E] lg:space-y-16 sm:space-y-14 space-y-6">
+            <div className="flex sm:justify-center justify-start ">
+              <ul className="text-[#1E1E1E] lg:space-y-16 sm:space-y-14 space-y-4">
                 {menuItems.map((item, index) => {
                   const isActive = currentPath === item.path;
                   return (
@@ -76,7 +76,8 @@ export default function Sidebar({ open, setOpen }) {
                           transition-transform duration-500 ease-out
                           will-change-transform
                           group-hover:scale-110
-                          ">
+                          "
+                        >
                           {item.label}
                         </span>
                       </Link>
@@ -103,7 +104,7 @@ export default function Sidebar({ open, setOpen }) {
                   to="/"
                   style={{ transitionDelay: "160ms" }}
                   className={`
-      flex gap-2.5 items-center mt-8
+      flex gap-2.5 items-center sm:mt-8 mt-4
       transition-all duration-700 ease-in-out
       ${open ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
     `}
@@ -132,7 +133,7 @@ export default function Sidebar({ open, setOpen }) {
                 <ul
                   style={{ transitionDelay: "480ms" }}
                   className={`
-      flex items-center gap-3 mt-12
+      flex items-center gap-3 sm:mt-12 mt-8
       transition-all duration-700 ease-in-out
       ${open ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
     `}

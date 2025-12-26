@@ -16,14 +16,14 @@ export default function Colortheme() {
   }, [activeIndex]);
 
   return (
-    <div className="fixed top-1/2 left-[30px] -translate-y-1/2 z-[9999]">
-      <ul className="grid gap-4">
+    <div className="fixed top-1/2 sm:left-[30px] left-[20px] -translate-y-1/2 z-[997]">
+      <ul className="grid sm:gap-4 gap-3">
         {colors.map((color, index) => (
           <li
             key={index}
             onClick={() => setActiveIndex(index)}
             className={`
-              w-[30px] h-[30px] rounded-full cursor-pointer
+              sm:w-[30px] sm:h-[30px] w-[20px] h-[20px] rounded-full cursor-pointer
               border-2 transition-all border-dashed
               ${activeIndex === index ? "border-black" : "border-transparent"}
             `}
