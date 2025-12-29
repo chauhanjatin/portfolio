@@ -740,12 +740,11 @@ p {
   }
 }
 
-/* Grayscale for non-active slides */
 .swiper-slide img {
   transition: all 0.4s ease;
+  filter: grayscale(1);
 }
 
-/* Remove grayscale for active slide */
 .swiper-slide-active img {
   filter: grayscale(0%);
 }

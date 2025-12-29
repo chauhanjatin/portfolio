@@ -28,7 +28,7 @@ export default function Mywork() {
   return (
     <div>
       <div className="containerX relative z-10">
-        
+
         <div className="sm:mt-[160px] mt-[60px]">
           <div className="mt-10
     grid  gap-4
@@ -1088,6 +1088,7 @@ export default function Mywork() {
               </div>
             </div>
           </div>
+          
         </div>
 
         <Cta></Cta>
