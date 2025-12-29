@@ -92,7 +92,6 @@ export default function Aboutus() {
         <div className="flex justify-center items-center mt-[100px]">
           <img src={aboutimg} alt="" />
         </div>
-
         <div className="grid justify-center text-center sm:mt-[60px] mt-[40px]">
           <h1 className="flex  justify-center font-medium gap-2 items-center ">
             “Hey!{" "}

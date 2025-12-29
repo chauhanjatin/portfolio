@@ -111,7 +111,7 @@ export default function Sidebar({ open, setOpen }) {
                 >
                   <img src={gmailicon} alt="" className="w-6 md:w-auto" />
                   <p className="text-[20px] xl:text-[28px] font-normal text-[#1E1E1E]">
-                    jatin_chauhan@gmail.com
+                    chauhanjatin.25@gmail.com
                   </p>
                 </Link>
 

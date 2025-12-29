@@ -25,7 +25,7 @@ export default function Cta() {
               <Link to="/" className="flex gap-2.5 items-center">
                 <img src={gmailicon} alt="" className="w-6 md:w-auto" />
                 <p className="text-[16px] xl:text-[20px] font-light text-[#1E1E1E]">
-                  jatin_chauhan@gmail.com
+                  chauhanjatin.25@gmail.com
                 </p>
               </Link>
 
