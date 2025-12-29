@@ -111,15 +111,17 @@ export default function Testimonial() {
           {people.map((p, i) => (
             <SwiperSlide key={i}>
               <div className="flex flex-col items-center w-full">
-                <img
-                  src={p.img}
-                  alt={p.name}
-                  className="w-60 h-60 rounded-3xl object-cover "
-                />
+                <div className="slider-imges w-60 h-60">
+                  <img
+                    src={p.img}
+                    alt={p.name}
+                    className=" object-cover w-full h-full"
+                  />
+                </div>
                 <h3 className="sm:text-xl text-sm text-center font-semibold mt-4">
                   {p.name}
                 </h3>
-                <p className="text-gray-500 text-center">{p.role}</p>
+                <p className="text-gray-500 text-center ">{p.role}</p>
               </div>
             </SwiperSlide>
           ))}
@@ -132,7 +134,7 @@ export default function Testimonial() {
             className="text-[60px] text-[--primary-color]  opacity-50 text-center"
           />
         </div>
-        <p className="text-[24px] mt-[15px] text-[#1E1E1E80] font-light client-text  z-10 mx-auto max-w-4xl leading-relaxed text-center">
+        <p className="sm:text-[24px] text-[16px] mt-[15px] text-[#1E1E1E80] font-light client-text  z-10 mx-auto max-w-4xl leading-relaxed text-center ">
           {activeText}
         </p>
       </div>

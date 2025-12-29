@@ -93,7 +93,7 @@ export default function Aboutus() {
           <img src={aboutimg} alt="" />
         </div>
 
-        <div className="grid justify-center text-center mt-[60px]">
+        <div className="grid justify-center text-center sm:mt-[60px] mt-[40px]">
           <h1 className="flex  justify-center font-medium gap-2 items-center ">
             “Hey!{" "}
             <img src={hand} alt="" className="sm:w-[62px] w-[40px] sm:h-[62px] h-[40px] hand-wave" />{" "}

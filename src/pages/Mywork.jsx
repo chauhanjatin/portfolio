@@ -29,7 +29,7 @@ export default function Mywork() {
     <div>
       <div className="containerX relative z-10">
         
-        <div className="sm:mt-[160px] mt-[80px]">
+        <div className="sm:mt-[160px] mt-[60px]">
           <div className="mt-10
     grid  gap-4
     sm:flex sm:justify-between sm:items-center">
