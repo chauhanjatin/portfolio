@@ -9,7 +9,6 @@ import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import "swiper/css";
 import "swiper/css/navigation";
 
-// People Data with Dynamic Text
 const people = [
   {
     img: img2,
@@ -106,8 +105,8 @@ export default function Testimonial() {
             swiper.slides[swiper.activeIndex].style.transform = "scale(1.2)";
             setActiveText(people[0].text);
           }}
-          className="pt-10"
-        >
+
+          className="pt-10">
           {people.map((p, i) => (
             <SwiperSlide key={i}>
               <div className="flex flex-col items-center w-full">
