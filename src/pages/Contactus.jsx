@@ -1,12 +1,34 @@
 import React from "react";
 import Footer from "../components/Footer";
 import Cta from "../components/Cta";
+import emailicon from "../assets/images/icons/email-icon.svg";
+import { Link } from "react-router-dom";
 
 export default function Contactus() {
   return (
     <div>
       <div className="containerX relative z-10">
-        <div className="max-w-7xl mx-auto sm:py-20 py-16">
+        <div className="Contactus-section sm:h-[calc(100vh-70px)] h-full flex justify-center items-center">
+          <div>
+            <h1>Let’s Work Together</h1>
+            <p className="text-[#1F1E1E80] mt-[30px]">
+              Have an idea or a project in mind? I design thoughtful digital
+              <br></br>
+              experiences that balance creativity and usability.
+            </p>
+            <a
+              href="mailto:chauhanjatin.25@gmail.com"
+              className="flex items-center gap-3 mt-[50px]"
+            >
+              <img src={emailicon} alt="Email" />
+              <p className="text-[60px] text-[--primary-color] border-b border-[#1E1E1E]">
+                chauhanjatin.25@gmail.com
+              </p>
+            </a>
+          </div>
+        </div>
+
+        {/* <div className="max-w-7xl mx-auto sm:py-20 py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:gap-[100px] md:gap-[70px] gap-[50px]">
             <div>
               <h2 className="font-medium sm:text-[55px] text-[30px] sm:leading-[70px] leading-[45px] text-black">
@@ -60,11 +82,11 @@ export default function Contactus() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <Cta></Cta>
+        {/* <Cta></Cta> */}
       </div>
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </div>
   );
 }

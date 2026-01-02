@@ -1,7 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 import { useState, useEffect } from "react";
-
 import Navbar from "./components/Navbar";
 import Colortheme from "./components/Colortheme";
 import Loader from "./components/Loader";
@@ -57,7 +56,7 @@ function App() {
       {isDesktop && <CustomCursor />}
       <Navbar />
       <Header />
-      <Colortheme />
+      {/* <Colortheme /> */}
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/about" element={<Aboutus />} />
@@ -68,7 +67,6 @@ function App() {
       </Routes>
     </>
   );
-  
 }
 
 export default App;

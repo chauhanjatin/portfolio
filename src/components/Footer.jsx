@@ -109,6 +109,7 @@ export default function Cta() {
             className="w-full h-full opacity-35 object-cover"
           />
         </div>
+        
       </div>
     </div>
   );

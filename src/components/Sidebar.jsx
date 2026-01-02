@@ -7,6 +7,7 @@ import { faDribbble } from "@fortawesome/free-brands-svg-icons";
 import gmailicon from "../assets/images/icons/gmail-icon.svg";
 import phoneicon from "../assets/images/icons/phone-icon.svg";
 import instagramlogo from "../assets/images/icons/instagram-logo.svg";
+import herobg from "../assets/images/hero-bg.gif";
 
 export default function Sidebar({ open, setOpen }) {
   const location = useLocation();
@@ -29,11 +30,12 @@ export default function Sidebar({ open, setOpen }) {
           open
             ? "translate-y-0 opacity-100 pointer-events-auto"
             : "-translate-y-full opacity-0 pointer-events-none"
-        }`}
-    >
+        }`}>
+
       <div className="w-full">
-        <div className="containerX ">
+        <div className="containerX">
           <div className="grid sm:grid-cols-2 grid-cols-1 sm:gap-40 gap-30 lg:gap-56">
+            
             <div className="flex sm:justify-center justify-start ">
               <ul className="text-[#1E1E1E] lg:space-y-16 sm:space-y-14 space-y-4">
                 {menuItems.map((item, index) => {
@@ -87,7 +89,7 @@ export default function Sidebar({ open, setOpen }) {
               </ul>
             </div>
 
-            <div className="flex ">
+            <div className="flex">
               <div>
                 <p
                   style={{ transitionDelay: "0ms" }}
@@ -237,9 +239,11 @@ export default function Sidebar({ open, setOpen }) {
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
+
     </div>
   );
 }

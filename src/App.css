@@ -481,9 +481,9 @@ p {
   animation: typing 12s steps(20) infinite;
 }
 
-  .custom-cursor {
-    display: none !important;
-  }
+.custom-cursor {
+  display: none !important;
+}
 
 @keyframes typing {
   0%,
@@ -713,7 +713,6 @@ p {
   border-radius: 50%;
 }
 
-/* From Uiverse.io by xXJollyHAKERXx */
 .spinner {
   background-image: linear-gradient(rgb(186, 66, 255) 35%, rgb(0, 225, 255));
   width: 140px;
@@ -844,6 +843,7 @@ p {
     box-shadow: -38px 0, -14px 0, 14px 0, 38px -12px;
   }
 }
+
 @keyframes animloader45 {
   0% {
     box-shadow: -38px -12px, -14px 0, 14px 0, 38px 0;
@@ -860,11 +860,16 @@ p {
 }
 
 .slider-imges img,
-.slider-imges{
+.slider-imges {
   border-radius: 15px;
   overflow: hidden;
 }
 
+.Contactus-section{
+  width: 65%;
+  margin: 0 auto;
+  text-align: center;
+}
 
 @media screen and (min-width: 1600px) and (max-width: 1799px) {
   .containerX {
@@ -938,7 +943,8 @@ p {
 
   .circle-text {
     width: 140px;
-  }
+  } 
+  
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
@@ -1040,6 +1046,7 @@ p {
 
   .upwork-logo {
     left: 26px;
+
     bottom: 26px;
   }
 
@@ -1158,6 +1165,7 @@ p {
     width: 70px;
     height: 70px;
   }
+
 }
 
 @media screen and (min-width: 576px) and (max-width: 767px) {

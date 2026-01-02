@@ -101,6 +101,7 @@ export default function Testimonial() {
             const realIndex = swiper.realIndex;
             setActiveText(people[realIndex].text);
           }}
+          
           onInit={(swiper) => {
             swiper.slides[swiper.activeIndex].style.transform = "scale(1.2)";
             setActiveText(people[0].text);
@@ -126,6 +127,7 @@ export default function Testimonial() {
           ))}
         </Swiper>
       </div>
+
       <div>
         <div className="flex justify-center ">
           <FontAwesomeIcon
@@ -137,6 +139,7 @@ export default function Testimonial() {
           {activeText}
         </p>
       </div>
+
     </div>
   );
 }
