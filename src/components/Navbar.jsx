@@ -17,7 +17,8 @@ export default function Navbar() {
       <div className="containerX ">
         <div className="relative top-0 z-50">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0 mt-[30px] md:mt-[40px] ">
-            <div className="flex items-center gap-4 md:gap-5">
+            
+            <Link to='/' className="flex items-center gap-4 md:gap-5">
               <div>
                 <img src={profileimg} alt="" />
               </div>
@@ -29,7 +30,8 @@ export default function Navbar() {
                   UI/UX Designer, Creative Developer
                 </p>
               </div>
-            </div>
+            </Link>
+
             <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 md:gap-5">
               <div className="flex items-center gap-2">
                 <div className="ripple"></div>

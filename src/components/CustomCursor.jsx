@@ -33,7 +33,7 @@ export default function CustomCursor() {
     window.addEventListener("mousemove", onMouseMove);
 
     document
-      .querySelectorAll("a, button, input, textarea, select, .btn")
+      .querySelectorAll("a , button, input, textarea, select, .btn , Link" )
       .forEach((el) => {
         el.addEventListener("mouseenter", () => (hidden = true));
         el.addEventListener("mouseleave", () => (hidden = false));

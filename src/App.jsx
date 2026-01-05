@@ -58,12 +58,12 @@ function App() {
       <Header />
       {/* <Colortheme /> */}
       <Routes>
-        <Route path="/" element={<Hero />} />
-        <Route path="/about" element={<Aboutus />} />
-        <Route path="/mywork" element={<Mywork />} />
-        <Route path="/hireme" element={<Hireme />} />
-        <Route path="/contactus" element={<Contactus />} />
-        <Route path="/project/:slug" element={<ProjectPage />} />
+        < Route path="/" element={<Hero />} />        
+        < Route path="/about" element={<Aboutus />} />      
+        < Route path="/mywork" element={<Mywork />} />
+        < Route path="/hireme" element={<Hireme />} />
+        < Route path="/contactus" element={<Contactus />} />
+        < Route path="/project/:slug" element={<ProjectPage />} />
       </Routes>
     </>
   );

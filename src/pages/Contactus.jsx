@@ -16,15 +16,15 @@ export default function Contactus() {
               <br></br>
               experiences that balance creativity and usability.
             </p>
-            <a
-              href="mailto:chauhanjatin.25@gmail.com"
-              className="flex items-center gap-3 mt-[50px]"
-            >
-              <img src={emailicon} alt="Email" />
-              <p className="text-[60px] text-[--primary-color] border-b border-[#1E1E1E]">
+           
+            <a href="mailto:chauhanjatin.25@gmail.com"
+              className="flex items-center gap-3 mt-[50px]">
+              {/* <img src={emailicon} alt="Email" /> */}
+              <h1 className="text-[--primary-color]">
                 chauhanjatin.25@gmail.com
-              </p>
+              </h1>
             </a>
+
           </div>
         </div>
 
