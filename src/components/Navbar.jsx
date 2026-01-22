@@ -41,7 +41,7 @@ export default function Navbar() {
               </div>
               <div className="hidden sm:block bg-[#44444499] w-[2px] h-[40px] md:h-[35px]"></div>
               <ul className="flex items-center gap-3">
-                <li className="icon-tilt">
+                {/* <li className="icon-tilt">
                   <Link
                     to="https://www.linkedin.com/in/jatin-chauhan-a52a4947"
                     target="_blank"
@@ -52,9 +52,9 @@ export default function Navbar() {
                       className="text-[18px] md:text-[20px]"
                     />
                   </Link>
-                </li>
+                </li> */}
 
-                <li className="icon-tilt">
+                {/* <li className="icon-tilt">
                   <Link
                     to="https://upwork.com/freelancers/jatinchauhan"
                     target="_blank"
@@ -65,7 +65,7 @@ export default function Navbar() {
                       className="text-[18px] md:text-[20px]"
                     />
                   </Link>
-                </li>
+                </li> */}
 
                 <li className="icon-tilt">
                   <Link

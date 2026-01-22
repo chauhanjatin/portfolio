@@ -336,12 +336,12 @@ export default function Hero() {
 
       <Footer></Footer>
 
-      <Link className="upwork-logo hidden sm:block"
+      {/* <Link className="upwork-logo hidden sm:block"
         to="https://upwork.com/freelancers/jatinchauhan"
         target="_blank">
         <img src={upworkring} alt="" className="circle-text" />
         <img src={uplogo} alt="" className="upwork-icon" />
-      </Link>      
+      </Link>       */}
     </div>
 
   );

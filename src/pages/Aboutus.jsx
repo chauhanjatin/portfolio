@@ -44,28 +44,28 @@ export default function Aboutus() {
     },
     {
       title: "Sr. Web & Graphics Designer",
-      duration: "Apr 2018 – Apr 2020",
+      duration: "Apr 2018 – Apr 2021",
       bullets: ["Differenz System", "India"],
       images: indiaicon,
     },
     {
-      title: "Sr. UI/UX Designer and Frontend Designer + Team Leader",
+      title: "Sr. UI/UX Designer and Frontend Designer ",
       images: indiaicon,
-      duration: "Apr 2020 – Apr 2021",
-      bullets: ["Differenz System", "India"],
+      duration: "Apr 2021 – Present",
+      bullets: ["Coders Brain", "India"],
     },
-    {
-      title: "UI/UX Designer – Remote Staff",
-      duration: "Feb 2022 – Dec 2022",
-      bullets: ["Engine B", "UK"],
-      images: ukicon,
-    },
-    {
-      title: "UI/UX + Frontend Designer - Freelancer",
-      duration: "Apr 2021 - Present",
-      bullets: ["LIS", "India"],
-      images: indiaicon,
-    },
+    // {
+    //   title: "UI/UX Designer – Remote Staff",
+    //   duration: "Feb 2022 – Dec 2022",
+    //   bullets: ["Engine B", "UK"],
+    //   images: ukicon,
+    // },
+    // {
+    //   title: "UI/UX + Frontend Designer - Freelancer",
+    //   duration: "Apr 2021 - Present",
+    //   bullets: ["LIS", "India"],
+    //   images: indiaicon,
+    // },
   ];
 
   // SCROLL EFFECT
@@ -246,7 +246,7 @@ export default function Aboutus() {
           </div>
 
         </div>
-        <Testimonial></Testimonial>
+        {/* <Testimonial></Testimonial> */}
       </div>
 
       <Footer></Footer>
