@@ -294,7 +294,7 @@ export default function Mywork() {
 
                       <Link
                         to="/project/trudentz"
-                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6  rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
                       >
                         <h4>View Details</h4>
                         <img src={viewProjectArrow} alt="" />

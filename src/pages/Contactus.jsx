@@ -18,7 +18,8 @@ export default function Contactus() {
               experiences that balance creativity and usability.
             </p>
            
-            <a href="mailto:chauhanjatin.25@gmail.com"
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chauhanjatin.25@gmail.com"
+                rel="noopener noreferrer"
               className="flex items-center gap-3 mt-[50px]">
               {/* <img src={emailicon} alt="Email" /> */}
               <h1 className="text-[--primary-color]">

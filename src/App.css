@@ -923,12 +923,12 @@ p {
   }
 
   .Portfolio-grid {
-    grid-template-columns: auto 300px;
+    grid-template-columns: auto 350px;
     grid-gap: 38px;
   }
 
   .leftPortfolio-grid {
-    grid-template-columns: 300px auto;
+    grid-template-columns: 350px auto;
     grid-gap: 38px;
   }
 
