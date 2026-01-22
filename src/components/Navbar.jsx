@@ -33,13 +33,13 @@ export default function Navbar() {
             </Link>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 md:gap-5">
-              <div className="flex items-center gap-2">
+              {/* <div className="flex items-center gap-2">
                 <div className="ripple"></div>
                 <p className="text-sm sm:text-base md:text-[16px]">
                   Available for work
                 </p>
-              </div>
-              <div className="hidden sm:block bg-[#44444499] w-[2px] h-[40px] md:h-[35px]"></div>
+              </div> */}
+              {/* <div className="hidden sm:block bg-[#44444499] w-[2px] h-[40px] md:h-[35px]"></div> */}
               <ul className="flex items-center gap-3">
                 {/* <li className="icon-tilt">
                   <Link
