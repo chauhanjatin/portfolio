@@ -52,7 +52,7 @@ export default function Aboutus() {
       title: "Sr. UI/UX Designer and Frontend Designer ",
       images: indiaicon,
       duration: "Apr 2021 – Present",
-      bullets: ["Coders Brain", "India"],
+      bullets: ["Freelancing", "India"],
     },
     // {
     //   title: "UI/UX Designer – Remote Staff",
