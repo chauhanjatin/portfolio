@@ -25,12 +25,10 @@ function useIsDesktop() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
   return isDesktop;
 }
 
 function App() {
-
   const [loading, setLoading] = useState(false);
   const location = useLocation();
   const isDesktop = useIsDesktop();

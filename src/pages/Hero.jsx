@@ -75,6 +75,7 @@ export default function Hero() {
 
           <div className="sm:mt-0 mt-10">
             <h2>Latest Work</h2>
+            
             <div className="Portfolio-grid">
               <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
                 <div className="bg-white h-full project-imgage">
@@ -197,6 +198,7 @@ export default function Hero() {
                   </div>
                 </div>
               </div>
+              
             </div>
 
             <div className="leftPortfolio-grid ">
@@ -204,7 +206,7 @@ export default function Hero() {
                 <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
                   <div className="bg-white p-5 ">
                     <p className="text-[#1F1E1E99] mb-2.5 text-start">
-                      Website
+                      Dashboard
                     </p>
                     <div>
                       <img src={project4} alt="" />

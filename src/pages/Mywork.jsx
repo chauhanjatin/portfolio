@@ -28,6 +28,7 @@ export default function Mywork() {
     <div>
 
       <div className="containerX relative z-10">
+        
         <div className="mt-[160px]">
         
           <div className="mt-10 grid gap-4 sm:flex sm:justify-between sm:items-center">
@@ -179,7 +180,7 @@ export default function Mywork() {
               <div className="grid gap-10">
                 <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
                   <div className="bg-white p-5 h-full ">
-                    <p className="text-[#1F1E1E99] mb-2.5">Website</p>
+                    <p className="text-[#1F1E1E99] mb-2.5">Dashboard</p>
                     <div>
                       <img src={project4} alt="" />
                     </div>
@@ -299,13 +300,14 @@ export default function Mywork() {
                         <h4>View Details</h4>
                         <img src={viewProjectArrow} alt="" />
                       </Link>
+
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="Portfolio-grid ">
+            <div className="Portfolio-grid">
 
               <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
                 <div className="bg-white  h-full project-imgage">
@@ -442,7 +444,7 @@ export default function Mywork() {
               </div>
             </div>
 
-            <div className="leftPortfolio-grid ">
+            <div className="leftPortfolio-grid">
               <div className="grid gap-10">
                 <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
                   <div className="bg-white p-5 h-full ">
@@ -1090,6 +1092,7 @@ export default function Mywork() {
         </div>
         
         <Cta></Cta>
+
       </div>
 
       <Footer></Footer>

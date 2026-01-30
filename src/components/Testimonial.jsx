@@ -3,143 +3,84 @@ import img1 from "../assets/images/slider-img1.png";
 import img2 from "../assets/images/slider-img2.png";
 import img3 from "../assets/images/slider-img3.png";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
 import { Navigation } from "swiper/modules";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import "swiper/css";
-import "swiper/css/navigation";
-
-const people = [
-  {
-    img: img2,
-    name: "James Carter",
-    role: "Globetrotter",
-    text: "James loves exploring new cultures and experiences across the world.",
-  },
-  {
-    img: img3,
-    name: "Mark Johnson",
-    role: "Photographer",
-    text: "Mark captures beautiful memories through his lens and creative vision.",
-  },
-  {
-    img: img1,
-    name: "Sarah Wilson",
-    role: "Designer",
-    text: "Sarah transforms ideas into stunning and seamless visual designs.",
-  },
-  {
-    img: img2,
-    name: "James Carter",
-    role: "Globetrotter",
-    text: "James loves exploring new cultures and experiences across the world.",
-  },
-  {
-    img: img3,
-    name: "Mark Johnson",
-    role: "Photographer",
-    text: "Mark captures beautiful memories through his lens and creative vision.",
-  },
-  {
-    img: img1,
-    name: "Sarah Wilson",
-    role: "Designer",
-    text: "Sarah transforms ideas into stunning and seamless visual designs.",
-  },
-];
+import "swiper/css/pagination";
 
 export default function Testimonial() {
-  // Dynamic Text State
-  const [activeText, setActiveText] = useState(people[0].text);
+  const testimonials = [
+    {
+      name: "Dev Monnappa",
+      role: "(New Zealand)",
+      content:
+        "Jatin communicated clearly throughout the engagement, was receptive to requests and feedback, delivered quality work, and was accommodating to changes. Overall, a very satisfying experience.",
+    },
+    {
+      name: "Haris Beha",
+      role: "(USA)",
+      content:
+        "Jatin's work is of the highest quality. He listens well and his English is very good, I never have encountered a communication problem with him. He is creative and forward thinking. He is very honest and reasonable with his time and effort and pricing. I would not hesitate to recommend him. He is very timely and helps the momentum of projects. He is insightful and dedicated. He is thorough and creative. A valuable asset to your project.",
+    },
+    {
+      name: "ALVA Design Studio ",
+      role: "(Canada)",
+      content:
+        "Jatin was great at communication and delivered on time. Will most definitely work with him again!",
+    },
+  ];
 
   return (
     <div>
-      {/* Title */}
       <div>
         <h2 className="text-center mt-[100px]">Voices of Trust & Success</h2>
-        {/* Dynamic Text */}
       </div>
+      <Swiper
+        modules={[Pagination]}
+        slidesPerView={2}
+        spaceBetween={40}
+        loop={true}
+        pagination={{ clickable: true }}
+        speed={800}
+        breakpoints={{
+          0: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+        }}
+      >
+        {testimonials.map((item, index) => (
+          <SwiperSlide key={index} className="px-5">
+            <div className="relative border-[7px] border-primary rounded-[45px] text-center h-full">
+              <span
+                className="absolute -top-11 -left-7 w-[120px] h-[100px]
+                  bg-[#F4F4F4] bg-no-repeat bg-[length:60%] bg-[position:34px_15px]
+                  rotate-180"
+                style={{
+                  backgroundImage:
+                    "url(https://cdn-icons-png.flaticon.com/512/4338/4338294.png)",
+                }}
+              />
 
-      {/* Slider Section */}
-      <div className="relative w-full  mx-auto mt-10 Testimonial-slider">
-        {/* PREV BUTTON */}
-        <button className="swiper-button-prev-custom absolute left-[-40px] top-1/2 -translate-y-1/2 bg-[--primary-color] sm:w-12 sm:h-12 w-8 h-8 rounded-full flex items-center justify-center shadow-lg z-10">
-          <span className="text-2xl">←</span>
-        </button>
-
-        {/* NEXT BUTTON */}
-        <button className="swiper-button-next-custom absolute right-[-40px] top-1/2 -translate-y-1/2 bg-[--primary-color] sm:w-12 sm:h-12 w-8 h-8 rounded-full flex items-center justify-center shadow-lg z-10">
-          <span className="text-2xl">→</span>
-        </button>
-
-        {/* SWIPER */}
-        <Swiper
-          modules={[Navigation]}
-          navigation={{
-            nextEl: ".swiper-button-next-custom",
-            prevEl: ".swiper-button-prev-custom",
-          }}
-          breakpoints={{
-            0: {
-              slidesPerView: 1,
-            },
-            768: {
-              slidesPerView: 3,
-            },
-          }}
-          centeredSlides={true}
-          loop={true}
-          spaceBetween={20}
-          onSlideChange={(swiper) => {
-            document.querySelectorAll(".swiper-slide").forEach((slide) => {
-              slide.style.transform = "scale(0.8)";
-              slide.style.transition = "0.4s";
-            });
-
-            swiper.slides[swiper.activeIndex].style.transform = "scale(1.2)";
-
-            const realIndex = swiper.realIndex;
-            setActiveText(people[realIndex].text);
-          }}
-          
-          onInit={(swiper) => {
-            swiper.slides[swiper.activeIndex].style.transform = "scale(1.2)";
-            setActiveText(people[0].text);
-          }}
-
-          className="pt-10">
-          {people.map((p, i) => (
-            <SwiperSlide key={i}>
-              <div className="flex flex-col items-center w-full">
-                <div className="slider-imges w-60 h-60">
-                  <img
-                    src={p.img}
-                    alt={p.name}
-                    className=" object-cover w-full h-full"
-                  />
-                </div>
-                <h3 className="sm:text-xl text-sm text-center font-semibold mt-4">
-                  {p.name}
-                </h3>
-                <p className="text-gray-500 text-center ">{p.role}</p>
+              <div className="px-12 pt-12 pb-6 relative z-10">
+                <p className="text-black text-[15px] leading-6 content-text">
+                {item.content}
+              </p>
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+              
+              <div className="flex items-center justify-center gap-4 pb-12 relative z-10">
+                <div className="text-center">
+                  <h6 className="text-primary font-bold text-lg">
+                    {item.name}
+                  </h6>
+                  <span className="text-black text-xs">{item.role}</span>
+                </div>
+              </div>
 
-      <div>
-        <div className="flex justify-center ">
-          <FontAwesomeIcon
-            icon={faQuoteLeft}
-            className="text-[60px] text-[--primary-color]  opacity-50 text-center"
-          />
-        </div>
-        <p className="sm:text-[24px] text-[16px] mt-[15px] text-[#1E1E1E80] font-light client-text  z-10 mx-auto max-w-4xl leading-relaxed text-center ">
-          {activeText}
-        </p>
-      </div>
-
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 }
