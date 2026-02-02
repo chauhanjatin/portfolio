@@ -44,15 +44,15 @@ export default function Aboutus() {
     },
     {
       title: "Sr. Web & Graphics Designer",
-      duration: "Apr 2018 – Apr 2021",
+      duration: "Apr 2018 – Apr 2020",
       bullets: ["Differenz System", "India"],
       images: indiaicon,
     },
     {
-      title: "Sr. UI/UX Designer and Frontend Designer ",
+      title: "Sr. UI/UX Designer and Frontend Designer + Team Leader ",
       images: indiaicon,
-      duration: "Apr 2021 – Present",
-      bullets: ["Coders Brain", "India"],
+      duration: "Apr 2020 – 2021",
+      bullets: ["Differenz System", "India"],
     },
     {
       title: "UI/UX Designer – Remote Staff",
@@ -61,8 +61,8 @@ export default function Aboutus() {
       images: ukicon,
     },
     {
-      title: "UI/UX + Frontend Designer - Freelancer",
-      duration: "Apr 2021 - Present",
+      title: "UI/UX + Frontend Designer - Team Leader",
+      duration: "Apr 2022 - Present",
       bullets: ["LIS", "India"],
       images: indiaicon,
     },
