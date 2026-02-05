@@ -17,107 +17,107 @@ export default function Ourclients() {
     <div className=" ">
       <div className=" mb-[100px] relative z-10">
         {/* <h2 className="text-center">Our Clients & Partners</h2>       */}
-        <article class="wrapper">
-          <div class="marquee">
-            <div class="marquee__group">
+        <article className="wrapper">
+          <div className="marquee">
+            <div className="marquee__group">
               <div>
-                <img src={cogentshift} class="img-fluid" alt="" />
+                <img src={cogentshift} className="img-fluid" alt="" />
               </div>
 
               <div>
-                <img src={demysti5} class="img-fluid" alt="" />
+                <img src={demysti5} className="img-fluid" alt="" />
               </div>
 
               <div>
-                <img src={instantsmile} class="img-fluid" alt="" />
+                <img src={instantsmile} className="img-fluid" alt="" />
               </div>
 
               <div>
-                <img src={youniversalhomecare} class="img-fluid" alt="" />
+                <img src={youniversalhomecare} className="img-fluid" alt="" />
               </div>
 
               <div>
-                <img src={arouzed} class="img-fluid" alt="" />
+                <img src={arouzed} className="img-fluid" alt="" />
               </div>
 
               <div>
-                <img src={uniqlearn} class="img-fluid" alt="" />
+                <img src={uniqlearn} className="img-fluid" alt="" />
               </div>
 
               <div>
-                <img src={Learnbud} class="img-fluid" alt="" />
+                <img src={Learnbud} className="img-fluid" alt="" />
               </div>
 
               <div>
-                <img src={wokista} class="img-fluid" alt="" />
+                <img src={wokista} className="img-fluid" alt="" />
               </div>
 
               <div>
-                <img src={voicing} class="img-fluid" alt="" />
+                <img src={voicing} className="img-fluid" alt="" />
               </div>
 
               <div>
-                <img src={dermatology} class="img-fluid" alt="" />
+                <img src={dermatology} className="img-fluid" alt="" />
               </div>
 
               <div>
-                <img src={trudentz} class="img-fluid" alt="" />
+                <img src={trudentz} className="img-fluid" alt="" />
               </div>
 
               <div>
-                <img src={salviali} class="img-fluid" alt="" />
+                <img src={salviali} className="img-fluid" alt="" />
               </div>
 
             </div>
 
-            <div aria-hidden="true" class="marquee__group">
+            <div aria-hidden="true" className="marquee__group">
                
                <div>
-                <img src={cogentshift} class="img-fluid" alt="" />
+                <img src={cogentshift} className="img-fluid" alt="" />
               </div>
 
               <div>
-                <img src={demysti5} class="img-fluid" alt="" />
+                <img src={demysti5} className="img-fluid" alt="" />
               </div>
 
               <div>
-                <img src={instantsmile} class="img-fluid" alt="" />
+                <img src={instantsmile} className="img-fluid" alt="" />
               </div>
 
               <div>
-                <img src={youniversalhomecare} class="img-fluid" alt="" />
+                <img src={youniversalhomecare} className="img-fluid" alt="" />
               </div>
 
               <div>
-                <img src={arouzed} class="img-fluid" alt="" />
+                <img src={arouzed} className="img-fluid" alt="" />
               </div>
 
               <div>
-                <img src={uniqlearn} class="img-fluid" alt="" />
+                <img src={uniqlearn} className="img-fluid" alt="" />
               </div>
 
               <div>
-                <img src={Learnbud} class="img-fluid" alt="" />
+                <img src={Learnbud} className="img-fluid" alt="" />
               </div>
 
               <div>
-                <img src={wokista} class="img-fluid" alt="" />
+                <img src={wokista} className="img-fluid" alt="" />
               </div>
 
               <div>
-                <img src={voicing} class="img-fluid" alt="" />
+                <img src={voicing} className="img-fluid" alt="" />
               </div>
 
               <div>
-                <img src={dermatology} class="img-fluid" alt="" />
+                <img src={dermatology} className="img-fluid" alt="" />
               </div>
 
               <div>
-                <img src={trudentz} class="img-fluid" alt="" />
+                <img src={trudentz} className="img-fluid" alt="" />
               </div>
 
               <div>
-                <img src={salviali} class="img-fluid" alt="" />
+                <img src={salviali} className="img-fluid" alt="" />
               </div>
             </div>
             

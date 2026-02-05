@@ -1456,11 +1456,12 @@ p {
   .marquee__group {
     gap: 20px;
   }
+
   .Industry_items img {
     width: 40px;
   }
 
   .Industry_items p {
     font-size: 14px;
-}
+  }
 }
