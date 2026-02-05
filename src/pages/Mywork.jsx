@@ -693,7 +693,7 @@ export default function Mywork() {
                 </div>
               </div>
 
-                   <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
+              <div className="relative overflow-hidden rounded-[40px] Portfolio-items">
                 <div className="bg-white p-5 h-full">
                   <p className="text-[#1F1E1E99] mb-2.5">Web App</p>
                   <div>
@@ -730,6 +730,7 @@ export default function Mywork() {
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
 
@@ -1003,11 +1004,11 @@ export default function Mywork() {
 
                       <Link
                         to="/project/learnbud"
-                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]"
-                      >
+                        className="flex gap-2.5 bg-[#FFFFFF] py-3 px-6 rounded-[40px] transition-all duration-300 hover:bg-[--primary-color]">
                         <h4>View Details</h4>
                         <img src={viewProjectArrow} alt="" />
                       </Link>
+
                     </div>
                   </div>
                 </div>
@@ -1098,6 +1099,7 @@ export default function Mywork() {
       </div>
 
       <Footer></Footer>
+      
     </div>
   );
 }
