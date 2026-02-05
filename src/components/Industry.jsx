@@ -3,7 +3,7 @@ import fintech from "../assets/images/fintech.png";
 import travel from "../assets/images/travel.png";
 import eCommerce from "../assets/images/ecommerce.png";
 import healthcare from "../assets/images/healthcare.png";
-import Sports from "../assets/images/Sports.png";
+import sports from "../assets/images/sports.png";
 import realestate from "../assets/images/realestate.png";
 import saas from "../assets/images/saas.png";
 import ai from "../assets/images/ai.png";
@@ -72,7 +72,7 @@ export default function Industry() {
               </div>
 
               <div className="Industry_items ">
-                <img src={Sports} className="img-fluid" alt="" />
+                <img src={sports} className="img-fluid" alt="" />
                 <p>Sports</p>
               </div>
 
@@ -149,7 +149,7 @@ export default function Industry() {
               </div>
 
               <div className="Industry_items ">
-                <img src={Sports} className="img-fluid" alt="" />
+                <img src={sports} className="img-fluid" alt="" />
                 <p>Sports</p>
               </div>
 
