@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import cogentshift from "../assets/images/cogentshift.webp";
 import demysti5 from "../assets/images/demysti5.webp";
 import instantsmile from "../assets/images/instantsmile.webp";

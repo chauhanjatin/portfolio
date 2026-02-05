@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import restaurant from "../assets/images/restaurant.png";
 import fintech from "../assets/images/fintech.png";
 import travel from "../assets/images/travel.png";
@@ -8,7 +7,6 @@ import Sports from "../assets/images/Sports.png";
 import realestate from "../assets/images/realestate.png";
 import saas from "../assets/images/saas.png";
 import ai from "../assets/images/ai.png";
-import sports from "../assets/images/sports.png";
 
 export default function Industry() {
   return (

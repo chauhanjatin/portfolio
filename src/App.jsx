@@ -2,7 +2,6 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
-import Colortheme from "./components/Colortheme";
 import Loader from "./components/Loader";
 import Hero from "./pages/Hero";
 import Aboutus from "./pages/Aboutus";
