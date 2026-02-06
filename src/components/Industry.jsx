@@ -12,7 +12,7 @@ export default function Industry() {
   return (
     <div className="containerX ">
       <div className="sm:mt-[100px]  mb-[60px] relative z-10">
-        <h2 className="text-center">Industry We Serve</h2>
+        <h2 className="text-center">Industries Served</h2>
 
         <article className="wrapper">
           <div className="marquee">
@@ -66,6 +66,7 @@ export default function Industry() {
                 <img src={healthcare} className="img-fluid" alt="" />
                 <p>Health Care</p>
               </div>
+
               <div className="Industry_items ">
                 <img src={realestate} className="img-fluid" alt="" />
                 <p>Real-estate</p>

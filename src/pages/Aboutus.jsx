@@ -216,6 +216,7 @@ export default function Aboutus() {
                   Department of Computer Science, VNSGU, SURAT
                 </h4>
               </div>
+              
             </div>
           </div>
         </div>
